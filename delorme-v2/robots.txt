@@ -1,6 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /merci.html
-Disallow: /404.html
-
-Sitemap: https://www.delorme-elagage.fr/sitemap.xml
