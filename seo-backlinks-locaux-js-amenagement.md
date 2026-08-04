@@ -3,43 +3,43 @@
 Recherche de prospection de backlinks locaux pour JS Aménagement, paysagiste intervenant sur Lens, Liévin, Avion, Sallaumines, Loos-en-Gohelle, Bully-les-Mines (Pas-de-Calais).
 
 Date de la recherche : 04/08/2026.
-Métrique DR : DataForSEO Backlinks Rank, échelle 0–100 (indicateur comparable à un Domain Rating). Trafic : estimation de trafic organique mensuel (ETV DataForSEO, Google France).
+Métrique DR : DataForSEO Backlinks Rank, échelle 0–100 (indicateur comparable à un Domain Rating).
 
-## Tableau de prospection
+**Correction importante (v2)** : la première version de ce tableau qualifiait plusieurs pistes de "gratuites" à tort. Un email froid n'obtient quasiment jamais un backlink. Ce tableau distingue maintenant, pour chaque site, s'il existe un **mécanisme de lien réel et vérifié**, et son **coût réel confirmé** (quand il a pu être trouvé).
 
-| Site | URL | Type d'opportunité | DR | Contact / page pertinente | Effort | Note /10 |
-|---|---|---|---|---|---|---|
-| Ville de Lens | https://villedelens.fr | Mairie — page vie économique / actualité lensoise | 55 | Service communication / développement économique de la mairie | Email gratuit (proposer un portrait d'artisan local ou un partenariat événementiel) | 9 |
-| Communauté d'agglomération Lens-Liévin | https://www.agglo-lenslievin.fr/nos-actions/developpement-economique/aides-tpe-pme-artisans-commercants/ | Agglomération — page aides TPE/PME/artisans | 54 | deveco@agglo-lenslievin.fr — 03 21 79 05 34 | Email gratuit (dispositif de soutien aux artisans, possibilité de fiche entreprise) | 9 |
-| Mairie de Loos-en-Gohelle | https://www.loos-en-gohelle.fr | Mairie — ville pilote développement durable, valorise ses acteurs économiques locaux | 40 | contact@loos-en-gohelle.fr | Email gratuit | 8 |
-| Mes Commerçants Lensois | https://www.mescommercantslensois.fr/cat124-Artisans.htm | Annuaire officieux des commerçants/artisans de Lens | 22 | "Espace commerçant" (inscription en ligne) | Email/inscription (gratuit ou petit abonnement à vérifier) | 8 |
-| ES Bully-les-Mines (football) | https://esbully.footeo.com/partenaires.html | Club sportif local — page partenaires | 18 | Formulaire de contact du club sur la page partenaires | Sponsoring (dotation matériel/financière contre logo + lien) | 8 |
-| CCI Artois (Hauts-de-France) | https://hautsdefrance.cci.fr/cci-artois/ | Chambre de commerce — agences Lens/Béthune/Arras | 76 | Agence de Lens, 3 avenue Elie Reumaux — 03 21 23 24 24 | Cotisation obligatoire (déjà due si ressortissant CCI) + démarche pour fiche annuaire | 8 |
-| HorizonActu | https://www.horizonactu.fr | Média local — actualités Arras/Lens/Béthune | 40 | redaction@horizonradio.fr | Email gratuit (proposer un sujet : portrait d'entreprise, actu paysage/environnement local) | 8 |
-| APEI de Lens et environs | https://www.apei-lens.org/partenaires/ | Association locale — page partenaires | 28 | contact@apei-lens.org — 03 21 79 16 39 | Sponsoring / mécénat | 7 |
-| CMA Hauts-de-France | https://www.cma-hautsdefrance.fr/lens/ | Chambre de métiers — agence Lens | 58 | CMA Entreprises Lens, 3 avenue Elie Reumaux — 09 72 72 72 07 | Cotisation obligatoire (déjà due si artisan immatriculé) + démarche fiche annuaire | 7 |
-| Jardicoop Services | https://www.jardicoop.fr/cooperative-paysagistes-jardiniers-jardicoop/ | Coopérative de paysagistes Hauts-de-France (Béthunois) — annuaire de sociétaires | 29 | jardicoop.fr/contact/ ("Adhérer à Jardicoop") | Adhésion payante (parts sociales coopérative) | 7 |
-| UNEP — Les Entreprises du Paysage | https://lesentreprisesdupaysage.fr/annuaire-adherents/pas-de-calais | Fédération professionnelle du paysage — annuaire adhérents Pas-de-Calais | 56 | Union régionale UNEP Hauts-de-France | Adhésion payante (cotisation syndicale professionnelle) | 7 |
-| Office de Tourisme Lens-Liévin Hénin-Carvin | https://tourisme-lens.fr/espace-partenaires/le-club-partenaires/ | Club partenaires (gratuit mais engageant) | 65 | 03 21 67 66 66 — 16 place Jean Jaurès, Lens | Email gratuit, engagement annuel (accueil d'un référent, visibilité touristique) | 6 |
-| AOSC Sallaumines (football) | https://aoscsallaumines.footeo.com/partenaires.html | Club sportif local — page partenaires | 2 | Formulaire de contact du club sur la page partenaires | Sponsoring (petit budget, forte proximité géographique) | 6 |
-| Société Française d'Arboriculture (SFA) | https://sfa-asso.fr/annuaire-professionnel/ | Fédération métier élagage/arboriculture — annuaire professionnel national | 39 | sfa-asso.fr/annuaire-professionnel/ ("Ajouter une annonce" / "Adhérer") | Adhésion probable pour figurer à l'annuaire | 5 |
-| RC Lens | https://www.rclens.fr/fr/partenaires | Club de football professionnel — page partenaires | 55 | Service partenariats RC Lens | Sponsoring très coûteux — hors budget d'une PME artisanale, à envisager seulement en dernier recours | 3 |
+## Tableau de prospection (trié par accessibilité réelle décroissante)
 
-## Méthodologie et fiabilité des données
+| Site | URL | DR | Coût réel confirmé | Ce qu'il faut vraiment faire | Note /10 |
+|---|---|---|---|---|---|
+| Jardicoop Services | https://www.jardicoop.fr/cooperative-paysagistes-jardiniers-jardicoop/ | 29 | **30 € une seule fois** (2 parts sociales à 15 €, pas de cotisation annuelle) | Adhérer comme sociétaire de la coopérative de paysagistes Hauts-de-France (Béthunois) → listing automatique dans leur annuaire géographique | 8 |
+| Mes Commerçants Lensois | https://www.mescommercantslensois.fr/cat124-Artisans.htm | 22 | 0 € annoncé par la Ville de Lens comme "entièrement gratuit" — **éligibilité non confirmée** pour un service sans boutique physique | Contacter la mairie/plateforme pour vérifier si un artisan-service (sans vitrine à Lens) peut s'inscrire | 6 |
+| CCI Artois (annuaire) | https://hautsdefrance.cci.fr/cci-artois/ | 76 | 0 € additionnel **si JS Aménagement cotise déjà à la CCI** (cotisation obligatoire liée à l'immatriculation) | Demander activement la mise à jour de la fiche entreprise avec l'URL du site — **le lien cliquable n'est pas garanti**, à vérifier au cas par cas | 6 |
+| CMA Hauts-de-France (annuaire) | https://www.cma-hautsdefrance.fr/lens/ | 58 | 0 € additionnel **si déjà artisan immatriculé** (cotisation CMA obligatoire) | Même démarche que la CCI — lien non garanti | 6 |
+| HorizonActu | https://www.horizonactu.fr | 40 | **0 € en argent**, mais publication non garantie (ligne éditoriale, pas un service payant) | Proposer un vrai sujet à redaction@horizonradio.fr (ex. actu paysage/environnement local, saisonnalité) — pas une demande de lien déguisée | 6 |
+| UNEP — Les Entreprises du Paysage | https://lesentreprisesdupaysage.fr/annuaire-adherents/pas-de-calais | 56 | **144 €/an minimum** pour une TPE sans salarié (davantage selon le CA) | Adhésion syndicale professionnelle via lesentreprisesdupaysage.fr/comment-adherer/ → listing annuaire adhérents Pas-de-Calais | 6 |
+| Société Française d'Arboriculture (SFA) | https://sfa-asso.fr/annuaire-professionnel/ | 39 | Tarif non public — à demander | Contacter secretariat@sfa-asso.fr / 06 88 46 41 66 ; l'annuaire existe mais le caractère cliquable du lien n'est pas confirmé | 4 |
+| ES Bully-les-Mines (football) | https://esbully.footeo.com/partenaires.html | 18 | **Sponsoring réel** (probablement plusieurs centaines d'euros pour un petit club amateur, à négocier) | Contacter le club via le formulaire de la page partenaires pour discuter d'un package sponsor | 5 |
+| APEI de Lens et environs | https://www.apei-lens.org/partenaires/ | 28 | **Mécénat/sponsoring réel**, montant à négocier | contact@apei-lens.org — 03 21 79 16 39 | 4 |
+| AOSC Sallaumines (football) | https://aoscsallaumines.footeo.com/partenaires.html | 2 | **Sponsoring réel**, DR quasi nul (impact SEO marginal, intérêt surtout local/notoriété) | Formulaire de contact du club | 4 |
+| Ville de Lens / Agglo Lens-Liévin / Mairie de Loos-en-Gohelle | villedelens.fr / agglo-lenslievin.fr / loos-en-gohelle.fr | 55 / 54 / 40 | Aucun coût, mais **aucun annuaire d'entreprises avec liens sortants identifié** sur ces sites | Pas de piste de prospection directe. Seule voie réaliste : être cité suite à un vrai chantier ou partenariat communal (aménagement d'espace public, action RSE/fleurissement) repris dans leur actualité — retombée possible, pas un objectif de prospection | 3 |
+| Office de Tourisme Lens-Liévin Hénin-Carvin | https://tourisme-lens.fr/espace-partenaires/le-club-partenaires/ | 65 | Gratuit, mais **éligibilité très probablement hors périmètre** (réservé aux acteurs touristiques : hébergement, activités, restauration) | À écarter pour un paysagiste | 2 |
+| RC Lens | https://www.rclens.fr/fr/partenaires | 55 | **Coût prohibitif** pour une PME artisanale (sponsors : Nexans, McDonald's, groupe Lempereur...) | À écarter | 1 |
 
-- DR obtenu via `backlinks_bulk_ranks` (échelle 0–100) et trafic via `dataforseo_labs_google_domain_rank_overview` (Google France, ETV = valeur de trafic organique estimée).
-- La pertinence locale (colonne Note) pondère d'abord la correspondance géographique stricte avec la zone (Lens, Liévin, Avion, Sallaumines, Loos-en-Gohelle, Bully-les-Mines), puis la pertinence thématique (métier du paysage/artisanat), puis le DR.
-- Le fait qu'un club sportif comme AOSC Sallaumines ait un DR de 2 ne le disqualifie pas : le lien reste géographiquement défendable et à très faible effort, mais l'impact SEO direct sera marginal — l'intérêt est surtout la notoriété locale et le maillage de proximité.
+## Ce qui est vraiment gratuit et sans condition
+
+**Une seule ligne est réellement gratuite en argent et sans condition d'éligibilité floue : HorizonActu**, à condition d'avoir un vrai sujet éditorial (pas une simple demande de lien). Tout le reste implique soit un coût réel (à partir de 30 € chez Jardicoop), soit une démarche administrative sans garantie de lien (CCI/CMA), soit une éligibilité à vérifier au cas par cas (Mes Commerçants Lensois).
 
 ## Sites écartés ou à vérifier
 
-- **ville-lievin.fr** : n'est PAS le site officiel de la mairie de Liévin. Il s'agit d'un site de contenu générique sans rapport avec la commune (probablement un domaine détourné/expiré) — à ne surtout pas contacter ni utiliser comme référence.
-- **Mairies d'Avion et de Bully-les-Mines** : je n'ai pas pu confirmer avec certitude leurs noms de domaine officiels lors de cette recherche — à vérifier manuellement avant prise de contact (éviter les sites tiers/agrégateurs qui usurpent parfois le nom de la commune).
-- **Mairie de Sallaumines** : le site trouvé (ville-de-sallaumines.jimdosite.com, hébergé sur Jimdo) a une officialité incertaine ; à confirmer directement auprès de la mairie (03 21 14 23 17) avant toute démarche.
-- Aucun annuaire générique national, ferme de liens ou site de vente de backlinks n'a été retenu, conformément à la consigne.
+- **ville-lievin.fr** : n'est PAS le site officiel de la mairie de Liévin. Contenu générique sans rapport avec la commune (domaine probablement détourné/expiré) — à ne pas contacter.
+- **Mairies d'Avion et de Bully-les-Mines** : noms de domaine officiels non confirmés lors de cette recherche — à vérifier manuellement avant toute prise de contact.
+- **Mairie de Sallaumines** : le site trouvé (ville-de-sallaumines.jimdosite.com, hébergé sur Jimdo) a une officialité incertaine — à confirmer par téléphone (03 21 14 23 17).
+- Aucun annuaire générique national, ferme de liens ou site de vente de backlinks n'a été retenu, conformément à la consigne initiale.
 
-## Prochaines étapes suggérées
+## Priorités concrètes
 
-1. Prioriser les 5 premières lignes (mairie de Lens, agglo Lens-Liévin, mairie de Loos-en-Gohelle, annuaire commerçants lensois, ES Bully-les-Mines) : contact gratuit ou très faible effort, forte pertinence géographique.
-2. Vérifier la cotisation CCI/CMA déjà versée par JS Aménagement (souvent obligatoire) et demander l'activation de la fiche entreprise avec lien vers le site — c'est un backlink "gratuit" si la cotisation est déjà payée.
-3. Contacter HorizonActu avec un angle éditorial concret (ex : conseils de saison, actu locale environnement/paysage) plutôt qu'une demande de lien brute.
+1. **Jardicoop (30 €)** : le meilleur rapport coût/certitude d'obtention d'un lien réel.
+2. **CCI/CMA** : vérifier si la cotisation est déjà payée, puis demander explicitement la mise à jour de la fiche avec un lien — coût nul si déjà cotisant, mais nécessite un suivi actif pour confirmer que le lien est en dur.
+3. **HorizonActu** : préparer un vrai angle éditorial local avant de solliciter la rédaction.
+4. **Mes Commerçants Lensois** : appeler la mairie pour lever le doute sur l'éligibilité avant d'investir du temps.
+5. **UNEP** (144 €/an) : à envisager seulement si l'adhésion professionnelle a aussi un intérêt métier au-delà du seul lien.
