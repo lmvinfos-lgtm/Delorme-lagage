@@ -228,13 +228,39 @@
   .ns-lead { font-size: 19px; font-weight: 300; line-height: 1.7; color: #3a3529; }
   .hero-img-static { position: absolute; inset: 0; background-size: cover; }
   .m-hero img.m-hero-img { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; object-fit: cover; z-index: 0; }
+  .nav-dd { position: relative; display: inline-block; }
+  .nav-dd > a::after { content: '▾'; font-size: 9px; margin-left: 5px; display: inline-block; vertical-align: middle; }
+  .nav-dd-panel { display: none; position: absolute; top: 26px; left: -20px; min-width: 300px; background: #1d220f; border: 1px solid rgba(244,239,226,.16); padding: 10px 0; z-index: 80; box-shadow: 0 20px 44px rgba(0,0,0,.4); }
+  .nav-dd:hover .nav-dd-panel { display: block; }
+  .nav-dd-panel a { display: block; padding: 9px 22px; font-size: 12px; font-weight: 400; letter-spacing: .04em; color: #d9d4c7 !important; white-space: nowrap; }
+  .nav-dd-panel a:hover { background: rgba(244,239,226,.08); color: #f4efe2 !important; }
+  .m-services-toggle { position: relative; z-index: 4; background: #0f120a; }
+  .m-services-toggle summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; padding: 15px 17px; font-size: 11px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: #eee9da; }
+  .m-services-toggle summary::-webkit-details-marker { display: none; }
+  .m-services-toggle summary::after { content: '+'; font-size: 16px; font-weight: 300; color: #a4b359; }
+  .m-services-toggle[open] summary::after { content: '–'; }
+  .m-services-toggle-panel { padding: 4px 17px 18px; display: flex; flex-direction: column; }
+  .m-services-toggle-panel a { padding: 9px 0; font-size: 12px; font-weight: 400; letter-spacing: .03em; color: #cfc8b8; border-top: 1px solid rgba(244,239,226,.1); }
 
   .ns-ol { margin: 18px 0 0; padding: 0; list-style: none; }
+  .nav-dd { position: relative; display: inline-block; }
+  .nav-dd > a::after { content: '▾'; font-size: 9px; margin-left: 5px; display: inline-block; vertical-align: middle; }
+  .nav-dd-panel { display: none; position: absolute; top: 26px; left: -20px; min-width: 300px; background: #1d220f; border: 1px solid rgba(244,239,226,.16); padding: 10px 0; z-index: 80; box-shadow: 0 20px 44px rgba(0,0,0,.4); }
+  .nav-dd:hover .nav-dd-panel { display: block; }
+  .nav-dd-panel a { display: block; padding: 9px 22px; font-size: 12px; font-weight: 400; letter-spacing: .04em; color: #d9d4c7 !important; white-space: nowrap; }
+  .nav-dd-panel a:hover { background: rgba(244,239,226,.08); color: #f4efe2 !important; }
+  .m-services-toggle { position: relative; z-index: 4; background: #0f120a; }
+  .m-services-toggle summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; padding: 15px 17px; font-size: 11px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: #eee9da; }
+  .m-services-toggle summary::-webkit-details-marker { display: none; }
+  .m-services-toggle summary::after { content: '+'; font-size: 16px; font-weight: 300; color: #a4b359; }
+  .m-services-toggle[open] summary::after { content: '–'; }
+  .m-services-toggle-panel { padding: 4px 17px 18px; display: flex; flex-direction: column; }
+  .m-services-toggle-panel a { padding: 9px 0; font-size: 12px; font-weight: 400; letter-spacing: .03em; color: #cfc8b8; border-top: 1px solid rgba(244,239,226,.1); }
 </style>
 
 </helmet>
 <div class="desktop-viewport" aria-hidden="false">
-<div class="desktop-stage" data-screen-label="Pose de clôtures" style="position: relative; width: 1440px; height: 3142px; margin: 0 auto; overflow: hidden; background: #eee7de; font-family: Poppins, 'Century Gothic', sans-serif; -webkit-font-smoothing: antialiased;">
+<div class="desktop-stage" data-screen-label="Pose de clôtures" style="position: relative; width: 1440px; height: 3167px; margin: 0 auto; overflow: hidden; background: #eee7de; font-family: Poppins, 'Century Gothic', sans-serif; -webkit-font-smoothing: antialiased;">
   <div style="position: absolute; inset: 0; opacity: 0.5; mix-blend-mode: multiply; background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3'/%3E%3C/filter%3E%3Crect width='260' height='260' filter='url(%23n)' opacity='0.16'/%3E%3C/svg%3E&quot;);"></div>
 
   <!-- HERO (static image, no video) -->
@@ -262,9 +288,9 @@
 
   <div style="position: absolute; left: 484px; top: 82px; display: flex; align-items: center; gap: 38px; font-size: 12.5px; font-weight: 400; letter-spacing: 0.07em; line-height: 1;">
     <a href="index.html" style="color: #e3ded1;">ACCUEIL</a>
-    <a href="#" style="color: #d9d4c7;">NOS SERVICES</a>
+    <div class="nav-dd"><a href="#" style="color: #d9d4c7;">NOS SERVICES</a><div class="nav-dd-panel"><a href="creation-amenagement-jardin-aubagne.html">Création de jardin méditerranéen</a><a href="entretien-jardin-credit-impot-aubagne.html">Entretien & crédit d’impôt</a><a href="debroussaillement-old-aubagne.html">Débroussaillement réglementaire (OLD)</a><a href="engazonnement-gazon-mediterraneen-aubagne.html">Engazonnement</a><a href="arrosage-automatique-goutte-a-goutte-aubagne.html">Arrosage automatique</a><a href="muret-restanque-escalier-aubagne.html">Maçonnerie & restanques</a><a href="pavage-allee-terrasse-aubagne.html">Pavage & allées</a><a href="pose-cloture-aubagne.html">Pose de clôtures</a><a href="jardin-mediterraneen.html">Guide : le jardin méditerranéen</a></div></div>
+    <div class="nav-dd"><a href="#" style="color: #d9d4c7;">SECTEURS</a><div class="nav-dd-panel"><a href="zone-intervention.html">Toutes nos zones d’intervention</a><a href="paysagiste-gemenos.html">Gémenos</a><a href="paysagiste-roquevaire.html">Roquevaire</a><a href="paysagiste-auriol.html">Auriol</a><a href="paysagiste-la-penne-sur-huveaune.html">La Penne-sur-Huveaune</a><a href="paysagiste-carnoux.html">Carnoux-en-Provence</a><a href="paysagiste-cassis.html">Cassis</a></div></div>
     <a href="realisations.html" style="color: #d9d4c7;">RÉALISATIONS</a>
-    <a href="#" style="color: #d9d4c7;">À PROPOS</a>
     <a href="contact.html" style="color: #d9d4c7;">CONTACT</a>
   </div>
 
@@ -304,11 +330,11 @@
     <div class="ns-wrap" style="padding-top: 90px; padding-bottom: 90px;">
       <p class="ns-eyebrow">QUESTIONS FRÉQUENTES</p>
       <h2 class="ns-heading">ON RÉPOND À VOS QUESTIONS</h2><div style="margin-top: 46px;"><div class="ns-faq-item"><p class="ns-faq-q">Faut-il une autorisation ?</p><p class="ns-faq-a">Souvent une déclaration préalable, selon la commune et la hauteur. On vous le dit au diagnostic.</p></div>
-      <div class="ns-faq-item"><p class="ns-faq-q">La pose est-elle éligible au crédit d’impôt ?</p><p class="ns-faq-a">Non : poser une clôture est un travail d'aménagement, non éligible. Seul l'entretien courant du jardin l'est.</p></div></div>
+      <div class="ns-faq-item"><p class="ns-faq-q">La pose est-elle éligible au crédit d’impôt ?</p><p class="ns-faq-a">Non : poser une clôture est un travail d'aménagement, non éligible. Seul l'entretien courant du jardin l'est. <a href="entretien-jardin-credit-impot-aubagne.html" style="color:#6d7740;font-weight:500;">Voir l’entretien + crédit d’impôt</a>.</p></div></div>
     </div>
   </div>
 
-<div class="ns-section ns-cut-top" data-ns="S5" style="top: 2594px; background: #4a3c26;">
+<div class="ns-section ns-cut-top" data-ns="S5" style="top: 2619px; background: #4a3c26;">
     <div class="ns-wrap" style="padding-top: 90px; padding-bottom: 90px;">
       <h2 class="ns-heading dark">UN TERRAIN À<span class="ns-script dark">clôturer</span></h2>
       <p class="ns-body dark">Un terrain à clôturer, un vis-à-vis à masquer ? On vient prendre les mesures, on cadre les règles et on chiffre.</p>
@@ -316,9 +342,9 @@
     </div>
   </div>
 
-    <div style="position: absolute; left: 0px; top: 2978px; width: 1440px; height: 164px; clip-path: polygon(0px 0px, 1440px 46px, 1440px 164px, 0px 164px); background: #ece5da;"></div>
+<div style="position: absolute; left: 0px; top: 3003px; width: 1440px; height: 164px; clip-path: polygon(0px 0px, 1440px 46px, 1440px 164px, 0px 164px); background: #ece5da;"></div>
 
-  <div style="position: absolute; left: -30px; top: 3012px; width: 300px; height: 150px; color: #8a8770; opacity: 0.16; pointer-events: none;">
+  <div style="position: absolute; left: -30px; top: 3037px; width: 300px; height: 150px; color: #8a8770; opacity: 0.16; pointer-events: none;">
     <svg viewBox="0 0 60 22" style="width: 300px; height: 110px; transform: rotate(28deg); transform-origin: 10% 40%;">
       <path d="M2 20 C 16 16 30 11 58 3" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="round"></path>
       <ellipse cx="10" cy="15" rx="5.4" ry="1.9" transform="rotate(-38 10 15)" fill="none" stroke="currentColor" stroke-width="0.45"></ellipse>
@@ -332,7 +358,7 @@
     </svg>
   </div>
 
-  <div style="position: absolute; left: 164px; top: 3015px; width: 200px; display: flex; flex-direction: column; align-items: center;">
+  <div style="position: absolute; left: 164px; top: 3040px; width: 200px; display: flex; flex-direction: column; align-items: center;">
     <svg viewBox="0 0 60 22" style="width: 63px; height: 23px; color: #9a9169;">
       <path d="M2 20 C 16 16 30 11 58 3" fill="none" stroke="currentColor" stroke-width="0.9" stroke-linecap="round"></path>
       <ellipse cx="10" cy="15" rx="5.4" ry="1.9" transform="rotate(-38 10 15)" fill="none" stroke="currentColor" stroke-width="0.8"></ellipse>
@@ -348,15 +374,15 @@
     <div style="margin-top: 12px; font-size: 11px; font-weight: 300; letter-spacing: 0.7em; line-height: 1; color: #8a8175; margin-right: -0.7em;">PAYSAGE</div>
   </div>
 
-  <div style="position: absolute; left: 482px; top: 3032px; font-size: 12px; font-weight: 300; line-height: 15.5px; color: #8a8175;">181 allée Jean Aicard<br />13400 Aubagne</div>
-  <div style="position: absolute; left: 482px; top: 3073px; font-size: 12px; font-weight: 600; letter-spacing: 0.02em; line-height: 1; color: #3a3529;"></div>
-  <div style="position: absolute; left: 482px; top: 3093px; font-size: 12px; font-weight: 300; line-height: 1; color: #8a8175;">contact@trenca-paysage.fr</div>
+  <div style="position: absolute; left: 482px; top: 3057px; font-size: 12px; font-weight: 300; line-height: 15.5px; color: #8a8175;">181 allée Jean Aicard<br />13400 Aubagne</div>
+  <div style="position: absolute; left: 482px; top: 3098px; font-size: 12px; font-weight: 600; letter-spacing: 0.02em; line-height: 1; color: #3a3529;"></div>
+  <div style="position: absolute; left: 482px; top: 3118px; font-size: 12px; font-weight: 300; line-height: 1; color: #8a8175;">contact@trenca-paysage.fr</div>
 
-  <div style="position: absolute; left: 714px; top: 3036px; width: 1px; height: 70px; background: #ded7ca;"></div>
+  <div style="position: absolute; left: 714px; top: 3061px; width: 1px; height: 70px; background: #ded7ca;"></div>
 
-  <div style="position: absolute; left: 762px; top: 3046px; font-size: 13px; font-weight: 400; letter-spacing: 0.12em; line-height: 1; color: #8a8767;">SUIVEZ-NOUS</div>
+  <div style="position: absolute; left: 762px; top: 3071px; font-size: 13px; font-weight: 400; letter-spacing: 0.12em; line-height: 1; color: #8a8767;">SUIVEZ-NOUS</div>
 
-  <div style="position: absolute; left: 880px; top: 3073px; display: flex; align-items: center; gap: 14px;">
+  <div style="position: absolute; left: 880px; top: 3098px; display: flex; align-items: center; gap: 14px;">
     <a href="#" style="width: 31px; height: 31px; border: 1px solid #9a9184; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
       <span style="display: block; width: 15px; height: 15px; border: 1px solid #6f685c; border-radius: 5px; position: relative;">
         <span style="position: absolute; left: 3px; top: 3px; width: 7px; height: 7px; border: 1px solid #6f685c; border-radius: 50%;"></span>
@@ -366,7 +392,7 @@
     <a href="#" style="width: 31px; height: 31px; border: 1px solid #9a9184; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: Georgia, serif; font-size: 19px; line-height: 1; color: #6f685c; padding-bottom: 2px;">f</a>
   </div>
 
-  <a href="#" style="position: absolute; left: 1083px; top: 3058px; width: 231px; height: 46px; display: flex; align-items: center; justify-content: center; background: #1d220f; font-size: 13.4px; font-weight: 400; letter-spacing: 0.14em; color: #ece5d8;" style-hover="background: #262c14;">DEMANDE DE DEVIS</a>
+  <a href="#" style="position: absolute; left: 1083px; top: 3083px; width: 231px; height: 46px; display: flex; align-items: center; justify-content: center; background: #1d220f; font-size: 13.4px; font-weight: 400; letter-spacing: 0.14em; color: #ece5d8;" style-hover="background: #262c14;">DEMANDE DE DEVIS</a>
 
 </div><!-- /.desktop-stage -->
 </div><!-- /.desktop-viewport -->
@@ -386,6 +412,34 @@
       </div>
     </div>
   </section>
+
+  <details class="m-services-toggle">
+    <summary>Nos services</summary>
+    <div class="m-services-toggle-panel">
+      <a href="creation-amenagement-jardin-aubagne.html">Création de jardin méditerranéen</a>
+      <a href="entretien-jardin-credit-impot-aubagne.html">Entretien & crédit d’impôt</a>
+      <a href="debroussaillement-old-aubagne.html">Débroussaillement réglementaire (OLD)</a>
+      <a href="engazonnement-gazon-mediterraneen-aubagne.html">Engazonnement</a>
+      <a href="arrosage-automatique-goutte-a-goutte-aubagne.html">Arrosage automatique</a>
+      <a href="muret-restanque-escalier-aubagne.html">Maçonnerie & restanques</a>
+      <a href="pavage-allee-terrasse-aubagne.html">Pavage & allées</a>
+      <a href="pose-cloture-aubagne.html">Pose de clôtures</a>
+      <a href="jardin-mediterraneen.html">Guide : le jardin méditerranéen</a>
+    </div>
+  </details>
+
+  <details class="m-services-toggle">
+    <summary>Secteurs</summary>
+    <div class="m-services-toggle-panel">
+      <a href="zone-intervention.html">Toutes nos zones d’intervention</a>
+      <a href="paysagiste-gemenos.html">Gémenos</a>
+      <a href="paysagiste-roquevaire.html">Roquevaire</a>
+      <a href="paysagiste-auriol.html">Auriol</a>
+      <a href="paysagiste-la-penne-sur-huveaune.html">La Penne-sur-Huveaune</a>
+      <a href="paysagiste-carnoux.html">Carnoux-en-Provence</a>
+      <a href="paysagiste-cassis.html">Cassis</a>
+    </div>
+  </details>
 
   <section class="m-newsec" id="mobile-content">
     <div class="m-shell">
@@ -425,7 +479,7 @@
       <a href="mailto:contact@trenca-paysage.fr" class="m-ns-btn">Demander un devis clôture</a>
     </div>
   </section>
-    <footer class="m-footer" id="devis-mobile">
+<footer class="m-footer" id="devis-mobile">
     <div class="m-shell m-footer-grid">
       <div class="m-logo"><strong>TRENCA</strong><span>PAYSAGE</span></div>
       <div class="m-contact">181 allée Jean Aicard<br>13400 Aubagne<a href="mailto:contact@trenca-paysage.fr">contact@trenca-paysage.fr</a></div>
@@ -437,7 +491,7 @@
 <script>
 (function () {
   const BASE_WIDTH = 1440;
-  const BASE_HEIGHT = 3142;
+  const BASE_HEIGHT = 3167;
 
   function fitDesktopArtboard() {
     const viewport = document.querySelector('.desktop-viewport');

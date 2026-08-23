@@ -228,8 +228,34 @@
   .ns-lead { font-size: 19px; font-weight: 300; line-height: 1.7; color: #3a3529; }
   .hero-img-static { position: absolute; inset: 0; background-size: cover; }
   .m-hero img.m-hero-img { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; object-fit: cover; z-index: 0; }
+  .nav-dd { position: relative; display: inline-block; }
+  .nav-dd > a::after { content: '▾'; font-size: 9px; margin-left: 5px; display: inline-block; vertical-align: middle; }
+  .nav-dd-panel { display: none; position: absolute; top: 26px; left: -20px; min-width: 300px; background: #1d220f; border: 1px solid rgba(244,239,226,.16); padding: 10px 0; z-index: 80; box-shadow: 0 20px 44px rgba(0,0,0,.4); }
+  .nav-dd:hover .nav-dd-panel { display: block; }
+  .nav-dd-panel a { display: block; padding: 9px 22px; font-size: 12px; font-weight: 400; letter-spacing: .04em; color: #d9d4c7 !important; white-space: nowrap; }
+  .nav-dd-panel a:hover { background: rgba(244,239,226,.08); color: #f4efe2 !important; }
+  .m-services-toggle { position: relative; z-index: 4; background: #0f120a; }
+  .m-services-toggle summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; padding: 15px 17px; font-size: 11px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: #eee9da; }
+  .m-services-toggle summary::-webkit-details-marker { display: none; }
+  .m-services-toggle summary::after { content: '+'; font-size: 16px; font-weight: 300; color: #a4b359; }
+  .m-services-toggle[open] summary::after { content: '–'; }
+  .m-services-toggle-panel { padding: 4px 17px 18px; display: flex; flex-direction: column; }
+  .m-services-toggle-panel a { padding: 9px 0; font-size: 12px; font-weight: 400; letter-spacing: .03em; color: #cfc8b8; border-top: 1px solid rgba(244,239,226,.1); }
 
   .ns-ol { margin: 18px 0 0; padding: 0; list-style: none; }
+  .nav-dd { position: relative; display: inline-block; }
+  .nav-dd > a::after { content: '▾'; font-size: 9px; margin-left: 5px; display: inline-block; vertical-align: middle; }
+  .nav-dd-panel { display: none; position: absolute; top: 26px; left: -20px; min-width: 300px; background: #1d220f; border: 1px solid rgba(244,239,226,.16); padding: 10px 0; z-index: 80; box-shadow: 0 20px 44px rgba(0,0,0,.4); }
+  .nav-dd:hover .nav-dd-panel { display: block; }
+  .nav-dd-panel a { display: block; padding: 9px 22px; font-size: 12px; font-weight: 400; letter-spacing: .04em; color: #d9d4c7 !important; white-space: nowrap; }
+  .nav-dd-panel a:hover { background: rgba(244,239,226,.08); color: #f4efe2 !important; }
+  .m-services-toggle { position: relative; z-index: 4; background: #0f120a; }
+  .m-services-toggle summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; padding: 15px 17px; font-size: 11px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: #eee9da; }
+  .m-services-toggle summary::-webkit-details-marker { display: none; }
+  .m-services-toggle summary::after { content: '+'; font-size: 16px; font-weight: 300; color: #a4b359; }
+  .m-services-toggle[open] summary::after { content: '–'; }
+  .m-services-toggle-panel { padding: 4px 17px 18px; display: flex; flex-direction: column; }
+  .m-services-toggle-panel a { padding: 9px 0; font-size: 12px; font-weight: 400; letter-spacing: .03em; color: #cfc8b8; border-top: 1px solid rgba(244,239,226,.1); }
 </style>
 
 </helmet>
@@ -262,9 +288,9 @@
 
   <div style="position: absolute; left: 484px; top: 82px; display: flex; align-items: center; gap: 38px; font-size: 12.5px; font-weight: 400; letter-spacing: 0.07em; line-height: 1;">
     <a href="index.html" style="color: #e3ded1;">ACCUEIL</a>
-    <a href="#" style="color: #d9d4c7;">NOS SERVICES</a>
+    <div class="nav-dd"><a href="#" style="color: #d9d4c7;">NOS SERVICES</a><div class="nav-dd-panel"><a href="creation-amenagement-jardin-aubagne.html">Création de jardin méditerranéen</a><a href="entretien-jardin-credit-impot-aubagne.html">Entretien & crédit d’impôt</a><a href="debroussaillement-old-aubagne.html">Débroussaillement réglementaire (OLD)</a><a href="engazonnement-gazon-mediterraneen-aubagne.html">Engazonnement</a><a href="arrosage-automatique-goutte-a-goutte-aubagne.html">Arrosage automatique</a><a href="muret-restanque-escalier-aubagne.html">Maçonnerie & restanques</a><a href="pavage-allee-terrasse-aubagne.html">Pavage & allées</a><a href="pose-cloture-aubagne.html">Pose de clôtures</a><a href="jardin-mediterraneen.html">Guide : le jardin méditerranéen</a></div></div>
+    <div class="nav-dd"><a href="#" style="color: #d9d4c7;">SECTEURS</a><div class="nav-dd-panel"><a href="zone-intervention.html">Toutes nos zones d’intervention</a><a href="paysagiste-gemenos.html">Gémenos</a><a href="paysagiste-roquevaire.html">Roquevaire</a><a href="paysagiste-auriol.html">Auriol</a><a href="paysagiste-la-penne-sur-huveaune.html">La Penne-sur-Huveaune</a><a href="paysagiste-carnoux.html">Carnoux-en-Provence</a><a href="paysagiste-cassis.html">Cassis</a></div></div>
     <a href="realisations.html" style="color: #d9d4c7;">RÉALISATIONS</a>
-    <a href="#" style="color: #d9d4c7;">À PROPOS</a>
     <a href="contact.html" style="color: #d9d4c7;">CONTACT</a>
   </div>
 
@@ -310,7 +336,7 @@
       <p class="ns-eyebrow">LE DÉTAIL</p>
       <h2 class="ns-heading">CE QUI EST ÉLIGIBLE<br>(ET CE QUI NE L’EST PAS)</h2><div class="ns-compare" style="max-width: 900px;">
         <div><h4>Éligible (entretien courant)</h4><p class="ns-body">Tonte, taille de haies et d’arbustes, débroussaillage, désherbage, ramassage de feuilles, entretien courant des bassins d’ornement.</p></div>
-        <div><h4>Non éligible</h4><p class="ns-body">Pose de clôtures, création d’allées, installation d’un arrosage automatique, plantations, terrassement, abattage d’arbres — ce sont des travaux de création, pas des services à la personne.</p></div>
+        <div><h4>Non éligible</h4><p class="ns-body">Pose de <a href="pose-cloture-aubagne.html" style="color:#6d7740;font-weight:500;">clôtures</a>, création d’<a href="pavage-allee-terrasse-aubagne.html" style="color:#6d7740;font-weight:500;">allées</a>, installation d’un <a href="arrosage-automatique-goutte-a-goutte-aubagne.html" style="color:#6d7740;font-weight:500;">arrosage automatique</a>, plantations, terrassement, abattage d’arbres — ce sont des travaux de création, pas des services à la personne.</p></div>
       </div><a href="creation-amenagement-jardin-aubagne.html" class="ns-link" style="margin-top: 30px;">DÉCOUVRIR LA CRÉATION DE JARDIN<svg class="arrow-stroke" viewBox="0 0 40 8"><path d="M0 4 H38 M32.5 0.8 L38 4 L32.5 7.2" fill="none" stroke="currentColor" stroke-width="1"></path></svg></a>
     </div>
   </div>
@@ -342,7 +368,7 @@
     </div>
   </div>
 
-    <div style="position: absolute; left: 0px; top: 4562px; width: 1440px; height: 164px; clip-path: polygon(0px 0px, 1440px 46px, 1440px 164px, 0px 164px); background: #ece5da;"></div>
+<div style="position: absolute; left: 0px; top: 4562px; width: 1440px; height: 164px; clip-path: polygon(0px 0px, 1440px 46px, 1440px 164px, 0px 164px); background: #ece5da;"></div>
 
   <div style="position: absolute; left: -30px; top: 4596px; width: 300px; height: 150px; color: #8a8770; opacity: 0.16; pointer-events: none;">
     <svg viewBox="0 0 60 22" style="width: 300px; height: 110px; transform: rotate(28deg); transform-origin: 10% 40%;">
@@ -413,6 +439,34 @@
     </div>
   </section>
 
+  <details class="m-services-toggle">
+    <summary>Nos services</summary>
+    <div class="m-services-toggle-panel">
+      <a href="creation-amenagement-jardin-aubagne.html">Création de jardin méditerranéen</a>
+      <a href="entretien-jardin-credit-impot-aubagne.html">Entretien & crédit d’impôt</a>
+      <a href="debroussaillement-old-aubagne.html">Débroussaillement réglementaire (OLD)</a>
+      <a href="engazonnement-gazon-mediterraneen-aubagne.html">Engazonnement</a>
+      <a href="arrosage-automatique-goutte-a-goutte-aubagne.html">Arrosage automatique</a>
+      <a href="muret-restanque-escalier-aubagne.html">Maçonnerie & restanques</a>
+      <a href="pavage-allee-terrasse-aubagne.html">Pavage & allées</a>
+      <a href="pose-cloture-aubagne.html">Pose de clôtures</a>
+      <a href="jardin-mediterraneen.html">Guide : le jardin méditerranéen</a>
+    </div>
+  </details>
+
+  <details class="m-services-toggle">
+    <summary>Secteurs</summary>
+    <div class="m-services-toggle-panel">
+      <a href="zone-intervention.html">Toutes nos zones d’intervention</a>
+      <a href="paysagiste-gemenos.html">Gémenos</a>
+      <a href="paysagiste-roquevaire.html">Roquevaire</a>
+      <a href="paysagiste-auriol.html">Auriol</a>
+      <a href="paysagiste-la-penne-sur-huveaune.html">La Penne-sur-Huveaune</a>
+      <a href="paysagiste-carnoux.html">Carnoux-en-Provence</a>
+      <a href="paysagiste-cassis.html">Cassis</a>
+    </div>
+  </details>
+
   <section class="m-newsec" id="mobile-content">
     <div class="m-shell">
       <p class="m-ns-body" style="font-size: 14px; line-height: 1.75;">Vous taillez, vous tondez, vous nettoyez — et trois semaines plus tard, tout a repoussé. Le jardin ne prévient pas. Au printemps méditerranéen, tout pousse d'un coup et il reprend le dessus dès qu'on a le dos tourné. Résultat : soit le week-end y passe, soit on laisse filer jusqu'à devoir tout rattraper d'un coup. Un entretien régulier casse ce cercle — et revient souvent moins cher qu'une grosse remise en état une fois par an.</p>
@@ -447,7 +501,7 @@
       <p class="m-ns-eyebrow">Le détail</p>
       <h2 class="m-ns-heading">Ce qui est éligible</h2><div style="margin-top: 22px; display: flex; flex-direction: column; gap: 18px;">
         <div><h4 style="margin:0 0 8px; font-size:14px; font-weight:500; color:#2b2921;">Éligible</h4><p class="m-ns-body">Tonte, taille, débroussaillage, désherbage, ramassage, entretien de bassins.</p></div>
-        <div><h4 style="margin:0 0 8px; font-size:14px; font-weight:500; color:#2b2921;">Non éligible</h4><p class="m-ns-body">Clôtures, allées, arrosage automatique, plantations, terrassement.</p></div>
+        <div><h4 style="margin:0 0 8px; font-size:14px; font-weight:500; color:#2b2921;">Non éligible</h4><p class="m-ns-body"><a href="pose-cloture-aubagne.html" style="color:#6d7740;font-weight:500;">Clôtures</a>, <a href="pavage-allee-terrasse-aubagne.html" style="color:#6d7740;font-weight:500;">allées</a>, <a href="arrosage-automatique-goutte-a-goutte-aubagne.html" style="color:#6d7740;font-weight:500;">arrosage automatique</a>, plantations, terrassement.</p></div>
       </div><a href="creation-amenagement-jardin-aubagne.html" class="m-ns-link">Découvrir la création de jardin<svg viewBox="0 0 32 7"><path d="M0 3.5 H30 M26 0.6 L30 3.5 L26 6.4" fill="none" stroke="#6c6852" stroke-width="1"></path></svg></a>
     </div>
   </section>
@@ -473,7 +527,7 @@
       <a href="mailto:contact@trenca-paysage.fr" class="m-ns-btn">Choisir ma formule d’entretien</a>
     </div>
   </section>
-    <footer class="m-footer" id="devis-mobile">
+<footer class="m-footer" id="devis-mobile">
     <div class="m-shell m-footer-grid">
       <div class="m-logo"><strong>TRENCA</strong><span>PAYSAGE</span></div>
       <div class="m-contact">181 allée Jean Aicard<br>13400 Aubagne<a href="mailto:contact@trenca-paysage.fr">contact@trenca-paysage.fr</a></div>

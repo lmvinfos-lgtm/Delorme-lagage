@@ -210,6 +210,19 @@
       .m-values { gap: 9px; }
     }
   }
+  .nav-dd { position: relative; display: inline-block; }
+  .nav-dd > a::after { content: '▾'; font-size: 9px; margin-left: 5px; display: inline-block; vertical-align: middle; }
+  .nav-dd-panel { display: none; position: absolute; top: 26px; left: -20px; min-width: 300px; background: #1d220f; border: 1px solid rgba(244,239,226,.16); padding: 10px 0; z-index: 80; box-shadow: 0 20px 44px rgba(0,0,0,.4); }
+  .nav-dd:hover .nav-dd-panel { display: block; }
+  .nav-dd-panel a { display: block; padding: 9px 22px; font-size: 12px; font-weight: 400; letter-spacing: .04em; color: #d9d4c7 !important; white-space: nowrap; }
+  .nav-dd-panel a:hover { background: rgba(244,239,226,.08); color: #f4efe2 !important; }
+  .m-services-toggle { position: relative; z-index: 4; background: #0f120a; }
+  .m-services-toggle summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; padding: 15px 17px; font-size: 11px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: #eee9da; }
+  .m-services-toggle summary::-webkit-details-marker { display: none; }
+  .m-services-toggle summary::after { content: '+'; font-size: 16px; font-weight: 300; color: #a4b359; }
+  .m-services-toggle[open] summary::after { content: '–'; }
+  .m-services-toggle-panel { padding: 4px 17px 18px; display: flex; flex-direction: column; }
+  .m-services-toggle-panel a { padding: 9px 0; font-size: 12px; font-weight: 400; letter-spacing: .03em; color: #cfc8b8; border-top: 1px solid rgba(244,239,226,.1); }
 </style>
 </helmet>
 <div class="desktop-viewport" aria-hidden="false">
@@ -281,7 +294,7 @@
             <h3 class="ns-h3">Entretenir : votre jardin suivi toute l'année</h3>
             <p class="ns-body">Plutôt qu'une intervention isolée quand tout a déjà poussé, un entretien régulier coûte moins cher et garde un extérieur net en permanence : tonte, taille de haies, désherbage, débroussaillage, ramassage. Nous proposons des formules à l'année, adaptées à la taille de votre jardin.</p>
             <p class="ns-body"><strong>Et jusqu'à 50 % de crédit d'impôt.</strong> Les petits travaux d'entretien de jardin réalisés à domicile ouvrent droit à un crédit d'impôt égal à 50 % des sommes payées, dans la limite de 5 000 € de dépenses par an et par foyer fiscal (soit jusqu'à 2 500 € par an). Trenca Paysage étant déclaré au titre des services à la personne, vous pouvez en bénéficier — y compris via l'avance immédiate, qui vous permet de ne régler que la moitié de la facture.</p>
-            <p class="ns-note">À noter : cet avantage concerne l'entretien courant, pas les travaux de création ou d'aménagement (allées, clôtures, arrosage automatique, plantations), qui n'y sont pas éligibles.</p>
+            <p class="ns-note">À noter : cet avantage concerne l'entretien courant, pas les travaux de création ou d'aménagement (<a href="pavage-allee-terrasse-aubagne.html" style="color:#8a8368;font-weight:500;">allées</a>, <a href="pose-cloture-aubagne.html" style="color:#8a8368;font-weight:500;">clôtures</a>, <a href="arrosage-automatique-goutte-a-goutte-aubagne.html" style="color:#8a8368;font-weight:500;">arrosage automatique</a>, plantations), qui n'y sont pas éligibles.</p>
             <a href="entretien-jardin-credit-impot-aubagne.html" class="ns-link">DÉCOUVRIR LES FORMULES D'ENTRETIEN<svg class="arrow-stroke" viewBox="0 0 40 8"><path d="M0 4 H38 M32.5 0.8 L38 4 L32.5 7.2" fill="none" stroke="currentColor" stroke-width="1"></path></svg></a>
           </div>
           <div class="ns-row-image"><img src="assets/realisation-gazon-cour.jpg" alt="Jardin entretenu, gazon net à Aubagne" loading="lazy"></div>
@@ -291,7 +304,7 @@
           <div class="ns-row-text">
             <span class="ns-row-num">03</span>
             <h3 class="ns-h3">Créer : le jardin méditerranéen, pensé pour consommer moins d'eau</h3>
-            <p class="ns-body">Un beau jardin, ici, n'est pas un jardin qui boit toute l'année. C'est un jardin adapté au climat : essences méditerranéennes, paillage, arrosage au goutte-à-goutte, sols travaillés pour retenir l'eau, restanques qui tiennent la pente. Du terrain nu à l'espace de vie fini, on conçoit et on réalise l'ensemble : terrasses, allées et pavages, murets et escaliers, engazonnement et plantations, bassins, arrosage automatique.</p>
+            <p class="ns-body">Un beau jardin, ici, n'est pas un jardin qui boit toute l'année. C'est un jardin adapté au climat : essences méditerranéennes, paillage, arrosage au goutte-à-goutte, sols travaillés pour retenir l'eau, restanques qui tiennent la pente. Du terrain nu à l'espace de vie fini, on conçoit et on réalise l'ensemble : terrasses, <a href="pavage-allee-terrasse-aubagne.html" style="color:#6d7740;font-weight:500;">allées et pavages</a>, <a href="muret-restanque-escalier-aubagne.html" style="color:#6d7740;font-weight:500;">murets et escaliers</a>, <a href="engazonnement-gazon-mediterraneen-aubagne.html" style="color:#6d7740;font-weight:500;">engazonnement</a> et plantations, bassins, <a href="arrosage-automatique-goutte-a-goutte-aubagne.html" style="color:#6d7740;font-weight:500;">arrosage automatique</a>.</p>
             <a href="jardin-mediterraneen.html" class="ns-link">DÉCOUVRIR LE JARDIN MÉDITERRANÉEN<svg class="arrow-stroke" viewBox="0 0 40 8"><path d="M0 4 H38 M32.5 0.8 L38 4 L32.5 7.2" fill="none" stroke="currentColor" stroke-width="1"></path></svg></a>
           </div>
           <div class="ns-row-image"><img src="assets/jardin-sec-gravier-fleuri.jpg" alt="Jardin méditerranéen sec, gravier et lavandes" loading="lazy"></div>
@@ -354,13 +367,13 @@
       <p class="ns-body" style="max-width: 700px; margin-top: 26px;">Basés à Aubagne, nous intervenons dans tout l'Est marseillais : Gémenos, Roquevaire, Auriol, La Penne-sur-Huveaune, Cuges-les-Pins, Carnoux-en-Provence, Cassis et les communes voisines. Un doute sur votre secteur ? Demandez, on vous répond vite.</p>
       <div class="ns-chips">
         <div class="ns-chip is-hq"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21.5C7.5 17 5 13 5 9.5a7 7 0 0 1 14 0c0 3.5-2.5 7.5-7 12z"></path><circle cx="12" cy="9.5" r="2.6"></circle></svg>Aubagne (siège)</div>
-        <div class="ns-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21.5C7.5 17 5 13 5 9.5a7 7 0 0 1 14 0c0 3.5-2.5 7.5-7 12z"></path><circle cx="12" cy="9.5" r="2.6"></circle></svg>Gémenos</div>
-        <div class="ns-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21.5C7.5 17 5 13 5 9.5a7 7 0 0 1 14 0c0 3.5-2.5 7.5-7 12z"></path><circle cx="12" cy="9.5" r="2.6"></circle></svg>Roquevaire</div>
-        <div class="ns-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21.5C7.5 17 5 13 5 9.5a7 7 0 0 1 14 0c0 3.5-2.5 7.5-7 12z"></path><circle cx="12" cy="9.5" r="2.6"></circle></svg>Auriol</div>
-        <div class="ns-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21.5C7.5 17 5 13 5 9.5a7 7 0 0 1 14 0c0 3.5-2.5 7.5-7 12z"></path><circle cx="12" cy="9.5" r="2.6"></circle></svg>La Penne-sur-Huveaune</div>
+        <a href="paysagiste-gemenos.html" class="ns-chip" style="text-decoration:none;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21.5C7.5 17 5 13 5 9.5a7 7 0 0 1 14 0c0 3.5-2.5 7.5-7 12z"></path><circle cx="12" cy="9.5" r="2.6"></circle></svg>Gémenos</a>
+        <a href="paysagiste-roquevaire.html" class="ns-chip" style="text-decoration:none;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21.5C7.5 17 5 13 5 9.5a7 7 0 0 1 14 0c0 3.5-2.5 7.5-7 12z"></path><circle cx="12" cy="9.5" r="2.6"></circle></svg>Roquevaire</a>
+        <a href="paysagiste-auriol.html" class="ns-chip" style="text-decoration:none;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21.5C7.5 17 5 13 5 9.5a7 7 0 0 1 14 0c0 3.5-2.5 7.5-7 12z"></path><circle cx="12" cy="9.5" r="2.6"></circle></svg>Auriol</a>
+        <a href="paysagiste-la-penne-sur-huveaune.html" class="ns-chip" style="text-decoration:none;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21.5C7.5 17 5 13 5 9.5a7 7 0 0 1 14 0c0 3.5-2.5 7.5-7 12z"></path><circle cx="12" cy="9.5" r="2.6"></circle></svg>La Penne-sur-Huveaune</a>
         <div class="ns-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21.5C7.5 17 5 13 5 9.5a7 7 0 0 1 14 0c0 3.5-2.5 7.5-7 12z"></path><circle cx="12" cy="9.5" r="2.6"></circle></svg>Cuges-les-Pins</div>
-        <div class="ns-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21.5C7.5 17 5 13 5 9.5a7 7 0 0 1 14 0c0 3.5-2.5 7.5-7 12z"></path><circle cx="12" cy="9.5" r="2.6"></circle></svg>Carnoux-en-Provence</div>
-        <div class="ns-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21.5C7.5 17 5 13 5 9.5a7 7 0 0 1 14 0c0 3.5-2.5 7.5-7 12z"></path><circle cx="12" cy="9.5" r="2.6"></circle></svg>Cassis</div>
+        <a href="paysagiste-carnoux.html" class="ns-chip" style="text-decoration:none;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21.5C7.5 17 5 13 5 9.5a7 7 0 0 1 14 0c0 3.5-2.5 7.5-7 12z"></path><circle cx="12" cy="9.5" r="2.6"></circle></svg>Carnoux-en-Provence</a>
+        <a href="paysagiste-cassis.html" class="ns-chip" style="text-decoration:none;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21.5C7.5 17 5 13 5 9.5a7 7 0 0 1 14 0c0 3.5-2.5 7.5-7 12z"></path><circle cx="12" cy="9.5" r="2.6"></circle></svg>Cassis</a>
       </div>
       <a href="zone-intervention.html" class="ns-link">VÉRIFIER MA COMMUNE<svg class="arrow-stroke" viewBox="0 0 40 8"><path d="M0 4 H38 M32.5 0.8 L38 4 L32.5 7.2" fill="none" stroke="currentColor" stroke-width="1"></path></svg></a>
     </div>
@@ -443,10 +456,10 @@
 
   <div style="position: absolute; left: 484px; top: 82px; display: flex; align-items: center; gap: 38px; font-size: 12.5px; font-weight: 400; letter-spacing: 0.07em; line-height: 1;">
     <a href="#" style="color: #e3ded1;">ACCUEIL</a>
-    <a href="#" style="color: #d9d4c7;">NOS SERVICES</a>
-    <a href="#" style="color: #d9d4c7;">RÉALISATIONS</a>
-    <a href="#" style="color: #d9d4c7;">À PROPOS</a>
-    <a href="#" style="color: #d9d4c7;">CONTACT</a>
+    <div class="nav-dd"><a href="#" style="color: #d9d4c7;">NOS SERVICES</a><div class="nav-dd-panel"><a href="creation-amenagement-jardin-aubagne.html">Création de jardin méditerranéen</a><a href="entretien-jardin-credit-impot-aubagne.html">Entretien & crédit d’impôt</a><a href="debroussaillement-old-aubagne.html">Débroussaillement réglementaire (OLD)</a><a href="engazonnement-gazon-mediterraneen-aubagne.html">Engazonnement</a><a href="arrosage-automatique-goutte-a-goutte-aubagne.html">Arrosage automatique</a><a href="muret-restanque-escalier-aubagne.html">Maçonnerie & restanques</a><a href="pavage-allee-terrasse-aubagne.html">Pavage & allées</a><a href="pose-cloture-aubagne.html">Pose de clôtures</a><a href="jardin-mediterraneen.html">Guide : le jardin méditerranéen</a></div></div>
+    <div class="nav-dd"><a href="#" style="color: #d9d4c7;">SECTEURS</a><div class="nav-dd-panel"><a href="zone-intervention.html">Toutes nos zones d’intervention</a><a href="paysagiste-gemenos.html">Gémenos</a><a href="paysagiste-roquevaire.html">Roquevaire</a><a href="paysagiste-auriol.html">Auriol</a><a href="paysagiste-la-penne-sur-huveaune.html">La Penne-sur-Huveaune</a><a href="paysagiste-carnoux.html">Carnoux-en-Provence</a><a href="paysagiste-cassis.html">Cassis</a></div></div>
+    <a href="realisations.html" style="color: #d9d4c7;">RÉALISATIONS</a>
+    <a href="contact.html" style="color: #d9d4c7;">CONTACT</a>
   </div>
 
   <a href="#" style="position: absolute; left: 1188px; top: 69px; width: 192px; height: 42px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(246,241,230,0.55); font-size: 12.5px; font-weight: 400; letter-spacing: 0.15em; color: #f6f1e6;" style-hover="background: rgba(246,241,230,0.12);">DEMANDE DE DEVIS</a>
@@ -618,6 +631,34 @@
     </div>
   </section>
 
+  <details class="m-services-toggle">
+    <summary>Nos services</summary>
+    <div class="m-services-toggle-panel">
+      <a href="creation-amenagement-jardin-aubagne.html">Création de jardin méditerranéen</a>
+      <a href="entretien-jardin-credit-impot-aubagne.html">Entretien & crédit d’impôt</a>
+      <a href="debroussaillement-old-aubagne.html">Débroussaillement réglementaire (OLD)</a>
+      <a href="engazonnement-gazon-mediterraneen-aubagne.html">Engazonnement</a>
+      <a href="arrosage-automatique-goutte-a-goutte-aubagne.html">Arrosage automatique</a>
+      <a href="muret-restanque-escalier-aubagne.html">Maçonnerie & restanques</a>
+      <a href="pavage-allee-terrasse-aubagne.html">Pavage & allées</a>
+      <a href="pose-cloture-aubagne.html">Pose de clôtures</a>
+      <a href="jardin-mediterraneen.html">Guide : le jardin méditerranéen</a>
+    </div>
+  </details>
+
+  <details class="m-services-toggle">
+    <summary>Secteurs</summary>
+    <div class="m-services-toggle-panel">
+      <a href="zone-intervention.html">Toutes nos zones d’intervention</a>
+      <a href="paysagiste-gemenos.html">Gémenos</a>
+      <a href="paysagiste-roquevaire.html">Roquevaire</a>
+      <a href="paysagiste-auriol.html">Auriol</a>
+      <a href="paysagiste-la-penne-sur-huveaune.html">La Penne-sur-Huveaune</a>
+      <a href="paysagiste-carnoux.html">Carnoux-en-Provence</a>
+      <a href="paysagiste-cassis.html">Cassis</a>
+    </div>
+  </details>
+
   <section class="m-services" id="services-mobile">
     <div class="m-service-collage" id="realisations-mobile" aria-hidden="true">
       <img class="p" src="assets/realisation-villa-piscine-creation.jpg" alt="" loading="lazy" />
@@ -694,7 +735,7 @@
         <h3 class="m-ns-h3">Entretenir : votre jardin suivi toute l'année</h3>
         <p class="m-ns-body">Plutôt qu'une intervention isolée quand tout a déjà poussé, un entretien régulier coûte moins cher et garde un extérieur net en permanence : tonte, taille de haies, désherbage, débroussaillage, ramassage. Nous proposons des formules à l'année, adaptées à la taille de votre jardin.</p>
         <p class="m-ns-body"><strong>Jusqu'à 50 % de crédit d'impôt.</strong> Les petits travaux d'entretien de jardin réalisés à domicile ouvrent droit à un crédit d'impôt égal à 50 % des sommes payées, dans la limite de 5 000 € par an et par foyer fiscal. Trenca Paysage étant déclaré au titre des services à la personne, vous pouvez en bénéficier — y compris via l'avance immédiate.</p>
-        <p class="m-ns-note">Cet avantage concerne l'entretien courant, pas les travaux de création ou d'aménagement (allées, clôtures, arrosage automatique, plantations).</p>
+        <p class="m-ns-note">Cet avantage concerne l'entretien courant, pas les travaux de création ou d'aménagement (<a href="pavage-allee-terrasse-aubagne.html" style="color:#8a8368;font-weight:500;">allées</a>, <a href="pose-cloture-aubagne.html" style="color:#8a8368;font-weight:500;">clôtures</a>, <a href="arrosage-automatique-goutte-a-goutte-aubagne.html" style="color:#8a8368;font-weight:500;">arrosage automatique</a>, plantations).</p>
         <div class="m-ns-row-image"><img src="assets/realisation-gazon-cour.jpg" alt="Jardin entretenu, gazon net à Aubagne" loading="lazy"></div>
         <a href="entretien-jardin-credit-impot-aubagne.html" class="m-ns-link">Découvrir les formules d'entretien<svg viewBox="0 0 32 7"><path d="M0 3.5 H30 M26 0.6 L30 3.5 L26 6.4" fill="none" stroke="#6c6852" stroke-width="1"></path></svg></a>
       </div>
@@ -702,7 +743,7 @@
       <div class="m-ns-row">
         <span class="m-ns-num">03</span>
         <h3 class="m-ns-h3">Créer : le jardin méditerranéen, pensé pour consommer moins d'eau</h3>
-        <p class="m-ns-body">Un beau jardin, ici, n'est pas un jardin qui boit toute l'année. C'est un jardin adapté au climat : essences méditerranéennes, paillage, arrosage au goutte-à-goutte, sols travaillés pour retenir l'eau, restanques qui tiennent la pente. Du terrain nu à l'espace de vie fini, on conçoit et on réalise l'ensemble : terrasses, allées et pavages, murets et escaliers, engazonnement et plantations, bassins, arrosage automatique.</p>
+        <p class="m-ns-body">Un beau jardin, ici, n'est pas un jardin qui boit toute l'année. C'est un jardin adapté au climat : essences méditerranéennes, paillage, arrosage au goutte-à-goutte, sols travaillés pour retenir l'eau, restanques qui tiennent la pente. Du terrain nu à l'espace de vie fini, on conçoit et on réalise l'ensemble : terrasses, <a href="pavage-allee-terrasse-aubagne.html" style="color:#6d7740;font-weight:500;">allées et pavages</a>, <a href="muret-restanque-escalier-aubagne.html" style="color:#6d7740;font-weight:500;">murets et escaliers</a>, <a href="engazonnement-gazon-mediterraneen-aubagne.html" style="color:#6d7740;font-weight:500;">engazonnement</a> et plantations, bassins, <a href="arrosage-automatique-goutte-a-goutte-aubagne.html" style="color:#6d7740;font-weight:500;">arrosage automatique</a>.</p>
         <div class="m-ns-row-image"><img src="assets/jardin-sec-gravier-fleuri.jpg" alt="Jardin méditerranéen sec, gravier et lavandes" loading="lazy"></div>
         <a href="jardin-mediterraneen.html" class="m-ns-link">Découvrir le jardin méditerranéen<svg viewBox="0 0 32 7"><path d="M0 3.5 H30 M26 0.6 L30 3.5 L26 6.4" fill="none" stroke="#6c6852" stroke-width="1"></path></svg></a>
       </div>
@@ -742,13 +783,13 @@
       <p class="m-ns-body" style="margin-top: 14px;">Basés à Aubagne, nous intervenons dans tout l'Est marseillais : Gémenos, Roquevaire, Auriol, La Penne-sur-Huveaune, Cuges-les-Pins, Carnoux-en-Provence, Cassis et les communes voisines. Un doute sur votre secteur ? Demandez, on vous répond vite.</p>
       <div class="m-ns-chips">
         <div class="m-ns-chip is-hq"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21.5C7.5 17 5 13 5 9.5a7 7 0 0 1 14 0c0 3.5-2.5 7.5-7 12z"></path><circle cx="12" cy="9.5" r="2.6"></circle></svg>Aubagne (siège)</div>
-        <div class="m-ns-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21.5C7.5 17 5 13 5 9.5a7 7 0 0 1 14 0c0 3.5-2.5 7.5-7 12z"></path><circle cx="12" cy="9.5" r="2.6"></circle></svg>Gémenos</div>
-        <div class="m-ns-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21.5C7.5 17 5 13 5 9.5a7 7 0 0 1 14 0c0 3.5-2.5 7.5-7 12z"></path><circle cx="12" cy="9.5" r="2.6"></circle></svg>Roquevaire</div>
-        <div class="m-ns-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21.5C7.5 17 5 13 5 9.5a7 7 0 0 1 14 0c0 3.5-2.5 7.5-7 12z"></path><circle cx="12" cy="9.5" r="2.6"></circle></svg>Auriol</div>
-        <div class="m-ns-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21.5C7.5 17 5 13 5 9.5a7 7 0 0 1 14 0c0 3.5-2.5 7.5-7 12z"></path><circle cx="12" cy="9.5" r="2.6"></circle></svg>La Penne-sur-Huveaune</div>
+        <a href="paysagiste-gemenos.html" class="m-ns-chip" style="text-decoration:none;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21.5C7.5 17 5 13 5 9.5a7 7 0 0 1 14 0c0 3.5-2.5 7.5-7 12z"></path><circle cx="12" cy="9.5" r="2.6"></circle></svg>Gémenos</a>
+        <a href="paysagiste-roquevaire.html" class="m-ns-chip" style="text-decoration:none;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21.5C7.5 17 5 13 5 9.5a7 7 0 0 1 14 0c0 3.5-2.5 7.5-7 12z"></path><circle cx="12" cy="9.5" r="2.6"></circle></svg>Roquevaire</a>
+        <a href="paysagiste-auriol.html" class="m-ns-chip" style="text-decoration:none;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21.5C7.5 17 5 13 5 9.5a7 7 0 0 1 14 0c0 3.5-2.5 7.5-7 12z"></path><circle cx="12" cy="9.5" r="2.6"></circle></svg>Auriol</a>
+        <a href="paysagiste-la-penne-sur-huveaune.html" class="m-ns-chip" style="text-decoration:none;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21.5C7.5 17 5 13 5 9.5a7 7 0 0 1 14 0c0 3.5-2.5 7.5-7 12z"></path><circle cx="12" cy="9.5" r="2.6"></circle></svg>La Penne-sur-Huveaune</a>
         <div class="m-ns-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21.5C7.5 17 5 13 5 9.5a7 7 0 0 1 14 0c0 3.5-2.5 7.5-7 12z"></path><circle cx="12" cy="9.5" r="2.6"></circle></svg>Cuges-les-Pins</div>
-        <div class="m-ns-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21.5C7.5 17 5 13 5 9.5a7 7 0 0 1 14 0c0 3.5-2.5 7.5-7 12z"></path><circle cx="12" cy="9.5" r="2.6"></circle></svg>Carnoux-en-Provence</div>
-        <div class="m-ns-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21.5C7.5 17 5 13 5 9.5a7 7 0 0 1 14 0c0 3.5-2.5 7.5-7 12z"></path><circle cx="12" cy="9.5" r="2.6"></circle></svg>Cassis</div>
+        <a href="paysagiste-carnoux.html" class="m-ns-chip" style="text-decoration:none;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21.5C7.5 17 5 13 5 9.5a7 7 0 0 1 14 0c0 3.5-2.5 7.5-7 12z"></path><circle cx="12" cy="9.5" r="2.6"></circle></svg>Carnoux-en-Provence</a>
+        <a href="paysagiste-cassis.html" class="m-ns-chip" style="text-decoration:none;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21.5C7.5 17 5 13 5 9.5a7 7 0 0 1 14 0c0 3.5-2.5 7.5-7 12z"></path><circle cx="12" cy="9.5" r="2.6"></circle></svg>Cassis</a>
       </div>
       <a href="zone-intervention.html" class="m-ns-link">Vérifier ma commune<svg viewBox="0 0 32 7"><path d="M0 3.5 H30 M26 0.6 L30 3.5 L26 6.4" fill="none" stroke="#6c6852" stroke-width="1"></path></svg></a>
     </div>
