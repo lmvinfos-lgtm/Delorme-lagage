@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&family=Allura&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { margin: 0; width: 100%; max-width: 100%; overflow-x: hidden; background: #e4ded5; }
+  body { min-width: 320px; }
+  img, video, svg { max-width: 100%; }
+  a { color: #6d7740; text-decoration: none; }
+  a:hover { color: #a4b359; }
+
+  /* Desktop artboard: same original design, fluidly fitted without horizontal overflow. */
+  .desktop-viewport { position: relative; width: 100%; height: 2160px; overflow: hidden; background: #e4ded5; }
+  .desktop-stage { position: absolute !important; top: 0; left: 0; margin: 0 !important; transform-origin: top left; }
+  .mobile-site { display: none; }
+
+  @media (max-width: 1100px) {
+    .desktop-viewport { display: none; }
+    .mobile-site { display: block; width: 100%; overflow: hidden; background: #eee7de; color: #2b2921; font-family: Poppins, 'Century Gothic', sans-serif; -webkit-font-smoothing: antialiased; }
+    .m-shell { width: min(100% - 34px, 720px); margin-inline: auto; }
+
+    /* HERO — keeps the desktop visual language: video, dark left gradient and diagonal cut. */
+    .m-hero { position: relative; min-height: clamp(620px, 172vw, 780px); overflow: hidden; color: #f8f2e9; background: #0b0d08; }
+    .m-hero video { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: 58% center; filter: brightness(.78) saturate(.92); z-index: 0; }
+    .m-hero::before { content: ''; position: absolute; inset: 0; background: linear-gradient(96deg, rgba(9,11,7,.96) 0%, rgba(9,11,7,.84) 31%, rgba(9,11,7,.48) 58%, rgba(9,11,7,.08) 100%); z-index: 1; pointer-events: none; }
+    .m-hero::after { content: ''; position: absolute; left: -7%; right: -7%; bottom: -49px; height: 118px; background: #eee7de; transform: rotate(-5.7deg); transform-origin: 50% 50%; z-index: 2; pointer-events: none; }
+    .m-nav { position: relative; z-index: 3; display: flex; justify-content: space-between; align-items: flex-start; padding-top: 24px; }
+    .m-logo { display: inline-flex; flex-direction: column; line-height: 1; color: #f8f3ea; }
+    .m-logo strong { font-weight: 300; font-size: clamp(21px, 6.3vw, 28px); letter-spacing: .17em; }
+    .m-logo span { margin-top: 7px; font-size: 7px; font-weight: 300; letter-spacing: .69em; color: #cfc8b8; }
+    .m-quote { min-width: 92px; height: 38px; padding: 0 13px; border: 1px solid rgba(244,239,226,.48); display: inline-flex; align-items: center; justify-content: center; color: #eee8dc; font-size: 8px; font-weight: 400; letter-spacing: .13em; text-transform: uppercase; }
+    .m-hero-copy { position: relative; z-index: 3; width: min(88%, 520px); padding-top: clamp(105px, 28vw, 145px); padding-bottom: 145px; }
+    .m-kicker { margin: 0 0 10px; font-size: 12px; font-weight: 300; letter-spacing: .24em; text-transform: uppercase; color: #ece7dc; }
+    .m-title { margin: 0; font-weight: 300; font-size: clamp(49px, 15.4vw, 86px); letter-spacing: -.018em; line-height: .88; white-space: nowrap; }
+    .m-script { display: block; margin-top: -7px; margin-left: 2px; font-family: Allura, cursive; font-size: clamp(78px, 24vw, 132px); line-height: .72; color: #a4b359; font-weight: 400; }
+    .m-location { margin: 31px 0 0; font-size: 11px; font-weight: 300; letter-spacing: .19em; text-transform: uppercase; color: #e7e1d3; }
+    .m-intro { width: min(100%, 320px); margin: 23px 0 0; font-size: 13px; font-weight: 300; line-height: 1.65; color: rgba(243,239,230,.88); }
+    .m-btn { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 0 20px; margin-top: 26px; background: #5f6626; color: #f4efe2; font-size: 9px; font-weight: 500; letter-spacing: .13em; text-transform: uppercase; }
+    .m-btn::after { content: '⟶'; margin-left: 14px; font-size: 16px; font-weight: 300; }
+
+    /* SERVICES — same desktop collage on the left and paper panel on the right. */
+    .m-services { position: relative; min-height: 1135px; padding: 10px 0 70px; background: #eee7de; overflow: hidden; }
+    .m-service-collage { position: absolute; left: 0; top: 0; width: 100%; height: 560px; z-index: 0; pointer-events: none; }
+    .m-service-collage img { position: absolute; object-fit: cover; box-shadow: 0 10px 24px rgba(25,22,16,.08); }
+    .m-service-collage .p { left: 0; top: 0; width: 58%; height: 244px; clip-path: polygon(0 0,100% 0,88% 100%,0 100%); object-position: 40% 55%; }
+    .m-service-collage .b { left: 0; top: 262px; width: 48%; height: 282px; clip-path: polygon(0 0,100% 6%,88% 100%,0 95%); object-position: 32% 54%; }
+    .m-service-collage .c { left: 18%; top: 286px; width: 46%; height: 244px; clip-path: polygon(12% 0,100% 4%,88% 100%,0 95%); object-position: 68% 48%; }
+    .m-services-panel { position: relative; z-index: 2; width: calc(100% - 16px); margin-left: 16px; margin-top: 112px; min-height: 790px; padding: 58px 20px 48px 118px; background: #eee7de; clip-path: polygon(18% 0,100% 0,100% 96%,0 100%,8% 48%); }
+    .m-section-head { margin-left: 0; }
+    .m-eyebrow { margin: 0 0 7px; color: #8a8767; font-size: 8px; font-weight: 500; letter-spacing: .16em; text-transform: uppercase; }
+    .m-heading { margin: 0; font-size: clamp(27px, 8.3vw, 43px); font-weight: 300; line-height: .93; color: #33301e; letter-spacing: -.015em; }
+    .m-heading-script { display: block; margin-top: -5px; font-family: Allura, cursive; font-size: clamp(51px, 15vw, 78px); line-height: .77; color: #6d7740; font-weight: 400; white-space: nowrap; }
+    .m-service-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); column-gap: 15px; row-gap: 0; margin: 34px 0 0; }
+    .m-service { min-width: 0; min-height: 103px; padding: 19px 3px 18px 0; border-bottom: 1px solid #d7d0c4; display: flex; align-items: flex-start; gap: 10px; }
+    .m-service svg { width: 26px; height: 26px; flex: none; color: #4a4736; margin-top: 1px; }
+    .m-service b { font-size: clamp(7px, 2.1vw, 10px); line-height: 1.62; letter-spacing: .04em; font-weight: 500; color: #2b2921; }
+    .m-text-link { display: inline-flex; align-items: center; gap: 9px; margin: 26px 0 0; font-size: 8px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: #2b2921; }
+    .m-text-link::after { content: '⟶'; color: #6c6852; font-size: 17px; font-weight: 300; }
+
+    /* ENGAGEMENT — dark diagonal panel over the pond image, like desktop. */
+    .m-engagement { position: relative; min-height: 680px; margin-top: -18px; background: #171b0b; color: #f4f1e8; overflow: hidden; }
+    .m-engagement-image { position: absolute; z-index: 0; right: -6%; top: 0; width: 52%; height: 100%; max-width: none; object-fit: cover; object-position: 70% center; filter: brightness(.67) saturate(.85); clip-path: polygon(18% 0,100% 4%,100% 100%,0 100%); }
+    .m-engagement-card { position: absolute; z-index: 2; left: 0; top: 0; width: 88%; height: 100%; padding: 72px 88px 48px 30px; background: linear-gradient(120deg,#22270f 0%,#171b0b 70%); clip-path: polygon(0 0,82% 0,100% 100%,0 95%); }
+    .m-engagement .m-eyebrow { color: #899457; }
+    .m-engagement .m-heading { max-width: 255px; color: #f4f1e8; font-size: clamp(22px, 6.6vw, 34px); line-height: 1.03; }
+    .m-engagement .m-heading-script { color: #a4b359; font-size: clamp(44px, 12.6vw, 62px); margin-top: 2px; }
+    .m-engagement-copy { max-width: 255px; width: auto; margin: 24px 0 0; color: rgba(238,236,224,.8); font-size: 11px; font-weight: 300; line-height: 1.7; }
+    .m-values { display: flex; flex-wrap: wrap; gap: 13px 14px; margin-top: 27px; max-width: 270px; }
+    .m-value { min-width: 0; display: flex; flex-direction: column; align-items: center; gap: 8px; font-size: 6.4px; letter-spacing: .08em; color: #e8e4d5; white-space: nowrap; }
+    .m-value svg { width: 23px; height: 23px; color: #e2dfcc; }
+    .m-engagement .m-text-link { margin-left: 0; margin-top: 27px; color: #eee9da; }
+    .m-engagement .m-text-link::after { color: #d8d4c2; }
+
+    /* FOOTER */
+    .m-footer { position: relative; background: #ece5da; padding: 40px 0 34px; color: #8a8175; }
+    .m-footer-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 23px 18px; align-items: center; }
+    .m-footer .m-logo { color: #3a3529; }
+    .m-footer .m-logo span { color: #8a8175; }
+    .m-contact { font-size: 9px; line-height: 1.7; }
+    .m-contact a { display: block; margin-top: 5px; color: #8a8175; }
+    .m-footer-cta { grid-column: 1 / -1; width: 100%; margin-top: 0; background: #1d220f; }
+
+
+    @media (max-width: 699px) {
+      .m-hero-copy { width: min(92%, 520px); }
+      .m-services { min-height: 1160px; }
+      .m-services-panel { padding-top: 60px; }
+      .m-service b { font-size: 10px; line-height: 1.55; }
+      .m-engagement-card { padding-right: 94px; }
+    }
+
+    @media (min-width: 700px) {
+      .m-shell { width: min(100% - 64px, 900px); }
+      .m-hero { min-height: 720px; }
+      .m-hero-copy { padding-top: 145px; }
+      .m-services { min-height: 940px; }
+      .m-services-panel { width: 71%; margin-left: 29%; margin-top: 84px; padding-left: 70px; padding-right: 48px; }
+      .m-service-collage { width: 56%; height: 760px; }
+      .m-service-grid { grid-template-columns: repeat(3,minmax(0,1fr)); }
+      .m-service b { font-size: 10px; }
+      .m-engagement-card { width: 66%; padding-left: 60px; }
+      .m-engagement-image { width: 61%; }
+      .m-values { gap: 25px; }
+      .m-value { font-size: 7.5px; }
+    }
+
+    @media (max-width: 370px) {
+      .m-shell { width: min(100% - 26px, 720px); }
+      .m-services-panel { width: calc(100% - 12px); margin-left: 12px; padding-left: 90px; padding-right: 16px; }
+      .m-service-grid { column-gap: 10px; margin-left: 0; }
+      .m-service svg { width: 23px; height: 23px; }
+      .m-engagement-card { width: 84%; padding-left: 24px; padding-right: 68px; }
+      .m-values { gap: 9px; }
+    }
+  }
+</style>
+</helmet>
+<div class="desktop-viewport" aria-hidden="false">
+<div class="desktop-stage" data-screen-label="Accueil" style="position: relative; width: 1440px; height: 2160px; margin: 0 auto; overflow: hidden; background: #eee7de; font-family: Poppins, 'Century Gothic', sans-serif; -webkit-font-smoothing: antialiased;">
+
+  <div style="position: absolute; inset: 0; opacity: 0.5; mix-blend-mode: multiply; background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3'/%3E%3C/filter%3E%3Crect width='260' height='260' filter='url(%23n)' opacity='0.16'/%3E%3C/svg%3E&quot;);"></div>
+
+  <div style="position: absolute; left: 0; top: 0; width: 1440px; height: 940px; overflow: hidden; clip-path: polygon(0px 0px, 1440px 0px, 1440px 796px, 696px 937px, 745px 760px, 0px 924px); background: #0b0d08;">
+    <video src="assets/hero.mp4" autoplay="autoplay" muted="muted" defaultmuted="defaultmuted" volume="0" loop="loop" playsinline="playsinline" preload="auto" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: {{ videoPos }}; filter: brightness(0.82) saturate(0.92);"></video>
+    <div style="position: absolute; inset: 0; background: linear-gradient(96deg, rgba(9,11,7,0.94) 0%, rgba(9,11,7,0.82) 22%, rgba(9,11,7,0.5) 42%, rgba(9,11,7,0.16) 62%, rgba(9,11,7,0) 82%); opacity: {{ heroOverlay }};"></div>
+    <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(8,10,6,0.62) 0%, rgba(8,10,6,0.12) 16%, rgba(8,10,6,0) 30%, rgba(8,10,6,0.28) 100%);"></div>
+  </div>
+
+  <div style="position: absolute; left: 0px; top: 759px; width: 746px; height: 548px; clip-path: polygon(0px 165px, 746px 0px, 625px 433px, 0px 548px); background-image: url('assets/patio.jpg'); background-size: cover; background-position: 42% 62%;"></div>
+
+  <div style="position: absolute; left: 0px; top: 1253px; width: 293px; height: 336px; clip-path: polygon(0px 57px, 293px 3px, 213px 317px, 0px 336px); background-image: url('assets/bassin.jpg'); background-size: cover; background-position: 30% 46%;"></div>
+
+  <div style="position: absolute; left: 212px; top: 1191px; width: 413px; height: 379px; clip-path: polygon(80px 65px, 413px 3px, 314px 353px, 0px 379px); background-image: url('assets/cloture.jpg'); background-size: cover; background-position: 52% 42%;"></div>
+
+  <sc-if value="{{ dapple }}" hint-placeholder-val="{{ true }}">
+    <div style="position: absolute; left: 696px; top: 796px; width: 744px; height: 520px; clip-path: polygon(0px 141px, 744px 0px, 744px 520px, 0px 520px); pointer-events: none;">
+      <div style="position: absolute; left: 300px; top: 18px; width: 96px; height: 34px; border-radius: 50%; background: rgba(46,42,28,0.16); filter: blur(7px); transform: rotate(-24deg);"></div>
+      <div style="position: absolute; left: 372px; top: 0px; width: 78px; height: 28px; border-radius: 50%; background: rgba(46,42,28,0.13); filter: blur(7px); transform: rotate(14deg);"></div>
+      <div style="position: absolute; left: 430px; top: 40px; width: 104px; height: 30px; border-radius: 50%; background: rgba(46,42,28,0.15); filter: blur(8px); transform: rotate(-8deg);"></div>
+      <div style="position: absolute; left: 352px; top: 62px; width: 70px; height: 26px; border-radius: 50%; background: rgba(46,42,28,0.12); filter: blur(7px); transform: rotate(38deg);"></div>
+      <div style="position: absolute; left: 494px; top: 6px; width: 86px; height: 26px; border-radius: 50%; background: rgba(46,42,28,0.12); filter: blur(7px); transform: rotate(22deg);"></div>
+      <div style="position: absolute; left: 520px; top: 58px; width: 118px; height: 32px; border-radius: 50%; background: rgba(46,42,28,0.14); filter: blur(9px); transform: rotate(-14deg);"></div>
+      <div style="position: absolute; left: 596px; top: 22px; width: 92px; height: 28px; border-radius: 50%; background: rgba(46,42,28,0.11); filter: blur(8px); transform: rotate(30deg);"></div>
+      <div style="position: absolute; left: 452px; top: 96px; width: 82px; height: 24px; border-radius: 50%; background: rgba(46,42,28,0.1); filter: blur(8px); transform: rotate(-32deg);"></div>
+      <div style="position: absolute; left: 556px; top: 112px; width: 96px; height: 26px; border-radius: 50%; background: rgba(46,42,28,0.1); filter: blur(9px); transform: rotate(16deg);"></div>
+      <div style="position: absolute; left: 640px; top: 74px; width: 78px; height: 24px; border-radius: 50%; background: rgba(46,42,28,0.1); filter: blur(8px); transform: rotate(-20deg);"></div>
+      <div style="position: absolute; left: 300px; top: 104px; width: 64px; height: 22px; border-radius: 50%; background: rgba(46,42,28,0.08); filter: blur(9px); transform: rotate(28deg);"></div>
+      <div style="position: absolute; left: 388px; top: 140px; width: 88px; height: 24px; border-radius: 50%; background: rgba(46,42,28,0.07); filter: blur(10px); transform: rotate(-10deg);"></div>
+      <div style="position: absolute; left: 500px; top: 168px; width: 74px; height: 22px; border-radius: 50%; background: rgba(46,42,28,0.06); filter: blur(10px); transform: rotate(20deg);"></div>
+      <div style="position: absolute; left: 632px; top: 148px; width: 84px; height: 22px; border-radius: 50%; background: rgba(46,42,28,0.06); filter: blur(10px); transform: rotate(-26deg);"></div>
+      <div style="position: absolute; left: 330px; top: 30px; width: 300px; height: 3px; border-radius: 2px; background: rgba(46,42,28,0.1); filter: blur(4px); transform: rotate(-11deg);"></div>
+      <div style="position: absolute; left: 430px; top: 110px; width: 250px; height: 3px; border-radius: 2px; background: rgba(46,42,28,0.07); filter: blur(5px); transform: rotate(-14deg);"></div>
+    </div>
+  </sc-if>
+
+  <div style="position: absolute; left: 352px; top: 1420px; width: 1088px; height: 623px; clip-path: polygon(0px 156px, 1088px 0px, 1088px 623px, 0px 586px); background-image: url('assets/bassin.jpg'); background-size: cover; background-position: 62% 72%; filter: {{ s3Filter }};"></div>
+
+  <div style="position: absolute; left: 1305px; top: 1420px; width: 135px; height: 606px; clip-path: polygon(135px 0px, 42px 71px, 17px 253px, 0px 345px, 28px 437px, 66px 528px, 116px 605px, 135px 605px); background: linear-gradient(115deg, #23262a 0%, #14161a 40%, #1c1f22 70%, #0f1114 100%);"></div>
+
+  <div style="position: absolute; left: 0px; top: 1545px; width: 782px; height: 476px; clip-path: path('M0,49 L556,4 C592,-1 604,12 612,40 L782,476 L0,452 Z'); background: #4a5326; opacity: 0.9;"></div>
+  <div style="position: absolute; left: 0px; top: 1545px; width: 776px; height: 476px; clip-path: path('M0,49 L552,4 C588,-1 600,12 608,38 L774,474 L0,450 Z'); background: linear-gradient(120deg, #22270f 0%, #1b1f0e 46%, #171b0b 100%);"></div>
+
+  <div style="position: absolute; left: 0px; top: 1996px; width: 1440px; height: 164px; clip-path: polygon(0px 0px, 1440px 46px, 1440px 164px, 0px 164px); background: #ece5da;"></div>
+
+  <div style="position: absolute; left: -30px; top: 2030px; width: 300px; height: 150px; color: #8a8770; opacity: 0.16; pointer-events: none;">
+    <svg viewBox="0 0 60 22" style="width: 300px; height: 110px; transform: rotate(28deg); transform-origin: 10% 40%;">
+      <path d="M2 20 C 16 16 30 11 58 3" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="round"></path>
+      <ellipse cx="10" cy="15" rx="5.4" ry="1.9" transform="rotate(-38 10 15)" fill="none" stroke="currentColor" stroke-width="0.45"></ellipse>
+      <ellipse cx="15" cy="18" rx="5" ry="1.8" transform="rotate(28 15 18)" fill="none" stroke="currentColor" stroke-width="0.45"></ellipse>
+      <ellipse cx="21" cy="11.5" rx="5.6" ry="1.9" transform="rotate(-34 21 11.5)" fill="none" stroke="currentColor" stroke-width="0.45"></ellipse>
+      <ellipse cx="26" cy="15" rx="5" ry="1.8" transform="rotate(30 26 15)" fill="none" stroke="currentColor" stroke-width="0.45"></ellipse>
+      <ellipse cx="33" cy="8" rx="5.6" ry="1.9" transform="rotate(-32 33 8)" fill="none" stroke="currentColor" stroke-width="0.45"></ellipse>
+      <ellipse cx="38" cy="11.5" rx="5" ry="1.8" transform="rotate(32 38 11.5)" fill="none" stroke="currentColor" stroke-width="0.45"></ellipse>
+      <ellipse cx="45" cy="5" rx="5.4" ry="1.9" transform="rotate(-30 45 5)" fill="none" stroke="currentColor" stroke-width="0.45"></ellipse>
+      <ellipse cx="50" cy="8.5" rx="4.8" ry="1.8" transform="rotate(34 50 8.5)" fill="none" stroke="currentColor" stroke-width="0.45"></ellipse>
+    </svg>
+  </div>
+
+  <div style="position: absolute; left: 62px; top: 28px; width: 200px; display: flex; flex-direction: column; align-items: center;">
+    <svg viewBox="0 0 60 22" style="width: 54px; height: 20px; color: #b3aa78;">
+      <path d="M2 20 C 16 16 30 11 58 3" fill="none" stroke="currentColor" stroke-width="0.9" stroke-linecap="round"></path>
+      <ellipse cx="10" cy="15" rx="5.4" ry="1.9" transform="rotate(-38 10 15)" fill="none" stroke="currentColor" stroke-width="0.8"></ellipse>
+      <ellipse cx="15" cy="18" rx="5" ry="1.8" transform="rotate(28 15 18)" fill="none" stroke="currentColor" stroke-width="0.8"></ellipse>
+      <ellipse cx="21" cy="11.5" rx="5.6" ry="1.9" transform="rotate(-34 21 11.5)" fill="none" stroke="currentColor" stroke-width="0.8"></ellipse>
+      <ellipse cx="26" cy="15" rx="5" ry="1.8" transform="rotate(30 26 15)" fill="none" stroke="currentColor" stroke-width="0.8"></ellipse>
+      <ellipse cx="33" cy="8" rx="5.6" ry="1.9" transform="rotate(-32 33 8)" fill="none" stroke="currentColor" stroke-width="0.8"></ellipse>
+      <ellipse cx="38" cy="11.5" rx="5" ry="1.8" transform="rotate(32 38 11.5)" fill="none" stroke="currentColor" stroke-width="0.8"></ellipse>
+      <ellipse cx="45" cy="5" rx="5.4" ry="1.9" transform="rotate(-30 45 5)" fill="none" stroke="currentColor" stroke-width="0.8"></ellipse>
+      <ellipse cx="50" cy="8.5" rx="4.8" ry="1.8" transform="rotate(34 50 8.5)" fill="none" stroke="currentColor" stroke-width="0.8"></ellipse>
+    </svg>
+    <div style="margin-top: 6px; font-size: 40px; font-weight: 300; letter-spacing: 0.14em; line-height: 1; color: #f8f3ea; margin-right: -0.14em;">TRENCA</div>
+    <div style="margin-top: 14px; font-size: 14px; font-weight: 300; letter-spacing: 0.75em; line-height: 1; color: #cfc8b8; margin-right: -0.75em;">PAYSAGE</div>
+  </div>
+
+  <div style="position: absolute; left: 484px; top: 82px; display: flex; align-items: center; gap: 38px; font-size: 12.5px; font-weight: 400; letter-spacing: 0.07em; line-height: 1;">
+    <a href="#" style="color: #e3ded1;">ACCUEIL</a>
+    <a href="#" style="color: #d9d4c7;">NOS SERVICES</a>
+    <a href="#" style="color: #d9d4c7;">RÉALISATIONS</a>
+    <a href="#" style="color: #d9d4c7;">À PROPOS</a>
+    <a href="#" style="color: #d9d4c7;">CONTACT</a>
+  </div>
+
+  <a href="#" style="position: absolute; left: 1188px; top: 69px; width: 192px; height: 42px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(246,241,230,0.55); font-size: 12.5px; font-weight: 400; letter-spacing: 0.15em; color: #f6f1e6;" style-hover="background: rgba(246,241,230,0.12);">DEMANDE DE DEVIS</a>
+
+  <div style="position: absolute; left: 105px; top: 278px; font-size: 24px; font-weight: 300; letter-spacing: 0.233em; line-height: 1; color: #ece7dc;">CRÉATEURS DE</div>
+  <div style="position: absolute; left: 106px; top: 308px; font-size: 111px; font-weight: 300; letter-spacing: 0.008em; line-height: 1; color: #f8f2e9;">PAYSAGES</div>
+  <div style="position: absolute; left: 111px; top: 361px; font-family: Allura, cursive; font-size: 173px; line-height: 1; color: #a4b359;">vivants</div>
+  <div style="position: absolute; left: 105px; top: 515px; font-size: 22.5px; font-weight: 300; letter-spacing: 0.172em; line-height: 1; color: #e7e1d3;">À AUBAGNE ET ALENTOURS</div>
+  <div style="position: absolute; left: 101px; top: 580px; width: 340px; font-size: 16.9px; font-weight: 300; line-height: 25.3px; color: rgba(243,239,230,0.87); text-wrap: pretty;">Trenca Paysage conçoit et réalise<br />des espaces extérieurs uniques,<br />harmonieusement intégrés à<br />leur environnement.</div>
+
+  <a href="#" style="position: absolute; left: 103px; top: 712px; width: 302px; height: 46px; display: flex; align-items: center; justify-content: center; background: #5f6626; font-size: 13.4px; font-weight: 400; letter-spacing: 0.14em; color: #f4efe2;" style-hover="background: #6d7530;">DÉCOUVRIR NOS RÉALISATIONS</a>
+  <svg viewBox="0 0 46 8" style="position: absolute; left: 426px; top: 730px; width: 46px; height: 8px; color: #ede8db;">
+    <path d="M0 4 H44 M38.5 0.8 L44 4 L38.5 7.2" fill="none" stroke="currentColor" stroke-width="1"></path>
+  </svg>
+
+  <div style="position: absolute; left: 755px; top: 992px; font-size: 15px; font-weight: 400; letter-spacing: 0.106em; line-height: 1; color: #8a8767;">NOTRE SAVOIR-FAIRE</div>
+  <div style="position: absolute; left: 757px; top: 1022px; font-size: 47px; font-weight: 300; letter-spacing: 0em; line-height: 1; color: #33301e;">L’ART DU PAYSAGE</div>
+  <div style="position: absolute; left: 754px; top: 1046px; font-family: Allura, cursive; font-size: 102px; line-height: 1; color: #6d7740;">sur mesure</div>
+
+  <div style="position: absolute; left: 755px; top: 1191px; display: grid; grid-template-columns: 200px 197px 200px; row-gap: 79px;">
+    <div style="display: flex; align-items: flex-start; gap: 20px;">
+      <svg viewBox="0 0 24 24" style="width: 33px; height: 33px; flex: none; color: #4a4736; margin-top: 1px;">
+        <path d="M3.5 20.5 C 3.5 10.5 9.5 4 20 3.5 C 20 14 13.5 20.5 3.5 20.5 Z" fill="none" stroke="currentColor" stroke-width="1.1"></path>
+        <path d="M4.5 20 L 17 7.5" fill="none" stroke="currentColor" stroke-width="1.1"></path>
+        <path d="M11 11.5 L 8 8 M14.5 15 L 11.5 18.5" fill="none" stroke="currentColor" stroke-width="1.1"></path>
+      </svg>
+      <div style="font-size: 13.4px; font-weight: 500; letter-spacing: 0.06em; line-height: 27px; color: #2b2921;">CRÉATION<br />DE JARDINS</div>
+    </div>
+    <div style="display: flex; align-items: flex-start; gap: 20px;">
+      <svg viewBox="0 0 24 24" style="width: 33px; height: 33px; flex: none; color: #4a4736; margin-top: 1px;">
+        <path d="M2 7 H22 M2 4.5 H22 M4.5 21 V7 M19.5 21 V7 M7.5 7 V21 M16.5 7 V21" fill="none" stroke="currentColor" stroke-width="1.1"></path>
+        <path d="M7.5 12 H16.5 M7.5 16.5 H16.5" fill="none" stroke="currentColor" stroke-width="0.9"></path>
+      </svg>
+      <div style="font-size: 13.4px; font-weight: 500; letter-spacing: 0.06em; line-height: 27px; color: #2b2921;">AMÉNAGEMENTS<br />EXTÉRIEURS</div>
+    </div>
+    <div style="display: flex; align-items: flex-start; gap: 18px;">
+      <svg viewBox="0 0 24 24" style="width: 33px; height: 33px; flex: none; color: #4a4736; margin-top: 3px;">
+        <path d="M1.5 7 q3 -3.2 6 0 t6 0 t6 0 M1.5 12 q3 -3.2 6 0 t6 0 t6 0 M1.5 17 q3 -3.2 6 0 t6 0 t6 0" fill="none" stroke="currentColor" stroke-width="1.1"></path>
+      </svg>
+      <div style="font-size: 13.4px; font-weight: 500; letter-spacing: 0.06em; line-height: 27px; color: #2b2921;">BASSINS &amp; POINTS<br />D’EAU</div>
+    </div>
+    <div style="display: flex; align-items: flex-start; gap: 20px;">
+      <svg viewBox="0 0 24 24" style="width: 33px; height: 33px; flex: none; color: #4a4736; margin-top: 1px;">
+        <path d="M4 21 V7 q0 -2 2 -2 t2 2 V21 Z M10 21 V7 q0 -2 2 -2 t2 2 V21 Z M16 21 V7 q0 -2 2 -2 t2 2 V21 Z" fill="none" stroke="currentColor" stroke-width="1.1"></path>
+        <path d="M2 10 H22 M2 15.5 H22" fill="none" stroke="currentColor" stroke-width="1.1"></path>
+      </svg>
+      <div style="font-size: 13.4px; font-weight: 500; letter-spacing: 0.06em; line-height: 27px; color: #2b2921;">CLÔTURES &amp;<br />SÉPARATIONS</div>
+    </div>
+    <div style="display: flex; align-items: flex-start; gap: 24px;">
+      <svg viewBox="0 0 24 24" style="width: 26px; height: 33px; flex: none; color: #4a4736; margin-top: 1px;">
+        <path d="M12 2.5 C 12 2.5 4.5 11 4.5 15.2 A 7.5 7.5 0 0 0 19.5 15.2 C 19.5 11 12 2.5 12 2.5 Z" fill="none" stroke="currentColor" stroke-width="1.1"></path>
+        <path d="M9 15.5 a3 3 0 0 0 3 3" fill="none" stroke="currentColor" stroke-width="0.9"></path>
+      </svg>
+      <div style="font-size: 13.4px; font-weight: 500; letter-spacing: 0.06em; line-height: 27px; color: #2b2921;">ARROSAGE<br />AUTOMATIQUE</div>
+    </div>
+    <div style="display: flex; align-items: flex-start; gap: 18px;">
+      <svg viewBox="0 0 24 24" style="width: 30px; height: 33px; flex: none; color: #4a4736; margin-top: 1px;">
+        <path d="M5.5 14.5 H18.5 L16.8 22 H7.2 Z" fill="none" stroke="currentColor" stroke-width="1.1"></path>
+        <path d="M12 14 V6.5" fill="none" stroke="currentColor" stroke-width="1.1"></path>
+        <path d="M12 8.5 C 8 8.5 6.5 6 6.5 3 C 10 3 12 5 12 8.5 Z M12 10.5 C 16 10.5 17.5 8 17.5 5 C 14 5 12 7 12 10.5 Z" fill="none" stroke="currentColor" stroke-width="1.1"></path>
+      </svg>
+      <div style="font-size: 13.4px; font-weight: 500; letter-spacing: 0.06em; line-height: 27px; color: #2b2921;">VENTE DE PRODUITS<br />EXTÉRIEURS</div>
+    </div>
+  </div>
+
+  <div style="position: absolute; left: 755px; top: 1266px; width: 585px; height: 1px; background: #d5cdc0;"></div>
+
+  <a href="#" style="position: absolute; left: 755px; top: 1420px; font-size: 13.4px; font-weight: 500; letter-spacing: 0.08em; line-height: 1; color: #2b2921;">VOIR TOUS NOS SERVICES</a>
+  <svg viewBox="0 0 42 8" style="position: absolute; left: 948px; top: 1421px; width: 42px; height: 8px; color: #6c6852;">
+    <path d="M0 4 H40 M34.5 0.8 L40 4 L34.5 7.2" fill="none" stroke="currentColor" stroke-width="1"></path>
+  </svg>
+
+  <div style="position: absolute; left: 121px; top: 1628px; font-size: 13px; font-weight: 400; letter-spacing: 0.094em; line-height: 1; color: #838d4f;">NOTRE ENGAGEMENT</div>
+  <div style="position: absolute; left: 122px; top: 1652px; font-size: 42px; font-weight: 300; letter-spacing: 0em; line-height: 41px; color: #f4f1e8;">DES ESPACES QUI<br />VOUS RESSEMBLENT</div>
+  <div style="position: absolute; left: 119px; top: 1727px; font-family: Allura, cursive; font-size: 66px; line-height: 1; color: #a4b359;">durablement</div>
+  <div style="position: absolute; left: 121px; top: 1804px; width: 340px; font-size: 15.5px; font-weight: 300; line-height: 24px; color: rgba(238,236,224,0.8);">Chaque projet est pensé avec passion, en<br />respectant la nature et vos envies.</div>
+
+  <div style="position: absolute; left: 121px; top: 1874px; display: flex; align-items: flex-start; gap: 34px;">
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 13px;">
+      <svg viewBox="0 0 24 24" style="width: 31px; height: 31px; color: #e2dfcc;">
+        <path d="M8 3.5 a 8.5 8.5 0 0 1 0 17" fill="none" stroke="currentColor" stroke-width="1.1"></path>
+        <path d="M12 8 a 4.2 4.2 0 0 1 0 8" fill="none" stroke="currentColor" stroke-width="1.1"></path>
+        <circle cx="7" cy="12" r="1.1" fill="currentColor"></circle>
+      </svg>
+      <div style="font-size: 11.3px; font-weight: 500; letter-spacing: 0.1em; line-height: 1; color: #e8e4d5;">ÉCOUTE</div>
+    </div>
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 13px;">
+      <svg viewBox="0 0 24 24" style="width: 31px; height: 31px; color: #e2dfcc;">
+        <circle cx="12" cy="9.5" r="6.3" fill="none" stroke="currentColor" stroke-width="1.1"></circle>
+        <circle cx="12" cy="9.5" r="2.6" fill="none" stroke="currentColor" stroke-width="1"></circle>
+        <path d="M8.6 15 L7 21.5 L12 19 L17 21.5 L15.4 15" fill="none" stroke="currentColor" stroke-width="1.1"></path>
+      </svg>
+      <div style="font-size: 11.3px; font-weight: 500; letter-spacing: 0.1em; line-height: 1; color: #e8e4d5;">QUALITÉ</div>
+    </div>
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 13px;">
+      <svg viewBox="0 0 24 24" style="width: 31px; height: 31px; color: #e2dfcc;">
+        <path d="M12 20.5 C 3.5 14.5 2.5 9 5.5 6.2 C 8 3.8 11 5.6 12 7.6 C 13 5.6 16 3.8 18.5 6.2 C 21.5 9 20.5 14.5 12 20.5 Z" fill="none" stroke="currentColor" stroke-width="1.1"></path>
+      </svg>
+      <div style="font-size: 11.3px; font-weight: 500; letter-spacing: 0.1em; line-height: 1; color: #e8e4d5;">PASSION</div>
+    </div>
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 13px;">
+      <svg viewBox="0 0 24 24" style="width: 31px; height: 31px; color: #e2dfcc;">
+        <path d="M4.5 20 C 4.5 10 10.5 3.8 20.5 3.5 C 20.5 13.5 14 20 4.5 20 Z" fill="none" stroke="currentColor" stroke-width="1.1"></path>
+        <path d="M2.5 21.5 L 18 6" fill="none" stroke="currentColor" stroke-width="1.1"></path>
+      </svg>
+      <div style="font-size: 11.3px; font-weight: 500; letter-spacing: 0.1em; line-height: 1; color: #e8e4d5;">DURABILITÉ</div>
+    </div>
+  </div>
+
+  <a href="#" style="position: absolute; left: 121px; top: 1961px; font-size: 14.8px; font-weight: 400; letter-spacing: 0.1em; line-height: 1; color: #eee9da;">EN SAVOIR PLUS SUR NOUS</a>
+  <svg viewBox="0 0 44 8" style="position: absolute; left: 345px; top: 1963px; width: 44px; height: 8px; color: #d8d4c2;">
+    <path d="M0 4 H42 M36.5 0.8 L42 4 L36.5 7.2" fill="none" stroke="currentColor" stroke-width="1"></path>
+  </svg>
+
+  <div style="position: absolute; left: 164px; top: 2033px; width: 200px; display: flex; flex-direction: column; align-items: center;">
+    <svg viewBox="0 0 60 22" style="width: 63px; height: 23px; color: #9a9169;">
+      <path d="M2 20 C 16 16 30 11 58 3" fill="none" stroke="currentColor" stroke-width="0.9" stroke-linecap="round"></path>
+      <ellipse cx="10" cy="15" rx="5.4" ry="1.9" transform="rotate(-38 10 15)" fill="none" stroke="currentColor" stroke-width="0.8"></ellipse>
+      <ellipse cx="15" cy="18" rx="5" ry="1.8" transform="rotate(28 15 18)" fill="none" stroke="currentColor" stroke-width="0.8"></ellipse>
+      <ellipse cx="21" cy="11.5" rx="5.6" ry="1.9" transform="rotate(-34 21 11.5)" fill="none" stroke="currentColor" stroke-width="0.8"></ellipse>
+      <ellipse cx="26" cy="15" rx="5" ry="1.8" transform="rotate(30 26 15)" fill="none" stroke="currentColor" stroke-width="0.8"></ellipse>
+      <ellipse cx="33" cy="8" rx="5.6" ry="1.9" transform="rotate(-32 33 8)" fill="none" stroke="currentColor" stroke-width="0.8"></ellipse>
+      <ellipse cx="38" cy="11.5" rx="5" ry="1.8" transform="rotate(32 38 11.5)" fill="none" stroke="currentColor" stroke-width="0.8"></ellipse>
+      <ellipse cx="45" cy="5" rx="5.4" ry="1.9" transform="rotate(-30 45 5)" fill="none" stroke="currentColor" stroke-width="0.8"></ellipse>
+      <ellipse cx="50" cy="8.5" rx="4.8" ry="1.8" transform="rotate(34 50 8.5)" fill="none" stroke="currentColor" stroke-width="0.8"></ellipse>
+    </svg>
+    <div style="margin-top: 8px; font-size: 36px; font-weight: 300; letter-spacing: 0.14em; line-height: 1; color: #3a3529; margin-right: -0.14em;">TRENCA</div>
+    <div style="margin-top: 12px; font-size: 11px; font-weight: 300; letter-spacing: 0.7em; line-height: 1; color: #8a8175; margin-right: -0.7em;">PAYSAGE</div>
+  </div>
+
+  <div style="position: absolute; left: 482px; top: 2050px; font-size: 12px; font-weight: 300; line-height: 15.5px; color: #8a8175;">181 allée Jean Aicard<br />13400 Aubagne</div>
+  <div style="position: absolute; left: 482px; top: 2091px; font-size: 12px; font-weight: 600; letter-spacing: 0.02em; line-height: 1; color: #3a3529;"></div>
+  <div style="position: absolute; left: 482px; top: 2111px; font-size: 12px; font-weight: 300; line-height: 1; color: #8a8175;">contact@trenca-paysage.fr</div>
+
+  <div style="position: absolute; left: 714px; top: 2054px; width: 1px; height: 70px; background: #ded7ca;"></div>
+
+  <div style="position: absolute; left: 762px; top: 2064px; font-size: 13px; font-weight: 400; letter-spacing: 0.12em; line-height: 1; color: #8a8767;">SUIVEZ-NOUS</div>
+
+  <div style="position: absolute; left: 880px; top: 2091px; display: flex; align-items: center; gap: 14px;">
+    <a href="#" style="width: 31px; height: 31px; border: 1px solid #9a9184; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+      <span style="display: block; width: 15px; height: 15px; border: 1px solid #6f685c; border-radius: 5px; position: relative;">
+        <span style="position: absolute; left: 3px; top: 3px; width: 7px; height: 7px; border: 1px solid #6f685c; border-radius: 50%;"></span>
+        <span style="position: absolute; right: 1.5px; top: 1.5px; width: 2px; height: 2px; background: #6f685c; border-radius: 50%;"></span>
+      </span>
+    </a>
+    <a href="#" style="width: 31px; height: 31px; border: 1px solid #9a9184; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: Georgia, serif; font-size: 19px; line-height: 1; color: #6f685c; padding-bottom: 2px;">f</a>
+  </div>
+
+  <a href="#" style="position: absolute; left: 1083px; top: 2076px; width: 231px; height: 46px; display: flex; align-items: center; justify-content: center; background: #1d220f; font-size: 13.4px; font-weight: 400; letter-spacing: 0.14em; color: #ece5d8;" style-hover="background: #262c14;">DEMANDE DE DEVIS</a>
+
+</div><!-- /.desktop-stage -->
+</div><!-- /.desktop-viewport -->
+
+<div class="mobile-site" data-screen-label="Accueil mobile">
+  <section class="m-hero">
+    <video class="m-hero-video" src="assets/hero.mp4" autoplay="autoplay" muted="muted" defaultmuted="defaultmuted" loop="loop" playsinline="playsinline" webkit-playsinline="true" preload="auto" disablepictureinpicture></video>
+    <div class="m-shell">
+      <div class="m-nav">
+        <a href="#" class="m-logo" aria-label="Trenca Paysage, accueil"><strong>TRENCA</strong><span>PAYSAGE</span></a>
+        <a href="#devis-mobile" class="m-quote">Demande de devis</a>
+      </div>
+      <div class="m-hero-copy">
+        <p class="m-kicker">Créateurs de</p>
+        <h1 class="m-title">PAYSAGES <span class="m-script">vivants</span></h1>
+        <p class="m-location">À Aubagne et alentours</p>
+        <p class="m-intro">Trenca Paysage conçoit et réalise des espaces extérieurs uniques, harmonieusement intégrés à leur environnement.</p>
+        <a href="#realisations-mobile" class="m-btn">Découvrir nos réalisations</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="m-services" id="services-mobile">
+    <div class="m-service-collage" id="realisations-mobile" aria-hidden="true">
+      <img class="p" src="assets/patio.jpg" alt="" loading="lazy" />
+      <img class="b" src="assets/bassin.jpg" alt="" loading="lazy" />
+      <img class="c" src="assets/cloture.jpg" alt="" loading="lazy" />
+    </div>
+    <div class="m-services-panel">
+      <div class="m-section-head">
+        <p class="m-eyebrow">Notre savoir-faire</p>
+        <h2 class="m-heading">L’ART DU PAYSAGE <span class="m-heading-script">sur mesure</span></h2>
+      </div>
+      <div class="m-service-grid">
+        <div class="m-service">
+          <svg viewBox="0 0 24 24"><path d="M3.5 20.5 C 3.5 10.5 9.5 4 20 3.5 C 20 14 13.5 20.5 3.5 20.5 Z" fill="none" stroke="currentColor" stroke-width="1.1"/><path d="M4.5 20 L 17 7.5" fill="none" stroke="currentColor" stroke-width="1.1"/><path d="M11 11.5 L 8 8 M14.5 15 L 11.5 18.5" fill="none" stroke="currentColor" stroke-width="1.1"/></svg>
+          <b>CRÉATION<br>DE JARDINS</b>
+        </div>
+        <div class="m-service">
+          <svg viewBox="0 0 24 24"><path d="M2 7 H22 M2 4.5 H22 M4.5 21 V7 M19.5 21 V7 M7.5 7 V21 M16.5 7 V21" fill="none" stroke="currentColor" stroke-width="1.1"/><path d="M7.5 12 H16.5 M7.5 16.5 H16.5" fill="none" stroke="currentColor" stroke-width=".9"/></svg>
+          <b>AMÉNAGEMENTS<br>EXTÉRIEURS</b>
+        </div>
+        <div class="m-service">
+          <svg viewBox="0 0 24 24"><path d="M1.5 7 q3 -3.2 6 0 t6 0 t6 0 M1.5 12 q3 -3.2 6 0 t6 0 t6 0 M1.5 17 q3 -3.2 6 0 t6 0 t6 0" fill="none" stroke="currentColor" stroke-width="1.1"/></svg>
+          <b>BASSINS &amp; POINTS<br>D’EAU</b>
+        </div>
+        <div class="m-service">
+          <svg viewBox="0 0 24 24"><path d="M4 21 V7 q0 -2 2 -2 t2 2 V21 Z M10 21 V7 q0 -2 2 -2 t2 2 V21 Z M16 21 V7 q0 -2 2 -2 t2 2 V21 Z" fill="none" stroke="currentColor" stroke-width="1.1"/><path d="M2 10 H22 M2 15.5 H22" fill="none" stroke="currentColor" stroke-width="1.1"/></svg>
+          <b>CLÔTURES &amp;<br>SÉPARATIONS</b>
+        </div>
+        <div class="m-service">
+          <svg viewBox="0 0 24 24"><path d="M12 2.5 C 12 2.5 4.5 11 4.5 15.2 A 7.5 7.5 0 0 0 19.5 15.2 C 19.5 11 12 2.5 12 2.5 Z" fill="none" stroke="currentColor" stroke-width="1.1"/><path d="M9 15.5 a3 3 0 0 0 3 3" fill="none" stroke="currentColor" stroke-width=".9"/></svg>
+          <b>ARROSAGE<br>AUTOMATIQUE</b>
+        </div>
+        <div class="m-service">
+          <svg viewBox="0 0 24 24"><path d="M5.5 14.5 H18.5 L16.8 22 H7.2 Z" fill="none" stroke="currentColor" stroke-width="1.1"/><path d="M12 14 V6.5" fill="none" stroke="currentColor" stroke-width="1.1"/><path d="M12 8.5 C 8 8.5 6.5 6 6.5 3 C 10 3 12 5 12 8.5 Z M12 10.5 C 16 10.5 17.5 8 17.5 5 C 14 5 12 7 12 10.5 Z" fill="none" stroke="currentColor" stroke-width="1.1"/></svg>
+          <b>VENTE DE PRODUITS<br>EXTÉRIEURS</b>
+        </div>
+      </div>
+      <a href="#" class="m-text-link">Voir tous nos services</a>
+    </div>
+  </section>
+
+  <section class="m-engagement">
+    <img class="m-engagement-image" src="assets/bassin.jpg" alt="Jardin avec bassin et cascade" loading="lazy" />
+    <div class="m-engagement-card">
+      <p class="m-eyebrow">Notre engagement</p>
+      <h2 class="m-heading">DES ESPACES<br>QUI VOUS<br>RESSEMBLENT <span class="m-heading-script">durablement</span></h2>
+      <p class="m-engagement-copy">Chaque projet est pensé avec passion, en respectant la nature et vos envies.</p>
+      <div class="m-values">
+        <div class="m-value"><svg viewBox="0 0 24 24"><path d="M8 3.5 a 8.5 8.5 0 0 1 0 17" fill="none" stroke="currentColor" stroke-width="1.1"/><path d="M12 8 a 4.2 4.2 0 0 1 0 8" fill="none" stroke="currentColor" stroke-width="1.1"/><circle cx="7" cy="12" r="1.1" fill="currentColor"/></svg><span>ÉCOUTE</span></div>
+        <div class="m-value"><svg viewBox="0 0 24 24"><circle cx="12" cy="9.5" r="6.3" fill="none" stroke="currentColor" stroke-width="1.1"/><circle cx="12" cy="9.5" r="2.6" fill="none" stroke="currentColor" stroke-width="1"/><path d="M8.6 15 L7 21.5 L12 19 L17 21.5 L15.4 15" fill="none" stroke="currentColor" stroke-width="1.1"/></svg><span>QUALITÉ</span></div>
+        <div class="m-value"><svg viewBox="0 0 24 24"><path d="M12 20.5 C 3.5 14.5 2.5 9 5.5 6.2 C 8 3.8 11 5.6 12 7.6 C 13 5.6 16 3.8 18.5 6.2 C 21.5 9 20.5 14.5 12 20.5 Z" fill="none" stroke="currentColor" stroke-width="1.1"/></svg><span>PASSION</span></div>
+        <div class="m-value"><svg viewBox="0 0 24 24"><path d="M4.5 20 C 4.5 10 10.5 3.8 20.5 3.5 C 20.5 13.5 14 20 4.5 20 Z" fill="none" stroke="currentColor" stroke-width="1.1"/><path d="M2.5 21.5 L 18 6" fill="none" stroke="currentColor" stroke-width="1.1"/></svg><span>DURABILITÉ</span></div>
+      </div>
+      <a href="#" class="m-text-link">En savoir plus sur nous</a>
+    </div>
+  </section>
+
+  <footer class="m-footer" id="devis-mobile">
+    <div class="m-shell m-footer-grid">
+      <div class="m-logo"><strong>TRENCA</strong><span>PAYSAGE</span></div>
+      <div class="m-contact">181 allée Jean Aicard<br>13400 Aubagne<a href="mailto:contact@trenca-paysage.fr">contact@trenca-paysage.fr</a></div>
+      <a href="#" class="m-btn m-footer-cta">Demande de devis</a>
+    </div>
+  </footer>
+</div><!-- /.mobile-site -->
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;heroOverlay&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0.88,&quot;min&quot;:0.3,&quot;max&quot;:1,&quot;step&quot;:0.02,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Héros&quot;},&quot;videoPos&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;center&quot;,&quot;top&quot;,&quot;bottom&quot;,&quot;50% 35%&quot;,&quot;50% 70%&quot;],&quot;default&quot;:&quot;center&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Héros&quot;},&quot;nightGrade&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Sections&quot;},&quot;dapple&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Sections&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const p = this.props;
+    return {
+      heroOverlay: p.heroOverlay ?? 0.88,
+      videoPos: p.videoPos ?? 'center',
+      dapple: p.dapple ?? true,
+      s3Filter: (p.nightGrade ?? true) ? 'brightness(0.66) saturate(0.85) hue-rotate(-6deg) contrast(1.05)' : 'none'
+    };
+  }
+}
+</script>
+
+<script>
+(function () {
+  const BASE_WIDTH = 1440;
+  const BASE_HEIGHT = 2160;
+
+  function fitDesktopArtboard() {
+    const viewport = document.querySelector('.desktop-viewport');
+    const stage = document.querySelector('.desktop-stage');
+    if (!viewport || !stage || document.documentElement.clientWidth <= 1100) return;
+    const availableWidth = document.documentElement.clientWidth;
+    const scale = Math.min(1, availableWidth / BASE_WIDTH);
+    const renderedWidth = BASE_WIDTH * scale;
+    stage.style.transform = 'scale(' + scale + ')';
+    stage.style.left = Math.max(0, (availableWidth - renderedWidth) / 2) + 'px';
+    viewport.style.height = (BASE_HEIGHT * scale) + 'px';
+  }
+
+  function ensureMobileVideo() {
+    const video = document.querySelector('.m-hero-video');
+    if (!video) return;
+    video.muted = true;
+    video.defaultMuted = true;
+    video.setAttribute('muted', '');
+    video.setAttribute('playsinline', '');
+    video.setAttribute('webkit-playsinline', '');
+    const attempt = () => {
+      const p = video.play();
+      if (p && typeof p.catch === 'function') p.catch(() => {});
+    };
+    if (video.readyState >= 2) attempt();
+    video.addEventListener('loadeddata', attempt, { once: true });
+    video.addEventListener('canplay', attempt, { once: true });
+    document.addEventListener('touchstart', attempt, { once: true, passive: true });
+    document.addEventListener('visibilitychange', () => { if (!document.hidden) attempt(); });
+  }
+
+  fitDesktopArtboard();
+  ensureMobileVideo();
+  window.addEventListener('resize', fitDesktopArtboard, { passive: true });
+  window.addEventListener('orientationchange', fitDesktopArtboard, { passive: true });
+})();
+</script>
+
+</body>
+</html>
