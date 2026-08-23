@@ -20,7 +20,7 @@
   a:hover { color: #a4b359; }
 
   /* Desktop artboard: same original design, fluidly fitted without horizontal overflow. */
-  .desktop-viewport { position: relative; width: 100%; height: 5708px; overflow: hidden; background: #e4ded5; }
+  .desktop-viewport { position: relative; width: 100%; height: 5708px; overflow-x: auto; overflow-y: hidden; background: #e4ded5; }
   .desktop-stage { position: absolute !important; top: 0; left: 0; margin: 0 !important; transform-origin: top left; }
   .mobile-site { display: none; }
 
@@ -298,7 +298,7 @@
   </div>
 
   <!-- P2 dark -->
-  <div class="ns-section ns-cut-top" data-ns="P2" style="top: 1503px; background: #d9cbaa;">
+  <div class="ns-section ns-cut-top" data-ns="P2" style="top: 1503px; background: #e6ddcf;">
     <div class="ns-wrap" style="padding-top: 90px; padding-bottom: 90px;">
       <p class="ns-eyebrow">LA PALETTE VÉGÉTALE</p>
       <h2 class="ns-heading">LES PLANTES DU JARDIN<br>MÉDITERRANÉEN</h2>
@@ -329,7 +329,7 @@
   </div>
 
   <!-- P4 dark -->
-  <div class="ns-section ns-cut-top" data-ns="P4" style="top: 2803px; background: #d9cbaa;">
+  <div class="ns-section ns-cut-top" data-ns="P4" style="top: 2803px; background: #e6ddcf;">
     <div class="ns-wrap" style="padding-top: 90px; padding-bottom: 90px;">
       <p class="ns-eyebrow">GESTION DE L'EAU</p>
       <h2 class="ns-heading">L'EAU : LE NERF DE LA GUERRE</h2>
@@ -364,7 +364,7 @@
   </div>
 
   <!-- P6 dark, image row -->
-  <div class="ns-section ns-cut-top" data-ns="P6" style="top: 3708px; background: #d9cbaa;">
+  <div class="ns-section ns-cut-top" data-ns="P6" style="top: 3708px; background: #e6ddcf;">
     <div class="ns-wrap" style="padding-top: 90px; padding-bottom: 90px;">
       <p class="ns-eyebrow">À AUBAGNE ET DANS L'EST MARSEILLAIS</p>
       <h2 class="ns-heading">LE CONCEVOIR CHEZ VOUS</h2>
@@ -500,7 +500,7 @@
     </div>
   </section>
 
-  <section class="m-newsec" style="background: #d9cbaa;">
+  <section class="m-newsec" style="background: #e6ddcf;">
     <div class="m-shell">
       <p class="m-ns-eyebrow">La palette végétale</p>
       <h2 class="m-ns-heading">Les plantes du jardin méditerranéen</h2>
@@ -525,7 +525,7 @@
     </div>
   </section>
 
-  <section class="m-newsec" style="background: #d9cbaa;">
+  <section class="m-newsec" style="background: #e6ddcf;">
     <div class="m-shell">
       <p class="m-ns-eyebrow">Gestion de l'eau</p>
       <h2 class="m-ns-heading">L'eau : le nerf de la guerre</h2>
@@ -552,7 +552,7 @@
     </div>
   </section>
 
-  <section class="m-newsec" style="background: #d9cbaa;">
+  <section class="m-newsec" style="background: #e6ddcf;">
     <div class="m-shell">
       <p class="m-ns-eyebrow">À Aubagne et dans l'Est marseillais</p>
       <h2 class="m-ns-heading">Le concevoir chez vous</h2>
@@ -641,6 +641,9 @@
   ensureMobileVideo();
   window.addEventListener('resize', fitDesktopArtboard, { passive: true });
   window.addEventListener('orientationchange', fitDesktopArtboard, { passive: true });
+  window.addEventListener('load', fitDesktopArtboard);
+  setTimeout(fitDesktopArtboard, 300);
+  setTimeout(fitDesktopArtboard, 1200);
 })();
 </script>
 

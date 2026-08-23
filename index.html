@@ -20,7 +20,7 @@
   a:hover { color: #a4b359; }
 
   /* Desktop artboard: same original design, fluidly fitted without horizontal overflow. */
-  .desktop-viewport { position: relative; width: 100%; height: 7289px; overflow: hidden; background: #e4ded5; }
+  .desktop-viewport { position: relative; width: 100%; height: 7250px; overflow-x: auto; overflow-y: hidden; background: #e4ded5; }
   .desktop-stage { position: absolute !important; top: 0; left: 0; margin: 0 !important; transform-origin: top left; }
   .mobile-site { display: none; }
 
@@ -54,19 +54,11 @@
   .ns-row-image { flex: 1 1 auto; height: 430px; overflow: hidden; clip-path: polygon(6% 0, 100% 7%, 94% 100%, 0 93%); }
   .ns-row-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .ns-cards { display: flex; gap: 32px; margin-top: 46px; }
-  .ns-card { flex: 1; background: #f6f0e3; border: 1px solid #ddd0b4; padding: 36px 32px; }
+  .ns-card { flex: 1; background: rgba(244,241,232,.04); border: 1px solid rgba(244,241,232,.18); padding: 36px 32px; }
   .ns-stars { display: flex; gap: 5px; margin: 0 0 20px; }
   .ns-stars svg { width: 15px; height: 15px; color: #a4b359; }
-  .ns-quote { margin: 0; font-size: 16px; font-weight: 300; font-style: italic; line-height: 1.68; color: #3a3529; }
-  .ns-quote-author { margin: 22px 0 0; font-size: 12.5px; font-weight: 500; letter-spacing: .06em; color: #6d7740; }
-  .ns-testi-carousel { max-width: 620px; }
-  .ns-testi-track { position: relative; min-height: 230px; }
-  .ns-testi-slide { position: absolute; inset: 0; opacity: 0; visibility: hidden; transition: opacity .7s ease; }
-  .ns-testi-slide.is-active { opacity: 1; visibility: visible; }
-  .ns-testi-slide .ns-card { height: 100%; }
-  .ns-testi-dots { display: flex; gap: 10px; margin-top: 24px; }
-  .ns-testi-dot { width: 9px; height: 9px; border-radius: 50%; border: none; padding: 0; background: #cabf9e; cursor: pointer; }
-  .ns-testi-dot.is-active { background: #6d7740; }
+  .ns-quote { margin: 0; font-size: 15px; font-weight: 300; font-style: italic; line-height: 1.68; color: rgba(238,236,224,.92); }
+  .ns-quote-author { margin: 22px 0 0; font-size: 12.5px; font-weight: 500; letter-spacing: .06em; color: #a9b47c; }
   .ns-chips { display: flex; flex-wrap: wrap; gap: 14px 16px; margin-top: 40px; }
   .ns-chip { display: inline-flex; align-items: center; gap: 10px; padding: 13px 22px; border: 1px solid #d5cdc0; font-size: 13px; font-weight: 500; letter-spacing: .03em; color: #2b2921; }
   .ns-chip svg { width: 14px; height: 14px; color: #6d7740; flex: none; }
@@ -169,19 +161,11 @@
     .m-ns-row-image { margin-top: 16px; height: 200px; overflow: hidden; }
     .m-ns-row-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .m-ns-cards { display: flex; flex-direction: column; gap: 16px; margin-top: 26px; }
-    .m-ns-card { background: #f6f0e3; border: 1px solid #ddd0b4; padding: 22px 20px; }
+    .m-ns-card { background: rgba(244,241,232,.04); border: 1px solid rgba(244,241,232,.18); padding: 22px 20px; }
     .m-ns-stars { display: flex; gap: 4px; margin: 0 0 12px; }
     .m-ns-stars svg { width: 12px; height: 12px; color: #a4b359; }
-    .m-ns-quote { margin: 0; font-size: 12px; font-weight: 300; font-style: italic; line-height: 1.6; color: #3a3529; }
-    .m-ns-quote-author { margin: 14px 0 0; font-size: 10px; font-weight: 500; letter-spacing: .04em; color: #6d7740; }
-    .m-ns-testi-carousel { margin-top: 26px; }
-    .m-ns-testi-track { position: relative; min-height: 175px; }
-    .m-ns-testi-slide { position: absolute; inset: 0; opacity: 0; visibility: hidden; transition: opacity .7s ease; }
-    .m-ns-testi-slide.is-active { opacity: 1; visibility: visible; }
-    .m-ns-testi-slide .m-ns-card { height: 100%; }
-    .m-ns-testi-dots { display: flex; gap: 8px; margin-top: 18px; }
-    .m-ns-testi-dot { width: 8px; height: 8px; border-radius: 50%; border: none; padding: 0; background: #cabf9e; }
-    .m-ns-testi-dot.is-active { background: #6d7740; }
+    .m-ns-quote { margin: 0; font-size: 12px; font-weight: 300; font-style: italic; line-height: 1.6; color: rgba(238,236,224,.92); }
+    .m-ns-quote-author { margin: 14px 0 0; font-size: 10px; font-weight: 500; letter-spacing: .04em; color: #a9b47c; }
     .m-ns-chips { display: flex; flex-wrap: wrap; gap: 9px 10px; margin-top: 22px; }
     .m-ns-chip { display: inline-flex; align-items: center; gap: 7px; padding: 9px 14px; border: 1px solid #d5cdc0; font-size: 10px; font-weight: 500; color: #2b2921; }
     .m-ns-chip svg { width: 11px; height: 11px; color: #6d7740; flex: none; }
@@ -229,7 +213,7 @@
 </style>
 </helmet>
 <div class="desktop-viewport" aria-hidden="false">
-<div class="desktop-stage" data-screen-label="Accueil" style="position: relative; width: 1440px; height: 7289px; margin: 0 auto; overflow: hidden; background: #eee7de; font-family: Poppins, 'Century Gothic', sans-serif; -webkit-font-smoothing: antialiased;">
+<div class="desktop-stage" data-screen-label="Accueil" style="position: relative; width: 1440px; height: 7250px; margin: 0 auto; overflow: hidden; background: #eee7de; font-family: Poppins, 'Century Gothic', sans-serif; -webkit-font-smoothing: antialiased;">
 
   <div style="position: absolute; inset: 0; opacity: 0.5; mix-blend-mode: multiply; background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3'/%3E%3C/filter%3E%3Crect width='260' height='260' filter='url(%23n)' opacity='0.16'/%3E%3C/svg%3E&quot;);"></div>
 
@@ -317,67 +301,53 @@
   </div>
 
   <!-- ===================== NEW: Témoignages ===================== -->
-  <div class="ns-section" data-ns="B" style="top: 4103px; background: #e6ddcf;">
-    <div class="ns-wrap" style="padding-top: 90px; padding-bottom: 90px;">
-      <p class="ns-eyebrow">AVIS GOOGLE · 5,0 / 5</p>
-      <h2 class="ns-heading">CE QUE DISENT NOS CLIENTS</h2>
-      <p class="ns-body" style="max-width: 720px; margin-top: 24px;">Trenca Paysage est une entreprise récente — et assumée comme telle : disponible, à l'écoute, appliquée sur chaque chantier. Les premiers retours, réels et vérifiables, sont sans équivoque :</p>
+  <div class="ns-section" data-ns="B" style="top: 4103px; background: #1d220f;">
+    <div class="ns-wrap" style="padding-top: 100px; padding-bottom: 96px;">
+      <p class="ns-eyebrow dark">AVIS GOOGLE · 5,0 / 5</p>
+      <h2 class="ns-heading dark">CE QUE DISENT NOS CLIENTS</h2>
+      <p class="ns-body dark" style="max-width: 720px; margin-top: 24px;">Trenca Paysage est une entreprise récente — et assumée comme telle : disponible, à l'écoute, appliquée sur chaque chantier. Les premiers retours, réels et vérifiables, sont sans équivoque :</p>
 
-      <div class="ns-testi-carousel" id="testi-carousel" style="margin-top: 44px;">
-        <div class="ns-testi-track">
-          <div class="ns-testi-slide is-active">
-            <div class="ns-card">
-              <div class="ns-stars">
-                <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg>
-                <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg>
-                <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg>
-                <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg>
-                <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg>
-              </div>
-              <p class="ns-quote">« Travail soigné, propre. Le jardin a complètement changé. »</p>
-              <p class="ns-quote-author">Charlène J. — avis Google</p>
-            </div>
+      <div class="ns-cards">
+        <div class="ns-card">
+          <div class="ns-stars">
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg>
           </div>
-          <div class="ns-testi-slide">
-            <div class="ns-card">
-              <div class="ns-stars">
-                <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg>
-                <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg>
-                <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg>
-                <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg>
-                <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg>
-              </div>
-              <p class="ns-quote">« Complètement sous le charme, travail soigné et appliqué, je recommande chaudement. »</p>
-              <p class="ns-quote-author">Nathan B. — avis Google</p>
-            </div>
-          </div>
-          <div class="ns-testi-slide">
-            <div class="ns-card">
-              <div class="ns-stars">
-                <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg>
-                <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg>
-                <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg>
-                <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg>
-                <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg>
-              </div>
-              <p class="ns-quote">« Super jeune professionnel, très sérieux et très agréable, je suis très satisfait de son travail. »</p>
-              <p class="ns-quote-author">Samuel — avis Google</p>
-            </div>
-          </div>
+          <p class="ns-quote">« Travail soigné, propre. Le jardin a complètement changé. »</p>
+          <p class="ns-quote-author">Charlène J. — avis Google</p>
         </div>
-        <div class="ns-testi-dots" data-testi-dots>
-          <button class="ns-testi-dot is-active" type="button" data-slide="0" aria-label="Avis 1"></button>
-          <button class="ns-testi-dot" type="button" data-slide="1" aria-label="Avis 2"></button>
-          <button class="ns-testi-dot" type="button" data-slide="2" aria-label="Avis 3"></button>
+        <div class="ns-card">
+          <div class="ns-stars">
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg>
+          </div>
+          <p class="ns-quote">« Complètement sous le charme, travail soigné et appliqué, je recommande chaudement. »</p>
+          <p class="ns-quote-author">Nathan B. — avis Google</p>
+        </div>
+        <div class="ns-card">
+          <div class="ns-stars">
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg>
+          </div>
+          <p class="ns-quote">« Super jeune professionnel, très sérieux et très agréable, je suis très satisfait de son travail. »</p>
+          <p class="ns-quote-author">Samuel — avis Google</p>
         </div>
       </div>
-
-      <a href="realisations.html" class="ns-link" style="margin-top: 40px;">VOIR TOUTES NOS RÉALISATIONS<svg class="arrow-stroke" viewBox="0 0 40 8"><path d="M0 4 H38 M32.5 0.8 L38 4 L32.5 7.2" fill="none" stroke="currentColor" stroke-width="1"></path></svg></a>
+      <a href="realisations.html" class="ns-link dark">VOIR TOUTES NOS RÉALISATIONS<svg class="arrow-stroke" viewBox="0 0 40 8"><path d="M0 4 H38 M32.5 0.8 L38 4 L32.5 7.2" fill="none" stroke="currentColor" stroke-width="1"></path></svg></a>
     </div>
   </div>
 
   <!-- ===================== NEW: Zone d'intervention ===================== -->
-  <div class="ns-section" data-ns="C" style="top: 4803px; background: #eee7de;">
+  <div class="ns-section" data-ns="C" style="top: 4764px; background: #eee7de;">
     <div class="ns-wrap" style="padding-top: 100px; padding-bottom: 96px;">
       <p class="ns-eyebrow">OÙ INTERVENONS-NOUS</p>
       <h2 class="ns-heading">NOTRE ZONE D'INTERVENTION<span class="ns-script">Est marseillais</span></h2>
@@ -397,7 +367,7 @@
   </div>
 
   <!-- ===================== NEW: FAQ ===================== -->
-  <div class="ns-section" data-ns="D" style="top: 5445px; background: #e6ddcf;">
+  <div class="ns-section" data-ns="D" style="top: 5406px; background: #e6ddcf;">
     <div class="ns-wrap" style="padding-top: 100px; padding-bottom: 96px;">
       <p class="ns-eyebrow">QUESTIONS FRÉQUENTES</p>
       <h2 class="ns-heading">ON RÉPOND À VOS QUESTIONS</h2>
@@ -431,7 +401,7 @@
   </div>
 
   <!-- ===================== NEW: CTA final ===================== -->
-  <div class="ns-section ns-cta-band" data-ns="E" style="top: 6615px;">
+  <div class="ns-section ns-cta-band" data-ns="E" style="top: 6576px;">
     <div class="ns-wrap ns-cta-inner">
       <h2 class="ns-heading dark">PARLONS DE VOTRE PROJET<span class="ns-script dark">gratuitement</span></h2>
       <p class="ns-body dark">Un extérieur à créer, à entretenir ou à mettre en conformité, ça commence par un échange. Dites-nous ce que vous avez en tête — on vient voir et on vous chiffre tout, gratuitement.</p>
@@ -439,9 +409,9 @@
     </div>
   </div>
 
-  <div style="position: absolute; left: 0px; top: 7125px; width: 1440px; height: 164px; clip-path: polygon(0px 0px, 1440px 46px, 1440px 164px, 0px 164px); background: #ece5da;"></div>
+  <div style="position: absolute; left: 0px; top: 7086px; width: 1440px; height: 164px; clip-path: polygon(0px 0px, 1440px 46px, 1440px 164px, 0px 164px); background: #ece5da;"></div>
 
-  <div style="position: absolute; left: -30px; top: 7159px; width: 300px; height: 150px; color: #8a8770; opacity: 0.16; pointer-events: none;">
+  <div style="position: absolute; left: -30px; top: 7120px; width: 300px; height: 150px; color: #8a8770; opacity: 0.16; pointer-events: none;">
     <svg viewBox="0 0 60 22" style="width: 300px; height: 110px; transform: rotate(28deg); transform-origin: 10% 40%;">
       <path d="M2 20 C 16 16 30 11 58 3" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="round"></path>
       <ellipse cx="10" cy="15" rx="5.4" ry="1.9" transform="rotate(-38 10 15)" fill="none" stroke="currentColor" stroke-width="0.45"></ellipse>
@@ -591,7 +561,7 @@
     <path d="M0 4 H42 M36.5 0.8 L42 4 L36.5 7.2" fill="none" stroke="currentColor" stroke-width="1"></path>
   </svg>
 
-  <div style="position: absolute; left: 164px; top: 7162px; width: 200px; display: flex; flex-direction: column; align-items: center;">
+  <div style="position: absolute; left: 164px; top: 7123px; width: 200px; display: flex; flex-direction: column; align-items: center;">
     <svg viewBox="0 0 60 22" style="width: 63px; height: 23px; color: #9a9169;">
       <path d="M2 20 C 16 16 30 11 58 3" fill="none" stroke="currentColor" stroke-width="0.9" stroke-linecap="round"></path>
       <ellipse cx="10" cy="15" rx="5.4" ry="1.9" transform="rotate(-38 10 15)" fill="none" stroke="currentColor" stroke-width="0.8"></ellipse>
@@ -607,15 +577,15 @@
     <div style="margin-top: 12px; font-size: 11px; font-weight: 300; letter-spacing: 0.7em; line-height: 1; color: #8a8175; margin-right: -0.7em;">PAYSAGE</div>
   </div>
 
-  <div style="position: absolute; left: 482px; top: 7179px; font-size: 12px; font-weight: 300; line-height: 15.5px; color: #8a8175;">181 allée Jean Aicard<br />13400 Aubagne</div>
-  <div style="position: absolute; left: 482px; top: 7220px; font-size: 12px; font-weight: 600; letter-spacing: 0.02em; line-height: 1; color: #3a3529;"></div>
-  <div style="position: absolute; left: 482px; top: 7240px; font-size: 12px; font-weight: 300; line-height: 1; color: #8a8175;">contact@trenca-paysage.fr</div>
+  <div style="position: absolute; left: 482px; top: 7140px; font-size: 12px; font-weight: 300; line-height: 15.5px; color: #8a8175;">181 allée Jean Aicard<br />13400 Aubagne</div>
+  <div style="position: absolute; left: 482px; top: 7181px; font-size: 12px; font-weight: 600; letter-spacing: 0.02em; line-height: 1; color: #3a3529;"></div>
+  <div style="position: absolute; left: 482px; top: 7201px; font-size: 12px; font-weight: 300; line-height: 1; color: #8a8175;">contact@trenca-paysage.fr</div>
 
-  <div style="position: absolute; left: 714px; top: 7183px; width: 1px; height: 70px; background: #ded7ca;"></div>
+  <div style="position: absolute; left: 714px; top: 7144px; width: 1px; height: 70px; background: #ded7ca;"></div>
 
-  <div style="position: absolute; left: 762px; top: 7193px; font-size: 13px; font-weight: 400; letter-spacing: 0.12em; line-height: 1; color: #8a8767;">SUIVEZ-NOUS</div>
+  <div style="position: absolute; left: 762px; top: 7154px; font-size: 13px; font-weight: 400; letter-spacing: 0.12em; line-height: 1; color: #8a8767;">SUIVEZ-NOUS</div>
 
-  <div style="position: absolute; left: 880px; top: 7220px; display: flex; align-items: center; gap: 14px;">
+  <div style="position: absolute; left: 880px; top: 7181px; display: flex; align-items: center; gap: 14px;">
     <a href="#" style="width: 31px; height: 31px; border: 1px solid #9a9184; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
       <span style="display: block; width: 15px; height: 15px; border: 1px solid #6f685c; border-radius: 5px; position: relative;">
         <span style="position: absolute; left: 3px; top: 3px; width: 7px; height: 7px; border: 1px solid #6f685c; border-radius: 50%;"></span>
@@ -625,7 +595,7 @@
     <a href="#" style="width: 31px; height: 31px; border: 1px solid #9a9184; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: Georgia, serif; font-size: 19px; line-height: 1; color: #6f685c; padding-bottom: 2px;">f</a>
   </div>
 
-  <a href="#" style="position: absolute; left: 1083px; top: 7205px; width: 231px; height: 46px; display: flex; align-items: center; justify-content: center; background: #1d220f; font-size: 13.4px; font-weight: 400; letter-spacing: 0.14em; color: #ece5d8;" style-hover="background: #262c14;">DEMANDE DE DEVIS</a>
+  <a href="#" style="position: absolute; left: 1083px; top: 7166px; width: 231px; height: 46px; display: flex; align-items: center; justify-content: center; background: #1d220f; font-size: 13.4px; font-weight: 400; letter-spacing: 0.14em; color: #ece5d8;" style-hover="background: #262c14;">DEMANDE DE DEVIS</a>
 
 </div><!-- /.desktop-stage -->
 </div><!-- /.desktop-viewport -->
@@ -739,42 +709,29 @@
     </div>
   </section>
 
-  <section class="m-newsec" style="background: #e6ddcf;">
+  <section class="m-newsec on-dark">
     <div class="m-shell">
-      <p class="m-ns-eyebrow">Avis Google · 5,0 / 5</p>
-      <h2 class="m-ns-heading">Ce que disent nos clients</h2>
-      <p class="m-ns-body" style="margin-top: 14px;">Trenca Paysage est une entreprise récente — et assumée comme telle : disponible, à l'écoute, appliquée sur chaque chantier. Les premiers retours, réels et vérifiables, sont sans équivoque :</p>
-      <div class="m-ns-testi-carousel" id="testi-carousel-mobile">
-        <div class="m-ns-testi-track">
-          <div class="m-ns-testi-slide is-active">
-            <div class="m-ns-card">
-              <div class="m-ns-stars"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg></div>
-              <p class="m-ns-quote">« Travail soigné, propre. Le jardin a complètement changé. »</p>
-              <p class="m-ns-quote-author">Charlène J. — avis Google</p>
-            </div>
-          </div>
-          <div class="m-ns-testi-slide">
-            <div class="m-ns-card">
-              <div class="m-ns-stars"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg></div>
-              <p class="m-ns-quote">« Complètement sous le charme, travail soigné et appliqué, je recommande chaudement. »</p>
-              <p class="m-ns-quote-author">Nathan B. — avis Google</p>
-            </div>
-          </div>
-          <div class="m-ns-testi-slide">
-            <div class="m-ns-card">
-              <div class="m-ns-stars"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg></div>
-              <p class="m-ns-quote">« Super jeune professionnel, très sérieux et très agréable, je suis très satisfait de son travail. »</p>
-              <p class="m-ns-quote-author">Samuel — avis Google</p>
-            </div>
-          </div>
+      <p class="m-ns-eyebrow on-dark">Avis Google · 5,0 / 5</p>
+      <h2 class="m-ns-heading on-dark">Ce que disent nos clients</h2>
+      <p class="m-ns-body on-dark" style="margin-top: 14px;">Trenca Paysage est une entreprise récente — et assumée comme telle : disponible, à l'écoute, appliquée sur chaque chantier. Les premiers retours, réels et vérifiables, sont sans équivoque :</p>
+      <div class="m-ns-cards">
+        <div class="m-ns-card">
+          <div class="m-ns-stars"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg></div>
+          <p class="m-ns-quote">« Travail soigné, propre. Le jardin a complètement changé. »</p>
+          <p class="m-ns-quote-author">Charlène J. — avis Google</p>
         </div>
-        <div class="m-ns-testi-dots" data-testi-dots>
-          <button class="m-ns-testi-dot is-active" type="button" data-slide="0" aria-label="Avis 1"></button>
-          <button class="m-ns-testi-dot" type="button" data-slide="1" aria-label="Avis 2"></button>
-          <button class="m-ns-testi-dot" type="button" data-slide="2" aria-label="Avis 3"></button>
+        <div class="m-ns-card">
+          <div class="m-ns-stars"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg></div>
+          <p class="m-ns-quote">« Complètement sous le charme, travail soigné et appliqué, je recommande chaudement. »</p>
+          <p class="m-ns-quote-author">Nathan B. — avis Google</p>
+        </div>
+        <div class="m-ns-card">
+          <div class="m-ns-stars"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg></div>
+          <p class="m-ns-quote">« Super jeune professionnel, très sérieux et très agréable, je suis très satisfait de son travail. »</p>
+          <p class="m-ns-quote-author">Samuel — avis Google</p>
         </div>
       </div>
-      <a href="realisations.html" class="m-ns-link">Voir toutes nos réalisations<svg viewBox="0 0 32 7"><path d="M0 3.5 H30 M26 0.6 L30 3.5 L26 6.4" fill="none" stroke="#6c6852" stroke-width="1"></path></svg></a>
+      <a href="realisations.html" class="m-ns-link on-dark">Voir toutes nos réalisations<svg viewBox="0 0 32 7"><path d="M0 3.5 H30 M26 0.6 L30 3.5 L26 6.4" fill="none" stroke="#d8d4c2" stroke-width="1"></path></svg></a>
     </div>
   </section>
 
@@ -865,7 +822,7 @@ class Component extends DCLogic {
 <script>
 (function () {
   const BASE_WIDTH = 1440;
-  const BASE_HEIGHT = 7289;
+  const BASE_HEIGHT = 7250;
 
   function fitDesktopArtboard() {
     const viewport = document.querySelector('.desktop-viewport');
@@ -898,38 +855,13 @@ class Component extends DCLogic {
     document.addEventListener('visibilitychange', () => { if (!document.hidden) attempt(); });
   }
 
-  function initTestimonialCarousels() {
-    document.querySelectorAll('.ns-testi-carousel, .m-ns-testi-carousel').forEach(function (root) {
-      const slides = root.querySelectorAll('.ns-testi-slide, .m-ns-testi-slide');
-      const dots = root.querySelectorAll('.ns-testi-dot, .m-ns-testi-dot');
-      if (slides.length < 2) return;
-      let index = 0;
-      let timer = null;
-      function show(i) {
-        index = (i + slides.length) % slides.length;
-        slides.forEach(function (s, si) { s.classList.toggle('is-active', si === index); });
-        dots.forEach(function (d, di) { d.classList.toggle('is-active', di === index); });
-      }
-      function next() { show(index + 1); }
-      function restart() {
-        if (timer) clearInterval(timer);
-        timer = setInterval(next, 5500);
-      }
-      dots.forEach(function (dot) {
-        dot.addEventListener('click', function () {
-          show(parseInt(dot.getAttribute('data-slide'), 10) || 0);
-          restart();
-        });
-      });
-      restart();
-    });
-  }
-
   fitDesktopArtboard();
   ensureMobileVideo();
-  initTestimonialCarousels();
   window.addEventListener('resize', fitDesktopArtboard, { passive: true });
   window.addEventListener('orientationchange', fitDesktopArtboard, { passive: true });
+  window.addEventListener('load', fitDesktopArtboard);
+  setTimeout(fitDesktopArtboard, 300);
+  setTimeout(fitDesktopArtboard, 1200);
 })();
 </script>
 
