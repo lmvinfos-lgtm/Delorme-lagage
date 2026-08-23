@@ -20,7 +20,7 @@
   a:hover { color: #a4b359; }
 
   /* Desktop artboard: same original design, fluidly fitted without horizontal overflow. */
-  .desktop-viewport { position: relative; width: 100%; height: 6044px; overflow: hidden; background: #e4ded5; }
+  .desktop-viewport { position: relative; width: 100%; height: 5708px; overflow: hidden; background: #e4ded5; }
   .desktop-stage { position: absolute !important; top: 0; left: 0; margin: 0 !important; transform-origin: top left; }
   .mobile-site { display: none; }
 
@@ -67,7 +67,8 @@
   .ns-faq-item + .ns-faq-item { border-top: 1px solid #d5cdc0; }
   .ns-faq-q { margin: 0 0 12px; font-size: 18px; font-weight: 500; color: #2b2921; }
   .ns-faq-a { margin: 0; font-size: 15px; font-weight: 300; line-height: 1.68; color: #4a4736; max-width: 880px; }
-  .ns-cta-band { background: #1d220f; padding: 96px 0 100px; }
+  .ns-cta-band { background: #4a3c26; padding: 96px 0 100px; }
+  .ns-cut-top { clip-path: polygon(0px 48px, 100% 0px, 100% 100%, 0px 100%); }
   .ns-cta-inner { display: flex; flex-direction: column; align-items: center; text-align: center; }
   .ns-cta-inner .ns-body { max-width: 620px; margin-top: 22px; }
   .ns-cta-inner .ns-btn { margin-top: 34px; }
@@ -174,7 +175,7 @@
     .m-ns-faq-item + .m-ns-faq-item { border-top: 1px solid #d5cdc0; }
     .m-ns-faq-q { margin: 0 0 8px; font-size: 12.5px; font-weight: 500; color: #2b2921; }
     .m-ns-faq-a { margin: 0; font-size: 11.5px; font-weight: 300; line-height: 1.6; color: #4a4736; }
-    .m-ns-cta { background: #1d220f; padding: 54px 0 58px; text-align: center; }
+    .m-ns-cta { background: #4a3c26; padding: 54px 0 58px; text-align: center; }
     .m-ns-cta .m-ns-body { margin-top: 16px; }
 
 
@@ -219,8 +220,8 @@
   .ns-ul.dark li { color: rgba(238,236,224,.85); }
   .ns-ul.dark li::before { background: #a4b359; }
   .ns-plant-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px 50px; margin-top: 46px; }
-  .ns-plant-cat h4 { margin: 0 0 12px; font-size: 14px; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; color: #a4b359; }
-  .ns-plant-cat p { margin: 0; font-size: 14.5px; font-weight: 300; line-height: 1.6; color: rgba(238,236,224,.85); }
+  .ns-plant-cat h4 { margin: 0 0 12px; font-size: 14px; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; color: #6d7740; }
+  .ns-plant-cat p { margin: 0; font-size: 14.5px; font-weight: 300; line-height: 1.6; color: #4a4736; }
   .ns-compare { display: flex; gap: 60px; margin-top: 46px; }
   .ns-compare > div { flex: 1; }
   .ns-compare h4 { margin: 0 0 14px; font-size: 19px; font-weight: 500; color: #2b2921; }
@@ -231,7 +232,7 @@
 
 </helmet>
 <div class="desktop-viewport" aria-hidden="false">
-<div class="desktop-stage" data-screen-label="Jardin méditerranéen" style="position: relative; width: 1440px; height: 6044px; margin: 0 auto; overflow: hidden; background: #eee7de; font-family: Poppins, 'Century Gothic', sans-serif; -webkit-font-smoothing: antialiased;">
+<div class="desktop-stage" data-screen-label="Jardin méditerranéen" style="position: relative; width: 1440px; height: 5708px; margin: 0 auto; overflow: hidden; background: #eee7de; font-family: Poppins, 'Century Gothic', sans-serif; -webkit-font-smoothing: antialiased;">
 
   <div style="position: absolute; inset: 0; opacity: 0.5; mix-blend-mode: multiply; background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3'/%3E%3C/filter%3E%3Crect width='260' height='260' filter='url(%23n)' opacity='0.16'/%3E%3C/svg%3E&quot;);"></div>
 
@@ -297,10 +298,10 @@
   </div>
 
   <!-- P2 dark -->
-  <div class="ns-section" data-ns="P2" style="top: 1551px; background: #1d220f;">
+  <div class="ns-section ns-cut-top" data-ns="P2" style="top: 1503px; background: #d9cbaa;">
     <div class="ns-wrap" style="padding-top: 90px; padding-bottom: 90px;">
-      <p class="ns-eyebrow dark">LA PALETTE VÉGÉTALE</p>
-      <h2 class="ns-heading dark">LES PLANTES DU JARDIN<br>MÉDITERRANÉEN</h2>
+      <p class="ns-eyebrow">LA PALETTE VÉGÉTALE</p>
+      <h2 class="ns-heading">LES PLANTES DU JARDIN<br>MÉDITERRANÉEN</h2>
       <div class="ns-plant-grid">
         <div class="ns-plant-cat"><h4>Arbres</h4><p>Olivier, arbousier, micocoulier, chêne vert, pin parasol, cyprès de Provence, agrumes dans les secteurs abrités.</p></div>
         <div class="ns-plant-cat"><h4>Arbustes</h4><p>Laurier-rose, romarin, ciste, pittosporum, arbousier, germandrée, phlomis.</p></div>
@@ -308,12 +309,12 @@
         <div class="ns-plant-cat"><h4>Graminées</h4><p>Stipa, miscanthus, pour le mouvement et la légèreté.</p></div>
         <div class="ns-plant-cat"><h4>Couvre-sols</h4><p>Thym rampant, dichondra, plantes tapissantes qui limitent le désherbage.</p></div>
       </div>
-      <p class="ns-body dark" style="max-width: 880px; margin-top: 40px;">Le choix dépend toujours de l'exposition, du sol et du niveau d'entretien souhaité — c'est là que le conseil compte.</p>
+      <p class="ns-body" style="max-width: 880px; margin-top: 40px;">Le choix dépend toujours de l'exposition, du sol et du niveau d'entretien souhaité — c'est là que le conseil compte.</p>
     </div>
   </div>
 
   <!-- P3 cream, image row -->
-  <div class="ns-section" data-ns="P3" style="top: 2160px; background: #eee7de;">
+  <div class="ns-section ns-cut-top" data-ns="P3" style="top: 2064px; background: #eee7de;">
     <div class="ns-wrap" style="padding-top: 90px; padding-bottom: 90px;">
       <p class="ns-eyebrow">SANS CORVÉE D'ARROSAGE</p>
       <h2 class="ns-heading">LE JARDIN SEC : BEAU SANS<br>(PRESQUE) ARROSER</h2>
@@ -328,23 +329,23 @@
   </div>
 
   <!-- P4 dark -->
-  <div class="ns-section" data-ns="P4" style="top: 2947px; background: #1d220f;">
+  <div class="ns-section ns-cut-top" data-ns="P4" style="top: 2803px; background: #d9cbaa;">
     <div class="ns-wrap" style="padding-top: 90px; padding-bottom: 90px;">
-      <p class="ns-eyebrow dark">GESTION DE L'EAU</p>
-      <h2 class="ns-heading dark">L'EAU : LE NERF DE LA GUERRE</h2>
-      <p class="ns-body dark" style="max-width: 780px; margin-top: 22px;">Même sobre, un jardin méditerranéen s'installe et se gère intelligemment côté eau :</p>
-      <ul class="ns-ul dark" style="max-width: 780px;">
+      <p class="ns-eyebrow">GESTION DE L'EAU</p>
+      <h2 class="ns-heading">L'EAU : LE NERF DE LA GUERRE</h2>
+      <p class="ns-body" style="max-width: 780px; margin-top: 22px;">Même sobre, un jardin méditerranéen s'installe et se gère intelligemment côté eau :</p>
+      <ul class="ns-ul" style="max-width: 780px;">
         <li>Arrosage au goutte-à-goutte réglé par zones, aux heures fraîches.</li>
         <li>Paillage généralisé pour garder le sol frais et limiter l'évaporation.</li>
         <li>Sols travaillés pour retenir l'eau plutôt que la laisser filer.</li>
       </ul>
-      <p class="ns-body dark" style="max-width: 780px; margin-top: 22px;">C'est ce qui fait la différence entre un jardin qui tient l'été et un jardin qui souffre.</p>
-      <a href="arrosage-automatique-goutte-a-goutte-aubagne.html" class="ns-link dark">VOIR L'ARROSAGE AUTOMATIQUE &amp; GOUTTE-À-GOUTTE<svg class="arrow-stroke" viewBox="0 0 40 8"><path d="M0 4 H38 M32.5 0.8 L38 4 L32.5 7.2" fill="none" stroke="currentColor" stroke-width="1"></path></svg></a>
+      <p class="ns-body" style="max-width: 780px; margin-top: 22px;">C'est ce qui fait la différence entre un jardin qui tient l'été et un jardin qui souffre.</p>
+      <a href="arrosage-automatique-goutte-a-goutte-aubagne.html" class="ns-link">VOIR L'ARROSAGE AUTOMATIQUE &amp; GOUTTE-À-GOUTTE<svg class="arrow-stroke" viewBox="0 0 40 8"><path d="M0 4 H38 M32.5 0.8 L38 4 L32.5 7.2" fill="none" stroke="currentColor" stroke-width="1"></path></svg></a>
     </div>
   </div>
 
   <!-- P5 cream compare -->
-  <div class="ns-section" data-ns="P5" style="top: 3469px; background: #eee7de;">
+  <div class="ns-section ns-cut-top" data-ns="P5" style="top: 3277px; background: #eee7de;">
     <div class="ns-wrap" style="padding-top: 90px; padding-bottom: 90px;">
       <p class="ns-eyebrow">DEUX STYLES, UN MÊME PRINCIPE</p>
       <h2 class="ns-heading">TRADITIONNEL OU MODERNE ?</h2>
@@ -363,14 +364,14 @@
   </div>
 
   <!-- P6 dark, image row -->
-  <div class="ns-section" data-ns="P6" style="top: 3948px; background: #1d220f;">
+  <div class="ns-section ns-cut-top" data-ns="P6" style="top: 3708px; background: #d9cbaa;">
     <div class="ns-wrap" style="padding-top: 90px; padding-bottom: 90px;">
-      <p class="ns-eyebrow dark">À AUBAGNE ET DANS L'EST MARSEILLAIS</p>
-      <h2 class="ns-heading dark">LE CONCEVOIR CHEZ VOUS</h2>
+      <p class="ns-eyebrow">À AUBAGNE ET DANS L'EST MARSEILLAIS</p>
+      <h2 class="ns-heading">LE CONCEVOIR CHEZ VOUS</h2>
       <div class="ns-row" style="margin-top: 50px; align-items: flex-start;">
         <div class="ns-row-text">
-          <p class="ns-body dark">Sur les terrains du secteur — sols calcaires, pentes vers les collines, plein soleil — le jardin méditerranéen n'est pas une mode, c'est la solution la plus durable. On conçoit le vôtre de A à Z : plan, terrassement léger, restanques si le terrain monte, plantations, paillage, arrosage. Un seul interlocuteur, du croquis au résultat.</p>
-          <a href="creation-amenagement-jardin-aubagne.html" class="ns-link dark">VOIR NOTRE PRESTATION DE CRÉATION DE JARDIN<svg class="arrow-stroke" viewBox="0 0 40 8"><path d="M0 4 H38 M32.5 0.8 L38 4 L32.5 7.2" fill="none" stroke="currentColor" stroke-width="1"></path></svg></a>
+          <p class="ns-body">Sur les terrains du secteur — sols calcaires, pentes vers les collines, plein soleil — le jardin méditerranéen n'est pas une mode, c'est la solution la plus durable. On conçoit le vôtre de A à Z : plan, terrassement léger, restanques si le terrain monte, plantations, paillage, arrosage. Un seul interlocuteur, du croquis au résultat.</p>
+          <a href="creation-amenagement-jardin-aubagne.html" class="ns-link">VOIR NOTRE PRESTATION DE CRÉATION DE JARDIN<svg class="arrow-stroke" viewBox="0 0 40 8"><path d="M0 4 H38 M32.5 0.8 L38 4 L32.5 7.2" fill="none" stroke="currentColor" stroke-width="1"></path></svg></a>
         </div>
         <div class="ns-row-image"><img src="assets/villa-restanques-cypres.jpg" alt="Restanques et jardin en pente, Aubagne" loading="lazy"></div>
       </div>
@@ -378,7 +379,7 @@
   </div>
 
   <!-- P7 FAQ cream -->
-  <div class="ns-section" data-ns="P7" style="top: 4686px; background: #e6ddcf;">
+  <div class="ns-section ns-cut-top" data-ns="P7" style="top: 4398px; background: #e6ddcf;">
     <div class="ns-wrap" style="padding-top: 90px; padding-bottom: 90px;">
       <p class="ns-eyebrow">QUESTIONS FRÉQUENTES</p>
       <h2 class="ns-heading">ON RÉPOND À VOS QUESTIONS</h2>
@@ -400,7 +401,7 @@
   </div>
 
   <!-- P8 CTA final -->
-  <div class="ns-section ns-cta-band" data-ns="P8" style="top: 5397px;">
+  <div class="ns-section ns-cta-band ns-cut-top" data-ns="P8" style="top: 5061px;">
     <div class="ns-wrap ns-cta-inner">
       <h2 class="ns-heading dark">CONCEVOIR VOTRE JARDIN<span class="ns-script dark">méditerranéen</span></h2>
       <p class="ns-body dark">Envie d'un extérieur qui reste beau tout l'été sans se battre avec l'arrosoir ? On conçoit votre jardin méditerranéen, adapté à votre terrain et à votre budget.</p>
@@ -408,9 +409,9 @@
     </div>
   </div>
 
-    <div style="position: absolute; left: 0px; top: 5880px; width: 1440px; height: 164px; clip-path: polygon(0px 0px, 1440px 46px, 1440px 164px, 0px 164px); background: #ece5da;"></div>
+    <div style="position: absolute; left: 0px; top: 5544px; width: 1440px; height: 164px; clip-path: polygon(0px 0px, 1440px 46px, 1440px 164px, 0px 164px); background: #ece5da;"></div>
 
-  <div style="position: absolute; left: -30px; top: 5914px; width: 300px; height: 150px; color: #8a8770; opacity: 0.16; pointer-events: none;">
+  <div style="position: absolute; left: -30px; top: 5578px; width: 300px; height: 150px; color: #8a8770; opacity: 0.16; pointer-events: none;">
     <svg viewBox="0 0 60 22" style="width: 300px; height: 110px; transform: rotate(28deg); transform-origin: 10% 40%;">
       <path d="M2 20 C 16 16 30 11 58 3" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="round"></path>
       <ellipse cx="10" cy="15" rx="5.4" ry="1.9" transform="rotate(-38 10 15)" fill="none" stroke="currentColor" stroke-width="0.45"></ellipse>
@@ -424,7 +425,7 @@
     </svg>
   </div>
 
-  <div style="position: absolute; left: 164px; top: 5917px; width: 200px; display: flex; flex-direction: column; align-items: center;">
+  <div style="position: absolute; left: 164px; top: 5581px; width: 200px; display: flex; flex-direction: column; align-items: center;">
     <svg viewBox="0 0 60 22" style="width: 63px; height: 23px; color: #9a9169;">
       <path d="M2 20 C 16 16 30 11 58 3" fill="none" stroke="currentColor" stroke-width="0.9" stroke-linecap="round"></path>
       <ellipse cx="10" cy="15" rx="5.4" ry="1.9" transform="rotate(-38 10 15)" fill="none" stroke="currentColor" stroke-width="0.8"></ellipse>
@@ -440,15 +441,15 @@
     <div style="margin-top: 12px; font-size: 11px; font-weight: 300; letter-spacing: 0.7em; line-height: 1; color: #8a8175; margin-right: -0.7em;">PAYSAGE</div>
   </div>
 
-  <div style="position: absolute; left: 482px; top: 5934px; font-size: 12px; font-weight: 300; line-height: 15.5px; color: #8a8175;">181 allée Jean Aicard<br />13400 Aubagne</div>
-  <div style="position: absolute; left: 482px; top: 5975px; font-size: 12px; font-weight: 600; letter-spacing: 0.02em; line-height: 1; color: #3a3529;"></div>
-  <div style="position: absolute; left: 482px; top: 5995px; font-size: 12px; font-weight: 300; line-height: 1; color: #8a8175;">contact@trenca-paysage.fr</div>
+  <div style="position: absolute; left: 482px; top: 5598px; font-size: 12px; font-weight: 300; line-height: 15.5px; color: #8a8175;">181 allée Jean Aicard<br />13400 Aubagne</div>
+  <div style="position: absolute; left: 482px; top: 5639px; font-size: 12px; font-weight: 600; letter-spacing: 0.02em; line-height: 1; color: #3a3529;"></div>
+  <div style="position: absolute; left: 482px; top: 5659px; font-size: 12px; font-weight: 300; line-height: 1; color: #8a8175;">contact@trenca-paysage.fr</div>
 
-  <div style="position: absolute; left: 714px; top: 5938px; width: 1px; height: 70px; background: #ded7ca;"></div>
+  <div style="position: absolute; left: 714px; top: 5602px; width: 1px; height: 70px; background: #ded7ca;"></div>
 
-  <div style="position: absolute; left: 762px; top: 5948px; font-size: 13px; font-weight: 400; letter-spacing: 0.12em; line-height: 1; color: #8a8767;">SUIVEZ-NOUS</div>
+  <div style="position: absolute; left: 762px; top: 5612px; font-size: 13px; font-weight: 400; letter-spacing: 0.12em; line-height: 1; color: #8a8767;">SUIVEZ-NOUS</div>
 
-  <div style="position: absolute; left: 880px; top: 5975px; display: flex; align-items: center; gap: 14px;">
+  <div style="position: absolute; left: 880px; top: 5639px; display: flex; align-items: center; gap: 14px;">
     <a href="#" style="width: 31px; height: 31px; border: 1px solid #9a9184; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
       <span style="display: block; width: 15px; height: 15px; border: 1px solid #6f685c; border-radius: 5px; position: relative;">
         <span style="position: absolute; left: 3px; top: 3px; width: 7px; height: 7px; border: 1px solid #6f685c; border-radius: 50%;"></span>
@@ -458,7 +459,7 @@
     <a href="#" style="width: 31px; height: 31px; border: 1px solid #9a9184; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: Georgia, serif; font-size: 19px; line-height: 1; color: #6f685c; padding-bottom: 2px;">f</a>
   </div>
 
-  <a href="#" style="position: absolute; left: 1083px; top: 5960px; width: 231px; height: 46px; display: flex; align-items: center; justify-content: center; background: #1d220f; font-size: 13.4px; font-weight: 400; letter-spacing: 0.14em; color: #ece5d8;" style-hover="background: #262c14;">DEMANDE DE DEVIS</a>
+  <a href="#" style="position: absolute; left: 1083px; top: 5624px; width: 231px; height: 46px; display: flex; align-items: center; justify-content: center; background: #1d220f; font-size: 13.4px; font-weight: 400; letter-spacing: 0.14em; color: #ece5d8;" style-hover="background: #262c14;">DEMANDE DE DEVIS</a>
 
 
 </div><!-- /.desktop-stage -->
@@ -499,18 +500,18 @@
     </div>
   </section>
 
-  <section class="m-newsec on-dark">
+  <section class="m-newsec" style="background: #d9cbaa;">
     <div class="m-shell">
-      <p class="m-ns-eyebrow on-dark">La palette végétale</p>
-      <h2 class="m-ns-heading on-dark">Les plantes du jardin méditerranéen</h2>
+      <p class="m-ns-eyebrow">La palette végétale</p>
+      <h2 class="m-ns-heading">Les plantes du jardin méditerranéen</h2>
       <div style="margin-top: 26px; display: flex; flex-direction: column; gap: 20px;">
-        <div><h4 style="margin:0 0 8px; font-size:11px; font-weight:600; letter-spacing:.05em; text-transform:uppercase; color:#a4b359;">Arbres</h4><p class="m-ns-body on-dark">Olivier, arbousier, micocoulier, chêne vert, pin parasol, cyprès de Provence, agrumes dans les secteurs abrités.</p></div>
-        <div><h4 style="margin:0 0 8px; font-size:11px; font-weight:600; letter-spacing:.05em; text-transform:uppercase; color:#a4b359;">Arbustes</h4><p class="m-ns-body on-dark">Laurier-rose, romarin, ciste, pittosporum, arbousier, germandrée, phlomis.</p></div>
-        <div><h4 style="margin:0 0 8px; font-size:11px; font-weight:600; letter-spacing:.05em; text-transform:uppercase; color:#a4b359;">Vivaces et aromatiques</h4><p class="m-ns-body on-dark">Lavande, thym, santoline, sauge, gaura, perovskia, euphorbe.</p></div>
-        <div><h4 style="margin:0 0 8px; font-size:11px; font-weight:600; letter-spacing:.05em; text-transform:uppercase; color:#a4b359;">Graminées</h4><p class="m-ns-body on-dark">Stipa, miscanthus, pour le mouvement et la légèreté.</p></div>
-        <div><h4 style="margin:0 0 8px; font-size:11px; font-weight:600; letter-spacing:.05em; text-transform:uppercase; color:#a4b359;">Couvre-sols</h4><p class="m-ns-body on-dark">Thym rampant, dichondra, plantes tapissantes qui limitent le désherbage.</p></div>
+        <div><h4 style="margin:0 0 8px; font-size:11px; font-weight:600; letter-spacing:.05em; text-transform:uppercase; color:#6d7740;">Arbres</h4><p class="m-ns-body">Olivier, arbousier, micocoulier, chêne vert, pin parasol, cyprès de Provence, agrumes dans les secteurs abrités.</p></div>
+        <div><h4 style="margin:0 0 8px; font-size:11px; font-weight:600; letter-spacing:.05em; text-transform:uppercase; color:#6d7740;">Arbustes</h4><p class="m-ns-body">Laurier-rose, romarin, ciste, pittosporum, arbousier, germandrée, phlomis.</p></div>
+        <div><h4 style="margin:0 0 8px; font-size:11px; font-weight:600; letter-spacing:.05em; text-transform:uppercase; color:#6d7740;">Vivaces et aromatiques</h4><p class="m-ns-body">Lavande, thym, santoline, sauge, gaura, perovskia, euphorbe.</p></div>
+        <div><h4 style="margin:0 0 8px; font-size:11px; font-weight:600; letter-spacing:.05em; text-transform:uppercase; color:#6d7740;">Graminées</h4><p class="m-ns-body">Stipa, miscanthus, pour le mouvement et la légèreté.</p></div>
+        <div><h4 style="margin:0 0 8px; font-size:11px; font-weight:600; letter-spacing:.05em; text-transform:uppercase; color:#6d7740;">Couvre-sols</h4><p class="m-ns-body">Thym rampant, dichondra, plantes tapissantes qui limitent le désherbage.</p></div>
       </div>
-      <p class="m-ns-body on-dark" style="margin-top: 22px;">Le choix dépend toujours de l'exposition, du sol et du niveau d'entretien souhaité — c'est là que le conseil compte.</p>
+      <p class="m-ns-body" style="margin-top: 22px;">Le choix dépend toujours de l'exposition, du sol et du niveau d'entretien souhaité — c'est là que le conseil compte.</p>
     </div>
   </section>
 
@@ -524,18 +525,18 @@
     </div>
   </section>
 
-  <section class="m-newsec on-dark">
+  <section class="m-newsec" style="background: #d9cbaa;">
     <div class="m-shell">
-      <p class="m-ns-eyebrow on-dark">Gestion de l'eau</p>
-      <h2 class="m-ns-heading on-dark">L'eau : le nerf de la guerre</h2>
-      <p class="m-ns-body on-dark" style="margin-top: 14px;">Même sobre, un jardin méditerranéen s'installe et se gère intelligemment côté eau :</p>
+      <p class="m-ns-eyebrow">Gestion de l'eau</p>
+      <h2 class="m-ns-heading">L'eau : le nerf de la guerre</h2>
+      <p class="m-ns-body" style="margin-top: 14px;">Même sobre, un jardin méditerranéen s'installe et se gère intelligemment côté eau :</p>
       <ul style="margin: 14px 0 0; padding: 0; list-style: none;">
-        <li style="position:relative; padding-left:18px; margin-top:10px; font-size:12.5px; font-weight:300; line-height:1.6; color:rgba(238,236,224,.85);"><span style="position:absolute;left:0;top:7px;width:5px;height:5px;background:#a4b359;border-radius:50%;"></span>Arrosage au goutte-à-goutte réglé par zones, aux heures fraîches.</li>
-        <li style="position:relative; padding-left:18px; margin-top:10px; font-size:12.5px; font-weight:300; line-height:1.6; color:rgba(238,236,224,.85);"><span style="position:absolute;left:0;top:7px;width:5px;height:5px;background:#a4b359;border-radius:50%;"></span>Paillage généralisé pour garder le sol frais et limiter l'évaporation.</li>
-        <li style="position:relative; padding-left:18px; margin-top:10px; font-size:12.5px; font-weight:300; line-height:1.6; color:rgba(238,236,224,.85);"><span style="position:absolute;left:0;top:7px;width:5px;height:5px;background:#a4b359;border-radius:50%;"></span>Sols travaillés pour retenir l'eau plutôt que la laisser filer.</li>
+        <li style="position:relative; padding-left:18px; margin-top:10px; font-size:12.5px; font-weight:300; line-height:1.6; color:#4a4736;"><span style="position:absolute;left:0;top:7px;width:5px;height:5px;background:#6d7740;border-radius:50%;"></span>Arrosage au goutte-à-goutte réglé par zones, aux heures fraîches.</li>
+        <li style="position:relative; padding-left:18px; margin-top:10px; font-size:12.5px; font-weight:300; line-height:1.6; color:#4a4736;"><span style="position:absolute;left:0;top:7px;width:5px;height:5px;background:#6d7740;border-radius:50%;"></span>Paillage généralisé pour garder le sol frais et limiter l'évaporation.</li>
+        <li style="position:relative; padding-left:18px; margin-top:10px; font-size:12.5px; font-weight:300; line-height:1.6; color:#4a4736;"><span style="position:absolute;left:0;top:7px;width:5px;height:5px;background:#6d7740;border-radius:50%;"></span>Sols travaillés pour retenir l'eau plutôt que la laisser filer.</li>
       </ul>
-      <p class="m-ns-body on-dark" style="margin-top: 14px;">C'est ce qui fait la différence entre un jardin qui tient l'été et un jardin qui souffre.</p>
-      <a href="arrosage-automatique-goutte-a-goutte-aubagne.html" class="m-ns-link on-dark">Voir l'arrosage automatique &amp; goutte-à-goutte<svg viewBox="0 0 32 7"><path d="M0 3.5 H30 M26 0.6 L30 3.5 L26 6.4" fill="none" stroke="#d8d4c2" stroke-width="1"></path></svg></a>
+      <p class="m-ns-body" style="margin-top: 14px;">C'est ce qui fait la différence entre un jardin qui tient l'été et un jardin qui souffre.</p>
+      <a href="arrosage-automatique-goutte-a-goutte-aubagne.html" class="m-ns-link">Voir l'arrosage automatique &amp; goutte-à-goutte<svg viewBox="0 0 32 7"><path d="M0 3.5 H30 M26 0.6 L30 3.5 L26 6.4" fill="none" stroke="#6c6852" stroke-width="1"></path></svg></a>
     </div>
   </section>
 
@@ -551,13 +552,13 @@
     </div>
   </section>
 
-  <section class="m-newsec on-dark">
+  <section class="m-newsec" style="background: #d9cbaa;">
     <div class="m-shell">
-      <p class="m-ns-eyebrow on-dark">À Aubagne et dans l'Est marseillais</p>
-      <h2 class="m-ns-heading on-dark">Le concevoir chez vous</h2>
-      <p class="m-ns-body on-dark" style="margin-top: 14px;">Sur les terrains du secteur — sols calcaires, pentes vers les collines, plein soleil — le jardin méditerranéen n'est pas une mode, c'est la solution la plus durable. On conçoit le vôtre de A à Z : plan, terrassement léger, restanques si le terrain monte, plantations, paillage, arrosage. Un seul interlocuteur, du croquis au résultat.</p>
+      <p class="m-ns-eyebrow">À Aubagne et dans l'Est marseillais</p>
+      <h2 class="m-ns-heading">Le concevoir chez vous</h2>
+      <p class="m-ns-body" style="margin-top: 14px;">Sur les terrains du secteur — sols calcaires, pentes vers les collines, plein soleil — le jardin méditerranéen n'est pas une mode, c'est la solution la plus durable. On conçoit le vôtre de A à Z : plan, terrassement léger, restanques si le terrain monte, plantations, paillage, arrosage. Un seul interlocuteur, du croquis au résultat.</p>
       <div class="m-ns-row-image"><img src="assets/villa-restanques-cypres.jpg" alt="Restanques et jardin en pente, Aubagne" loading="lazy"></div>
-      <a href="creation-amenagement-jardin-aubagne.html" class="m-ns-link on-dark">Voir notre prestation de création de jardin<svg viewBox="0 0 32 7"><path d="M0 3.5 H30 M26 0.6 L30 3.5 L26 6.4" fill="none" stroke="#d8d4c2" stroke-width="1"></path></svg></a>
+      <a href="creation-amenagement-jardin-aubagne.html" class="m-ns-link">Voir notre prestation de création de jardin<svg viewBox="0 0 32 7"><path d="M0 3.5 H30 M26 0.6 L30 3.5 L26 6.4" fill="none" stroke="#6c6852" stroke-width="1"></path></svg></a>
     </div>
   </section>
 
@@ -603,7 +604,7 @@
 <script>
 (function () {
   const BASE_WIDTH = 1440;
-  const BASE_HEIGHT = 6044;
+  const BASE_HEIGHT = 5708;
 
   function fitDesktopArtboard() {
     const viewport = document.querySelector('.desktop-viewport');
