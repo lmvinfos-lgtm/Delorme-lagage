@@ -20,9 +20,57 @@
   a:hover { color: #a4b359; }
 
   /* Desktop artboard: same original design, fluidly fitted without horizontal overflow. */
-  .desktop-viewport { position: relative; width: 100%; height: 2160px; overflow: hidden; background: #e4ded5; }
+  .desktop-viewport { position: relative; width: 100%; height: 7250px; overflow: hidden; background: #e4ded5; }
   .desktop-stage { position: absolute !important; top: 0; left: 0; margin: 0 !important; transform-origin: top left; }
   .mobile-site { display: none; }
+
+  /* ===== New content sections (desktop) — additive, reuses the established type system ===== */
+  .ns-section { position: absolute; left: 0; width: 1440px; }
+  .ns-wrap { padding: 0 120px; }
+  .ns-eyebrow { margin: 0 0 14px; font-size: 14px; font-weight: 500; letter-spacing: .14em; color: #8a8767; }
+  .ns-eyebrow.dark { color: #899457; }
+  .ns-heading { margin: 0; font-size: 44px; font-weight: 300; line-height: 1.1; letter-spacing: 0; color: #33301e; }
+  .ns-heading.dark { color: #f4f1e8; }
+  .ns-script { display: block; margin-top: 4px; font-family: Allura, cursive; font-size: 74px; line-height: 1; color: #6d7740; font-weight: 400; }
+  .ns-script.dark { color: #a4b359; }
+  .ns-body { margin: 0; font-size: 16px; font-weight: 300; line-height: 1.7; color: #4a4736; }
+  .ns-body.dark { color: rgba(238,236,224,.82); }
+  .ns-body + .ns-body { margin-top: 18px; }
+  .ns-note { margin: 18px 0 0; font-size: 13.5px; font-weight: 300; font-style: italic; line-height: 1.6; color: #8a8368; }
+  .ns-link { display: inline-flex; align-items: center; gap: 12px; font-size: 13px; font-weight: 600; letter-spacing: .07em; color: #2b2921; margin-top: 26px; }
+  .ns-link.dark { color: #eee9da; }
+  .ns-link svg { width: 40px; height: 8px; flex: none; }
+  .ns-link .arrow-stroke { color: #6c6852; }
+  .ns-link.dark .arrow-stroke { color: #d8d4c2; }
+  .ns-btn { display: inline-flex; align-items: center; justify-content: center; height: 50px; padding: 0 34px; background: #5f6626; color: #f4efe2; font-size: 13.4px; font-weight: 400; letter-spacing: .14em; }
+  .ns-btn:hover { background: #6d7530; color: #f4efe2; }
+  .ns-divider { height: 1px; background: #d5cdc0; }
+  .ns-h3 { margin: 0 0 18px; font-size: 25px; font-weight: 400; line-height: 1.3; color: #2b2921; letter-spacing: -.005em; }
+  .ns-row-num { font-family: Allura, cursive; font-size: 42px; color: #a9b47c; line-height: 1; display: block; margin-bottom: 10px; }
+  .ns-row { display: flex; align-items: center; gap: 64px; }
+  .ns-row.reverse { flex-direction: row-reverse; }
+  .ns-row + .ns-row { margin-top: 74px; }
+  .ns-row-text { flex: 0 0 600px; }
+  .ns-row-image { flex: 1 1 auto; height: 430px; overflow: hidden; clip-path: polygon(6% 0, 100% 7%, 94% 100%, 0 93%); }
+  .ns-row-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .ns-cards { display: flex; gap: 32px; margin-top: 46px; }
+  .ns-card { flex: 1; background: rgba(244,241,232,.04); border: 1px solid rgba(244,241,232,.18); padding: 36px 32px; }
+  .ns-stars { display: flex; gap: 5px; margin: 0 0 20px; }
+  .ns-stars svg { width: 15px; height: 15px; color: #a4b359; }
+  .ns-quote { margin: 0; font-size: 15px; font-weight: 300; font-style: italic; line-height: 1.68; color: rgba(238,236,224,.92); }
+  .ns-quote-author { margin: 22px 0 0; font-size: 12.5px; font-weight: 500; letter-spacing: .06em; color: #a9b47c; }
+  .ns-chips { display: flex; flex-wrap: wrap; gap: 14px 16px; margin-top: 40px; }
+  .ns-chip { display: inline-flex; align-items: center; gap: 10px; padding: 13px 22px; border: 1px solid #d5cdc0; font-size: 13px; font-weight: 500; letter-spacing: .03em; color: #2b2921; }
+  .ns-chip svg { width: 14px; height: 14px; color: #6d7740; flex: none; }
+  .ns-chip.is-hq { border-color: #6d7740; background: rgba(109,119,64,.08); }
+  .ns-faq-item { padding: 30px 0; }
+  .ns-faq-item + .ns-faq-item { border-top: 1px solid #d5cdc0; }
+  .ns-faq-q { margin: 0 0 12px; font-size: 18px; font-weight: 500; color: #2b2921; }
+  .ns-faq-a { margin: 0; font-size: 15px; font-weight: 300; line-height: 1.68; color: #4a4736; max-width: 880px; }
+  .ns-cta-band { background: #1d220f; padding: 96px 0 100px; }
+  .ns-cta-inner { display: flex; flex-direction: column; align-items: center; text-align: center; }
+  .ns-cta-inner .ns-body { max-width: 620px; margin-top: 22px; }
+  .ns-cta-inner .ns-btn { margin-top: 34px; }
 
   @media (max-width: 1100px) {
     .desktop-viewport { display: none; }
@@ -90,6 +138,45 @@
     .m-contact a { display: block; margin-top: 5px; color: #8a8175; }
     .m-footer-cta { grid-column: 1 / -1; width: 100%; margin-top: 0; background: #1d220f; }
 
+    /* NEW content sections (mobile) — same type system as the rest of the mobile site */
+    .m-newsec { padding: 60px 0; background: #eee7de; }
+    .m-newsec.on-dark { background: #1d220f; }
+    .m-ns-eyebrow { margin: 0 0 9px; font-size: 9px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color: #8a8767; }
+    .m-ns-eyebrow.on-dark { color: #899457; }
+    .m-ns-heading { margin: 0; font-size: clamp(23px, 7vw, 30px); font-weight: 300; line-height: 1.15; color: #33301e; }
+    .m-ns-heading.on-dark { color: #f4f1e8; }
+    .m-ns-script { display: block; margin-top: 2px; font-family: Allura, cursive; font-size: clamp(36px, 11vw, 50px); line-height: 1; color: #6d7740; font-weight: 400; }
+    .m-ns-script.on-dark { color: #a4b359; }
+    .m-ns-body { margin: 0; font-size: 12.5px; font-weight: 300; line-height: 1.7; color: #4a4736; }
+    .m-ns-body.on-dark { color: rgba(238,236,224,.85); }
+    .m-ns-body + .m-ns-body { margin-top: 14px; }
+    .m-ns-note { margin: 14px 0 0; font-size: 10.5px; font-weight: 300; font-style: italic; line-height: 1.6; color: #8a8368; }
+    .m-ns-link { display: inline-flex; align-items: center; gap: 9px; margin-top: 20px; font-size: 9.5px; font-weight: 600; letter-spacing: .06em; color: #2b2921; }
+    .m-ns-link.on-dark { color: #eee9da; }
+    .m-ns-link svg { width: 32px; height: 7px; flex: none; }
+    .m-ns-btn { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 0 24px; margin-top: 22px; background: #5f6626; color: #f4efe2; font-size: 9.5px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; }
+    .m-ns-row { margin-top: 42px; }
+    .m-ns-num { font-family: Allura, cursive; font-size: 28px; color: #a9b47c; line-height: 1; display: block; margin-bottom: 6px; }
+    .m-ns-h3 { margin: 0 0 10px; font-size: 16.5px; font-weight: 400; line-height: 1.3; color: #2b2921; }
+    .m-ns-row-image { margin-top: 16px; height: 200px; overflow: hidden; }
+    .m-ns-row-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .m-ns-cards { display: flex; flex-direction: column; gap: 16px; margin-top: 26px; }
+    .m-ns-card { background: rgba(244,241,232,.04); border: 1px solid rgba(244,241,232,.18); padding: 22px 20px; }
+    .m-ns-stars { display: flex; gap: 4px; margin: 0 0 12px; }
+    .m-ns-stars svg { width: 12px; height: 12px; color: #a4b359; }
+    .m-ns-quote { margin: 0; font-size: 12px; font-weight: 300; font-style: italic; line-height: 1.6; color: rgba(238,236,224,.92); }
+    .m-ns-quote-author { margin: 14px 0 0; font-size: 10px; font-weight: 500; letter-spacing: .04em; color: #a9b47c; }
+    .m-ns-chips { display: flex; flex-wrap: wrap; gap: 9px 10px; margin-top: 22px; }
+    .m-ns-chip { display: inline-flex; align-items: center; gap: 7px; padding: 9px 14px; border: 1px solid #d5cdc0; font-size: 10px; font-weight: 500; color: #2b2921; }
+    .m-ns-chip svg { width: 11px; height: 11px; color: #6d7740; flex: none; }
+    .m-ns-chip.is-hq { border-color: #6d7740; background: rgba(109,119,64,.08); }
+    .m-ns-faq-item { padding: 20px 0; }
+    .m-ns-faq-item + .m-ns-faq-item { border-top: 1px solid #d5cdc0; }
+    .m-ns-faq-q { margin: 0 0 8px; font-size: 12.5px; font-weight: 500; color: #2b2921; }
+    .m-ns-faq-a { margin: 0; font-size: 11.5px; font-weight: 300; line-height: 1.6; color: #4a4736; }
+    .m-ns-cta { background: #1d220f; padding: 54px 0 58px; text-align: center; }
+    .m-ns-cta .m-ns-body { margin-top: 16px; }
+
 
     @media (max-width: 699px) {
       .m-hero-copy { width: min(92%, 520px); }
@@ -126,7 +213,7 @@
 </style>
 </helmet>
 <div class="desktop-viewport" aria-hidden="false">
-<div class="desktop-stage" data-screen-label="Accueil" style="position: relative; width: 1440px; height: 2160px; margin: 0 auto; overflow: hidden; background: #eee7de; font-family: Poppins, 'Century Gothic', sans-serif; -webkit-font-smoothing: antialiased;">
+<div class="desktop-stage" data-screen-label="Accueil" style="position: relative; width: 1440px; height: 7250px; margin: 0 auto; overflow: hidden; background: #eee7de; font-family: Poppins, 'Century Gothic', sans-serif; -webkit-font-smoothing: antialiased;">
 
   <div style="position: absolute; inset: 0; opacity: 0.5; mix-blend-mode: multiply; background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3'/%3E%3C/filter%3E%3Crect width='260' height='260' filter='url(%23n)' opacity='0.16'/%3E%3C/svg%3E&quot;);"></div>
 
@@ -136,11 +223,11 @@
     <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(8,10,6,0.62) 0%, rgba(8,10,6,0.12) 16%, rgba(8,10,6,0) 30%, rgba(8,10,6,0.28) 100%);"></div>
   </div>
 
-  <div style="position: absolute; left: 0px; top: 759px; width: 746px; height: 548px; clip-path: polygon(0px 165px, 746px 0px, 625px 433px, 0px 548px); background-image: url('assets/patio.jpg'); background-size: cover; background-position: 42% 62%;"></div>
+  <div style="position: absolute; left: 0px; top: 759px; width: 746px; height: 548px; clip-path: polygon(0px 165px, 746px 0px, 625px 433px, 0px 548px); background-image: url('assets/realisation-villa-piscine-creation.jpg'); background-size: cover; background-position: 50% 46%;"></div>
 
-  <div style="position: absolute; left: 0px; top: 1253px; width: 293px; height: 336px; clip-path: polygon(0px 57px, 293px 3px, 213px 317px, 0px 336px); background-image: url('assets/bassin.jpg'); background-size: cover; background-position: 30% 46%;"></div>
+  <div style="position: absolute; left: 0px; top: 1253px; width: 293px; height: 336px; clip-path: polygon(0px 57px, 293px 3px, 213px 317px, 0px 336px); background-image: url('assets/piscine-vegetation-colline.jpg'); background-size: cover; background-position: 60% 40%;"></div>
 
-  <div style="position: absolute; left: 212px; top: 1191px; width: 413px; height: 379px; clip-path: polygon(80px 65px, 413px 3px, 314px 353px, 0px 379px); background-image: url('assets/cloture.jpg'); background-size: cover; background-position: 52% 42%;"></div>
+  <div style="position: absolute; left: 212px; top: 1191px; width: 413px; height: 379px; clip-path: polygon(80px 65px, 413px 3px, 314px 353px, 0px 379px); background-image: url('assets/chantier-muret-restanque.jpg'); background-size: cover; background-position: 50% 38%;"></div>
 
   <sc-if value="{{ dapple }}" hint-placeholder-val="{{ true }}">
     <div style="position: absolute; left: 696px; top: 796px; width: 744px; height: 520px; clip-path: polygon(0px 141px, 744px 0px, 744px 520px, 0px 520px); pointer-events: none;">
@@ -163,16 +250,168 @@
     </div>
   </sc-if>
 
-  <div style="position: absolute; left: 352px; top: 1420px; width: 1088px; height: 623px; clip-path: polygon(0px 156px, 1088px 0px, 1088px 623px, 0px 586px); background-image: url('assets/bassin.jpg'); background-size: cover; background-position: 62% 72%; filter: {{ s3Filter }};"></div>
+  <div style="position: absolute; left: 352px; top: 1420px; width: 1088px; height: 623px; clip-path: polygon(0px 156px, 1088px 0px, 1088px 623px, 0px 586px); background-image: url('assets/villa-provence-panorama.jpg'); background-size: cover; background-position: 50% 62%; filter: {{ s3Filter }};"></div>
 
   <div style="position: absolute; left: 1305px; top: 1420px; width: 135px; height: 606px; clip-path: polygon(135px 0px, 42px 71px, 17px 253px, 0px 345px, 28px 437px, 66px 528px, 116px 605px, 135px 605px); background: linear-gradient(115deg, #23262a 0%, #14161a 40%, #1c1f22 70%, #0f1114 100%);"></div>
 
   <div style="position: absolute; left: 0px; top: 1545px; width: 782px; height: 476px; clip-path: path('M0,49 L556,4 C592,-1 604,12 612,40 L782,476 L0,452 Z'); background: #4a5326; opacity: 0.9;"></div>
   <div style="position: absolute; left: 0px; top: 1545px; width: 776px; height: 476px; clip-path: path('M0,49 L552,4 C588,-1 600,12 608,38 L774,474 L0,450 Z'); background: linear-gradient(120deg, #22270f 0%, #1b1f0e 46%, #171b0b 100%);"></div>
 
-  <div style="position: absolute; left: 0px; top: 1996px; width: 1440px; height: 164px; clip-path: polygon(0px 0px, 1440px 46px, 1440px 164px, 0px 164px); background: #ece5da;"></div>
+  <!-- ===================== NEW: Trois métiers (détail) ===================== -->
+  <div class="ns-section" data-ns="A" style="top: 2021px; background: #eee7de;">
+    <div class="ns-wrap" style="padding-top: 108px; padding-bottom: 96px;">
+      <p class="ns-eyebrow">NOS TROIS MÉTIERS</p>
+      <h2 class="ns-heading">TROIS MÉTIERS POUR<br>VOTRE EXTÉRIEUR<span class="ns-script">au fil des saisons</span></h2>
 
-  <div style="position: absolute; left: -30px; top: 2030px; width: 300px; height: 150px; color: #8a8770; opacity: 0.16; pointer-events: none;">
+      <div style="margin-top: 78px;">
+        <div class="ns-row">
+          <div class="ns-row-text">
+            <span class="ns-row-num">01</span>
+            <h3 class="ns-h3">Protéger : débroussaillement et mise en conformité (OLD)</h3>
+            <p class="ns-body">Autour d'Aubagne, beaucoup de maisons sont situées à moins de 200 mètres des massifs. Elles sont alors soumises à l'Obligation Légale de Débroussaillement (OLD). Concrètement, en zone naturelle, le débroussaillement doit être réalisé sur 50 mètres autour de l'habitation (distance pouvant être portée à 100 m par le maire) ; en zone urbaine, c'est toute la parcelle qui doit être entretenue. La règle est encadrée par l'arrêté préfectoral des Bouches-du-Rhône du 15 octobre 2025, et le non-respect expose à une amende pouvant atteindre 50 € par m² non débroussaillé.</p>
+            <p class="ns-body">On s'occupe de tout : diagnostic du terrain, débroussaillement, taille et évacuation des végétaux, puis entretien annuel pour rester en règle. Un point important sur le calendrier : ces travaux se réalisent d'octobre à mai, avant la saison à risque — l'accès aux massifs étant réglementé du 1ᵉʳ juin au 30 septembre. Mieux vaut donc anticiper l'hiver que courir en juillet.</p>
+            <a href="debroussaillement-old-aubagne.html" class="ns-link">EN SAVOIR PLUS SUR LE DÉBROUSSAILLEMENT OLD<svg class="arrow-stroke" viewBox="0 0 40 8"><path d="M0 4 H38 M32.5 0.8 L38 4 L32.5 7.2" fill="none" stroke="currentColor" stroke-width="1"></path></svg></a>
+          </div>
+          <div class="ns-row-image"><img src="assets/villa-restanques-cypres.jpg" alt="Terrain entretenu aux abords du massif, Aubagne" loading="lazy"></div>
+        </div>
+
+        <div class="ns-row reverse">
+          <div class="ns-row-text">
+            <span class="ns-row-num">02</span>
+            <h3 class="ns-h3">Entretenir : votre jardin suivi toute l'année</h3>
+            <p class="ns-body">Plutôt qu'une intervention isolée quand tout a déjà poussé, un entretien régulier coûte moins cher et garde un extérieur net en permanence : tonte, taille de haies, désherbage, débroussaillage, ramassage. Nous proposons des formules à l'année, adaptées à la taille de votre jardin.</p>
+            <p class="ns-body"><strong>Et jusqu'à 50 % de crédit d'impôt.</strong> Les petits travaux d'entretien de jardin réalisés à domicile ouvrent droit à un crédit d'impôt égal à 50 % des sommes payées, dans la limite de 5 000 € de dépenses par an et par foyer fiscal (soit jusqu'à 2 500 € par an). Trenca Paysage étant déclaré au titre des services à la personne, vous pouvez en bénéficier — y compris via l'avance immédiate, qui vous permet de ne régler que la moitié de la facture.</p>
+            <p class="ns-note">À noter : cet avantage concerne l'entretien courant, pas les travaux de création ou d'aménagement (allées, clôtures, arrosage automatique, plantations), qui n'y sont pas éligibles.</p>
+            <a href="entretien-jardin-credit-impot-aubagne.html" class="ns-link">DÉCOUVRIR LES FORMULES D'ENTRETIEN<svg class="arrow-stroke" viewBox="0 0 40 8"><path d="M0 4 H38 M32.5 0.8 L38 4 L32.5 7.2" fill="none" stroke="currentColor" stroke-width="1"></path></svg></a>
+          </div>
+          <div class="ns-row-image"><img src="assets/realisation-gazon-cour.jpg" alt="Jardin entretenu, gazon net à Aubagne" loading="lazy"></div>
+        </div>
+
+        <div class="ns-row">
+          <div class="ns-row-text">
+            <span class="ns-row-num">03</span>
+            <h3 class="ns-h3">Créer : le jardin méditerranéen, pensé pour consommer moins d'eau</h3>
+            <p class="ns-body">Un beau jardin, ici, n'est pas un jardin qui boit toute l'année. C'est un jardin adapté au climat : essences méditerranéennes, paillage, arrosage au goutte-à-goutte, sols travaillés pour retenir l'eau, restanques qui tiennent la pente. Du terrain nu à l'espace de vie fini, on conçoit et on réalise l'ensemble : terrasses, allées et pavages, murets et escaliers, engazonnement et plantations, bassins, arrosage automatique.</p>
+            <a href="jardin-mediterraneen.html" class="ns-link">DÉCOUVRIR LE JARDIN MÉDITERRANÉEN<svg class="arrow-stroke" viewBox="0 0 40 8"><path d="M0 4 H38 M32.5 0.8 L38 4 L32.5 7.2" fill="none" stroke="currentColor" stroke-width="1"></path></svg></a>
+          </div>
+          <div class="ns-row-image"><img src="assets/jardin-sec-gravier-fleuri.jpg" alt="Jardin méditerranéen sec, gravier et lavandes" loading="lazy"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== NEW: Témoignages ===================== -->
+  <div class="ns-section" data-ns="B" style="top: 4103px; background: #1d220f;">
+    <div class="ns-wrap" style="padding-top: 100px; padding-bottom: 96px;">
+      <p class="ns-eyebrow dark">AVIS GOOGLE · 5,0 / 5</p>
+      <h2 class="ns-heading dark">CE QUE DISENT NOS CLIENTS</h2>
+      <p class="ns-body dark" style="max-width: 720px; margin-top: 24px;">Trenca Paysage est une entreprise récente — et assumée comme telle : disponible, à l'écoute, appliquée sur chaque chantier. Les premiers retours, réels et vérifiables, sont sans équivoque :</p>
+
+      <div class="ns-cards">
+        <div class="ns-card">
+          <div class="ns-stars">
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg>
+          </div>
+          <p class="ns-quote">« Travail soigné, propre. Le jardin a complètement changé. »</p>
+          <p class="ns-quote-author">Charlène J. — avis Google</p>
+        </div>
+        <div class="ns-card">
+          <div class="ns-stars">
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg>
+          </div>
+          <p class="ns-quote">« Complètement sous le charme, travail soigné et appliqué, je recommande chaudement. »</p>
+          <p class="ns-quote-author">Nathan B. — avis Google</p>
+        </div>
+        <div class="ns-card">
+          <div class="ns-stars">
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg>
+          </div>
+          <p class="ns-quote">« Super jeune professionnel, très sérieux et très agréable, je suis très satisfait de son travail. »</p>
+          <p class="ns-quote-author">Samuel — avis Google</p>
+        </div>
+      </div>
+      <a href="realisations.html" class="ns-link dark">VOIR TOUTES NOS RÉALISATIONS<svg class="arrow-stroke" viewBox="0 0 40 8"><path d="M0 4 H38 M32.5 0.8 L38 4 L32.5 7.2" fill="none" stroke="currentColor" stroke-width="1"></path></svg></a>
+    </div>
+  </div>
+
+  <!-- ===================== NEW: Zone d'intervention ===================== -->
+  <div class="ns-section" data-ns="C" style="top: 4764px; background: #eee7de;">
+    <div class="ns-wrap" style="padding-top: 100px; padding-bottom: 96px;">
+      <p class="ns-eyebrow">OÙ INTERVENONS-NOUS</p>
+      <h2 class="ns-heading">NOTRE ZONE D'INTERVENTION<span class="ns-script">Est marseillais</span></h2>
+      <p class="ns-body" style="max-width: 700px; margin-top: 26px;">Basés à Aubagne, nous intervenons dans tout l'Est marseillais : Gémenos, Roquevaire, Auriol, La Penne-sur-Huveaune, Cuges-les-Pins, Carnoux-en-Provence, Cassis et les communes voisines. Un doute sur votre secteur ? Demandez, on vous répond vite.</p>
+      <div class="ns-chips">
+        <div class="ns-chip is-hq"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21.5C7.5 17 5 13 5 9.5a7 7 0 0 1 14 0c0 3.5-2.5 7.5-7 12z"></path><circle cx="12" cy="9.5" r="2.6"></circle></svg>Aubagne (siège)</div>
+        <div class="ns-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21.5C7.5 17 5 13 5 9.5a7 7 0 0 1 14 0c0 3.5-2.5 7.5-7 12z"></path><circle cx="12" cy="9.5" r="2.6"></circle></svg>Gémenos</div>
+        <div class="ns-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21.5C7.5 17 5 13 5 9.5a7 7 0 0 1 14 0c0 3.5-2.5 7.5-7 12z"></path><circle cx="12" cy="9.5" r="2.6"></circle></svg>Roquevaire</div>
+        <div class="ns-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21.5C7.5 17 5 13 5 9.5a7 7 0 0 1 14 0c0 3.5-2.5 7.5-7 12z"></path><circle cx="12" cy="9.5" r="2.6"></circle></svg>Auriol</div>
+        <div class="ns-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21.5C7.5 17 5 13 5 9.5a7 7 0 0 1 14 0c0 3.5-2.5 7.5-7 12z"></path><circle cx="12" cy="9.5" r="2.6"></circle></svg>La Penne-sur-Huveaune</div>
+        <div class="ns-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21.5C7.5 17 5 13 5 9.5a7 7 0 0 1 14 0c0 3.5-2.5 7.5-7 12z"></path><circle cx="12" cy="9.5" r="2.6"></circle></svg>Cuges-les-Pins</div>
+        <div class="ns-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21.5C7.5 17 5 13 5 9.5a7 7 0 0 1 14 0c0 3.5-2.5 7.5-7 12z"></path><circle cx="12" cy="9.5" r="2.6"></circle></svg>Carnoux-en-Provence</div>
+        <div class="ns-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21.5C7.5 17 5 13 5 9.5a7 7 0 0 1 14 0c0 3.5-2.5 7.5-7 12z"></path><circle cx="12" cy="9.5" r="2.6"></circle></svg>Cassis</div>
+      </div>
+      <a href="zone-intervention.html" class="ns-link">VÉRIFIER MA COMMUNE<svg class="arrow-stroke" viewBox="0 0 40 8"><path d="M0 4 H38 M32.5 0.8 L38 4 L32.5 7.2" fill="none" stroke="currentColor" stroke-width="1"></path></svg></a>
+    </div>
+  </div>
+
+  <!-- ===================== NEW: FAQ ===================== -->
+  <div class="ns-section" data-ns="D" style="top: 5406px; background: #e6ddcf;">
+    <div class="ns-wrap" style="padding-top: 100px; padding-bottom: 96px;">
+      <p class="ns-eyebrow">QUESTIONS FRÉQUENTES</p>
+      <h2 class="ns-heading">ON RÉPOND À VOS QUESTIONS</h2>
+      <div style="margin-top: 56px;">
+        <div class="ns-faq-item">
+          <p class="ns-faq-q">Suis-je concerné par l'obligation de débroussaillement ?</p>
+          <p class="ns-faq-a">Si votre habitation est à moins de 200 m d'un bois ou d'une forêt classés à risque, très probablement oui. On réalise le diagnostic de votre terrain gratuitement lors du devis.</p>
+        </div>
+        <div class="ns-faq-item">
+          <p class="ns-faq-q">Le crédit d'impôt de 50 % s'applique-t-il à la création de mon jardin ?</p>
+          <p class="ns-faq-a">Non. Il concerne uniquement l'entretien courant (tonte, taille, désherbage, débroussaillage). Les travaux de création et d'aménagement n'y sont pas éligibles.</p>
+        </div>
+        <div class="ns-faq-item">
+          <p class="ns-faq-q">Quand faut-il débroussailler ?</p>
+          <p class="ns-faq-a">De préférence entre octobre et mai. En été, l'accès aux massifs est réglementé et certains travaux sont limités selon le risque incendie du jour.</p>
+        </div>
+        <div class="ns-faq-item">
+          <p class="ns-faq-q">Intervenez-vous à Gémenos, Cassis ou Carnoux ?</p>
+          <p class="ns-faq-a">Oui, l'Est marseillais fait partie de notre zone. Précisez votre commune dans votre demande.</p>
+        </div>
+        <div class="ns-faq-item">
+          <p class="ns-faq-q">Quelle différence entre un jardinier et un paysagiste ?</p>
+          <p class="ns-faq-a">Le jardinier entretient (tonte, taille, nettoyage) ; le paysagiste conçoit et aménage (création, terrasses, plantations, maçonnerie). Trenca fait les deux — de la création à l'entretien à l'année.</p>
+        </div>
+        <div class="ns-faq-item">
+          <p class="ns-faq-q">Quel est le tarif moyen d'un paysagiste ?</p>
+          <p class="ns-faq-a">Tout dépend de la prestation : un entretien à l'année, une création complète ou un débroussaillement n'ont rien à voir en prix. On chiffre gratuitement, au cas par cas — et l'entretien courant ouvre droit à 50 % de crédit d'impôt.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== NEW: CTA final ===================== -->
+  <div class="ns-section ns-cta-band" data-ns="E" style="top: 6576px;">
+    <div class="ns-wrap ns-cta-inner">
+      <h2 class="ns-heading dark">PARLONS DE VOTRE PROJET<span class="ns-script dark">gratuitement</span></h2>
+      <p class="ns-body dark">Un extérieur à créer, à entretenir ou à mettre en conformité, ça commence par un échange. Dites-nous ce que vous avez en tête — on vient voir et on vous chiffre tout, gratuitement.</p>
+      <a href="mailto:contact@trenca-paysage.fr" class="ns-btn">DEMANDER MON DEVIS GRATUIT</a>
+    </div>
+  </div>
+
+  <div style="position: absolute; left: 0px; top: 7086px; width: 1440px; height: 164px; clip-path: polygon(0px 0px, 1440px 46px, 1440px 164px, 0px 164px); background: #ece5da;"></div>
+
+  <div style="position: absolute; left: -30px; top: 7120px; width: 300px; height: 150px; color: #8a8770; opacity: 0.16; pointer-events: none;">
     <svg viewBox="0 0 60 22" style="width: 300px; height: 110px; transform: rotate(28deg); transform-origin: 10% 40%;">
       <path d="M2 20 C 16 16 30 11 58 3" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="round"></path>
       <ellipse cx="10" cy="15" rx="5.4" ry="1.9" transform="rotate(-38 10 15)" fill="none" stroke="currentColor" stroke-width="0.45"></ellipse>
@@ -322,7 +561,7 @@
     <path d="M0 4 H42 M36.5 0.8 L42 4 L36.5 7.2" fill="none" stroke="currentColor" stroke-width="1"></path>
   </svg>
 
-  <div style="position: absolute; left: 164px; top: 2033px; width: 200px; display: flex; flex-direction: column; align-items: center;">
+  <div style="position: absolute; left: 164px; top: 7123px; width: 200px; display: flex; flex-direction: column; align-items: center;">
     <svg viewBox="0 0 60 22" style="width: 63px; height: 23px; color: #9a9169;">
       <path d="M2 20 C 16 16 30 11 58 3" fill="none" stroke="currentColor" stroke-width="0.9" stroke-linecap="round"></path>
       <ellipse cx="10" cy="15" rx="5.4" ry="1.9" transform="rotate(-38 10 15)" fill="none" stroke="currentColor" stroke-width="0.8"></ellipse>
@@ -338,15 +577,15 @@
     <div style="margin-top: 12px; font-size: 11px; font-weight: 300; letter-spacing: 0.7em; line-height: 1; color: #8a8175; margin-right: -0.7em;">PAYSAGE</div>
   </div>
 
-  <div style="position: absolute; left: 482px; top: 2050px; font-size: 12px; font-weight: 300; line-height: 15.5px; color: #8a8175;">181 allée Jean Aicard<br />13400 Aubagne</div>
-  <div style="position: absolute; left: 482px; top: 2091px; font-size: 12px; font-weight: 600; letter-spacing: 0.02em; line-height: 1; color: #3a3529;"></div>
-  <div style="position: absolute; left: 482px; top: 2111px; font-size: 12px; font-weight: 300; line-height: 1; color: #8a8175;">contact@trenca-paysage.fr</div>
+  <div style="position: absolute; left: 482px; top: 7140px; font-size: 12px; font-weight: 300; line-height: 15.5px; color: #8a8175;">181 allée Jean Aicard<br />13400 Aubagne</div>
+  <div style="position: absolute; left: 482px; top: 7181px; font-size: 12px; font-weight: 600; letter-spacing: 0.02em; line-height: 1; color: #3a3529;"></div>
+  <div style="position: absolute; left: 482px; top: 7201px; font-size: 12px; font-weight: 300; line-height: 1; color: #8a8175;">contact@trenca-paysage.fr</div>
 
-  <div style="position: absolute; left: 714px; top: 2054px; width: 1px; height: 70px; background: #ded7ca;"></div>
+  <div style="position: absolute; left: 714px; top: 7144px; width: 1px; height: 70px; background: #ded7ca;"></div>
 
-  <div style="position: absolute; left: 762px; top: 2064px; font-size: 13px; font-weight: 400; letter-spacing: 0.12em; line-height: 1; color: #8a8767;">SUIVEZ-NOUS</div>
+  <div style="position: absolute; left: 762px; top: 7154px; font-size: 13px; font-weight: 400; letter-spacing: 0.12em; line-height: 1; color: #8a8767;">SUIVEZ-NOUS</div>
 
-  <div style="position: absolute; left: 880px; top: 2091px; display: flex; align-items: center; gap: 14px;">
+  <div style="position: absolute; left: 880px; top: 7181px; display: flex; align-items: center; gap: 14px;">
     <a href="#" style="width: 31px; height: 31px; border: 1px solid #9a9184; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
       <span style="display: block; width: 15px; height: 15px; border: 1px solid #6f685c; border-radius: 5px; position: relative;">
         <span style="position: absolute; left: 3px; top: 3px; width: 7px; height: 7px; border: 1px solid #6f685c; border-radius: 50%;"></span>
@@ -356,7 +595,7 @@
     <a href="#" style="width: 31px; height: 31px; border: 1px solid #9a9184; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: Georgia, serif; font-size: 19px; line-height: 1; color: #6f685c; padding-bottom: 2px;">f</a>
   </div>
 
-  <a href="#" style="position: absolute; left: 1083px; top: 2076px; width: 231px; height: 46px; display: flex; align-items: center; justify-content: center; background: #1d220f; font-size: 13.4px; font-weight: 400; letter-spacing: 0.14em; color: #ece5d8;" style-hover="background: #262c14;">DEMANDE DE DEVIS</a>
+  <a href="#" style="position: absolute; left: 1083px; top: 7166px; width: 231px; height: 46px; display: flex; align-items: center; justify-content: center; background: #1d220f; font-size: 13.4px; font-weight: 400; letter-spacing: 0.14em; color: #ece5d8;" style-hover="background: #262c14;">DEMANDE DE DEVIS</a>
 
 </div><!-- /.desktop-stage -->
 </div><!-- /.desktop-viewport -->
@@ -381,9 +620,9 @@
 
   <section class="m-services" id="services-mobile">
     <div class="m-service-collage" id="realisations-mobile" aria-hidden="true">
-      <img class="p" src="assets/patio.jpg" alt="" loading="lazy" />
-      <img class="b" src="assets/bassin.jpg" alt="" loading="lazy" />
-      <img class="c" src="assets/cloture.jpg" alt="" loading="lazy" />
+      <img class="p" src="assets/realisation-villa-piscine-creation.jpg" alt="" loading="lazy" />
+      <img class="b" src="assets/piscine-vegetation-colline.jpg" alt="" loading="lazy" />
+      <img class="c" src="assets/chantier-muret-restanque.jpg" alt="" loading="lazy" />
     </div>
     <div class="m-services-panel">
       <div class="m-section-head">
@@ -421,7 +660,7 @@
   </section>
 
   <section class="m-engagement">
-    <img class="m-engagement-image" src="assets/bassin.jpg" alt="Jardin avec bassin et cascade" loading="lazy" />
+    <img class="m-engagement-image" src="assets/villa-provence-panorama.jpg" alt="Villa et jardin à Aubagne, vue sur le massif" loading="lazy" />
     <div class="m-engagement-card">
       <p class="m-eyebrow">Notre engagement</p>
       <h2 class="m-heading">DES ESPACES<br>QUI VOUS<br>RESSEMBLENT <span class="m-heading-script">durablement</span></h2>
@@ -433,6 +672,126 @@
         <div class="m-value"><svg viewBox="0 0 24 24"><path d="M4.5 20 C 4.5 10 10.5 3.8 20.5 3.5 C 20.5 13.5 14 20 4.5 20 Z" fill="none" stroke="currentColor" stroke-width="1.1"/><path d="M2.5 21.5 L 18 6" fill="none" stroke="currentColor" stroke-width="1.1"/></svg><span>DURABILITÉ</span></div>
       </div>
       <a href="#" class="m-text-link">En savoir plus sur nous</a>
+    </div>
+  </section>
+
+  <section class="m-newsec">
+    <div class="m-shell">
+      <p class="m-ns-eyebrow">Nos trois métiers</p>
+      <h2 class="m-ns-heading">Trois métiers pour votre extérieur<span class="m-ns-script">au fil des saisons</span></h2>
+
+      <div class="m-ns-row">
+        <span class="m-ns-num">01</span>
+        <h3 class="m-ns-h3">Protéger : débroussaillement et mise en conformité (OLD)</h3>
+        <p class="m-ns-body">Autour d'Aubagne, beaucoup de maisons sont situées à moins de 200 mètres des massifs. Elles sont alors soumises à l'Obligation Légale de Débroussaillement (OLD). Concrètement, en zone naturelle, le débroussaillement doit être réalisé sur 50 mètres autour de l'habitation (distance pouvant être portée à 100 m par le maire) ; en zone urbaine, c'est toute la parcelle qui doit être entretenue. La règle est encadrée par l'arrêté préfectoral des Bouches-du-Rhône du 15 octobre 2025, et le non-respect expose à une amende pouvant atteindre 50 € par m² non débroussaillé.</p>
+        <p class="m-ns-body">On s'occupe de tout : diagnostic du terrain, débroussaillement, taille et évacuation des végétaux, puis entretien annuel pour rester en règle. Ces travaux se réalisent d'octobre à mai, avant la saison à risque — l'accès aux massifs étant réglementé du 1ᵉʳ juin au 30 septembre.</p>
+        <div class="m-ns-row-image"><img src="assets/villa-restanques-cypres.jpg" alt="Terrain entretenu aux abords du massif, Aubagne" loading="lazy"></div>
+        <a href="debroussaillement-old-aubagne.html" class="m-ns-link">En savoir plus sur le débroussaillement OLD<svg viewBox="0 0 32 7"><path d="M0 3.5 H30 M26 0.6 L30 3.5 L26 6.4" fill="none" stroke="#6c6852" stroke-width="1"></path></svg></a>
+      </div>
+
+      <div class="m-ns-row">
+        <span class="m-ns-num">02</span>
+        <h3 class="m-ns-h3">Entretenir : votre jardin suivi toute l'année</h3>
+        <p class="m-ns-body">Plutôt qu'une intervention isolée quand tout a déjà poussé, un entretien régulier coûte moins cher et garde un extérieur net en permanence : tonte, taille de haies, désherbage, débroussaillage, ramassage. Nous proposons des formules à l'année, adaptées à la taille de votre jardin.</p>
+        <p class="m-ns-body"><strong>Jusqu'à 50 % de crédit d'impôt.</strong> Les petits travaux d'entretien de jardin réalisés à domicile ouvrent droit à un crédit d'impôt égal à 50 % des sommes payées, dans la limite de 5 000 € par an et par foyer fiscal. Trenca Paysage étant déclaré au titre des services à la personne, vous pouvez en bénéficier — y compris via l'avance immédiate.</p>
+        <p class="m-ns-note">Cet avantage concerne l'entretien courant, pas les travaux de création ou d'aménagement (allées, clôtures, arrosage automatique, plantations).</p>
+        <div class="m-ns-row-image"><img src="assets/realisation-gazon-cour.jpg" alt="Jardin entretenu, gazon net à Aubagne" loading="lazy"></div>
+        <a href="entretien-jardin-credit-impot-aubagne.html" class="m-ns-link">Découvrir les formules d'entretien<svg viewBox="0 0 32 7"><path d="M0 3.5 H30 M26 0.6 L30 3.5 L26 6.4" fill="none" stroke="#6c6852" stroke-width="1"></path></svg></a>
+      </div>
+
+      <div class="m-ns-row">
+        <span class="m-ns-num">03</span>
+        <h3 class="m-ns-h3">Créer : le jardin méditerranéen, pensé pour consommer moins d'eau</h3>
+        <p class="m-ns-body">Un beau jardin, ici, n'est pas un jardin qui boit toute l'année. C'est un jardin adapté au climat : essences méditerranéennes, paillage, arrosage au goutte-à-goutte, sols travaillés pour retenir l'eau, restanques qui tiennent la pente. Du terrain nu à l'espace de vie fini, on conçoit et on réalise l'ensemble : terrasses, allées et pavages, murets et escaliers, engazonnement et plantations, bassins, arrosage automatique.</p>
+        <div class="m-ns-row-image"><img src="assets/jardin-sec-gravier-fleuri.jpg" alt="Jardin méditerranéen sec, gravier et lavandes" loading="lazy"></div>
+        <a href="jardin-mediterraneen.html" class="m-ns-link">Découvrir le jardin méditerranéen<svg viewBox="0 0 32 7"><path d="M0 3.5 H30 M26 0.6 L30 3.5 L26 6.4" fill="none" stroke="#6c6852" stroke-width="1"></path></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="m-newsec on-dark">
+    <div class="m-shell">
+      <p class="m-ns-eyebrow on-dark">Avis Google · 5,0 / 5</p>
+      <h2 class="m-ns-heading on-dark">Ce que disent nos clients</h2>
+      <p class="m-ns-body on-dark" style="margin-top: 14px;">Trenca Paysage est une entreprise récente — et assumée comme telle : disponible, à l'écoute, appliquée sur chaque chantier. Les premiers retours, réels et vérifiables, sont sans équivoque :</p>
+      <div class="m-ns-cards">
+        <div class="m-ns-card">
+          <div class="m-ns-stars"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg></div>
+          <p class="m-ns-quote">« Travail soigné, propre. Le jardin a complètement changé. »</p>
+          <p class="m-ns-quote-author">Charlène J. — avis Google</p>
+        </div>
+        <div class="m-ns-card">
+          <div class="m-ns-stars"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg></div>
+          <p class="m-ns-quote">« Complètement sous le charme, travail soigné et appliqué, je recommande chaudement. »</p>
+          <p class="m-ns-quote-author">Nathan B. — avis Google</p>
+        </div>
+        <div class="m-ns-card">
+          <div class="m-ns-stars"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg></div>
+          <p class="m-ns-quote">« Super jeune professionnel, très sérieux et très agréable, je suis très satisfait de son travail. »</p>
+          <p class="m-ns-quote-author">Samuel — avis Google</p>
+        </div>
+      </div>
+      <a href="realisations.html" class="m-ns-link on-dark">Voir toutes nos réalisations<svg viewBox="0 0 32 7"><path d="M0 3.5 H30 M26 0.6 L30 3.5 L26 6.4" fill="none" stroke="#d8d4c2" stroke-width="1"></path></svg></a>
+    </div>
+  </section>
+
+  <section class="m-newsec">
+    <div class="m-shell">
+      <p class="m-ns-eyebrow">Où intervenons-nous</p>
+      <h2 class="m-ns-heading">Notre zone d'intervention<span class="m-ns-script">Est marseillais</span></h2>
+      <p class="m-ns-body" style="margin-top: 14px;">Basés à Aubagne, nous intervenons dans tout l'Est marseillais : Gémenos, Roquevaire, Auriol, La Penne-sur-Huveaune, Cuges-les-Pins, Carnoux-en-Provence, Cassis et les communes voisines. Un doute sur votre secteur ? Demandez, on vous répond vite.</p>
+      <div class="m-ns-chips">
+        <div class="m-ns-chip is-hq"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21.5C7.5 17 5 13 5 9.5a7 7 0 0 1 14 0c0 3.5-2.5 7.5-7 12z"></path><circle cx="12" cy="9.5" r="2.6"></circle></svg>Aubagne (siège)</div>
+        <div class="m-ns-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21.5C7.5 17 5 13 5 9.5a7 7 0 0 1 14 0c0 3.5-2.5 7.5-7 12z"></path><circle cx="12" cy="9.5" r="2.6"></circle></svg>Gémenos</div>
+        <div class="m-ns-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21.5C7.5 17 5 13 5 9.5a7 7 0 0 1 14 0c0 3.5-2.5 7.5-7 12z"></path><circle cx="12" cy="9.5" r="2.6"></circle></svg>Roquevaire</div>
+        <div class="m-ns-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21.5C7.5 17 5 13 5 9.5a7 7 0 0 1 14 0c0 3.5-2.5 7.5-7 12z"></path><circle cx="12" cy="9.5" r="2.6"></circle></svg>Auriol</div>
+        <div class="m-ns-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21.5C7.5 17 5 13 5 9.5a7 7 0 0 1 14 0c0 3.5-2.5 7.5-7 12z"></path><circle cx="12" cy="9.5" r="2.6"></circle></svg>La Penne-sur-Huveaune</div>
+        <div class="m-ns-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21.5C7.5 17 5 13 5 9.5a7 7 0 0 1 14 0c0 3.5-2.5 7.5-7 12z"></path><circle cx="12" cy="9.5" r="2.6"></circle></svg>Cuges-les-Pins</div>
+        <div class="m-ns-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21.5C7.5 17 5 13 5 9.5a7 7 0 0 1 14 0c0 3.5-2.5 7.5-7 12z"></path><circle cx="12" cy="9.5" r="2.6"></circle></svg>Carnoux-en-Provence</div>
+        <div class="m-ns-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21.5C7.5 17 5 13 5 9.5a7 7 0 0 1 14 0c0 3.5-2.5 7.5-7 12z"></path><circle cx="12" cy="9.5" r="2.6"></circle></svg>Cassis</div>
+      </div>
+      <a href="zone-intervention.html" class="m-ns-link">Vérifier ma commune<svg viewBox="0 0 32 7"><path d="M0 3.5 H30 M26 0.6 L30 3.5 L26 6.4" fill="none" stroke="#6c6852" stroke-width="1"></path></svg></a>
+    </div>
+  </section>
+
+  <section class="m-newsec" style="background: #e6ddcf;">
+    <div class="m-shell">
+      <p class="m-ns-eyebrow">Questions fréquentes</p>
+      <h2 class="m-ns-heading">On répond à vos questions</h2>
+      <div style="margin-top: 30px;">
+        <div class="m-ns-faq-item">
+          <p class="m-ns-faq-q">Suis-je concerné par l'obligation de débroussaillement ?</p>
+          <p class="m-ns-faq-a">Si votre habitation est à moins de 200 m d'un bois ou d'une forêt classés à risque, très probablement oui. On réalise le diagnostic de votre terrain gratuitement lors du devis.</p>
+        </div>
+        <div class="m-ns-faq-item">
+          <p class="m-ns-faq-q">Le crédit d'impôt de 50 % s'applique-t-il à la création de mon jardin ?</p>
+          <p class="m-ns-faq-a">Non. Il concerne uniquement l'entretien courant (tonte, taille, désherbage, débroussaillage). Les travaux de création et d'aménagement n'y sont pas éligibles.</p>
+        </div>
+        <div class="m-ns-faq-item">
+          <p class="m-ns-faq-q">Quand faut-il débroussailler ?</p>
+          <p class="m-ns-faq-a">De préférence entre octobre et mai. En été, l'accès aux massifs est réglementé et certains travaux sont limités selon le risque incendie du jour.</p>
+        </div>
+        <div class="m-ns-faq-item">
+          <p class="m-ns-faq-q">Intervenez-vous à Gémenos, Cassis ou Carnoux ?</p>
+          <p class="m-ns-faq-a">Oui, l'Est marseillais fait partie de notre zone. Précisez votre commune dans votre demande.</p>
+        </div>
+        <div class="m-ns-faq-item">
+          <p class="m-ns-faq-q">Quelle différence entre un jardinier et un paysagiste ?</p>
+          <p class="m-ns-faq-a">Le jardinier entretient (tonte, taille, nettoyage) ; le paysagiste conçoit et aménage (création, terrasses, plantations, maçonnerie). Trenca fait les deux.</p>
+        </div>
+        <div class="m-ns-faq-item">
+          <p class="m-ns-faq-q">Quel est le tarif moyen d'un paysagiste ?</p>
+          <p class="m-ns-faq-a">Tout dépend de la prestation : entretien à l'année, création complète ou débroussaillement n'ont rien à voir en prix. On chiffre gratuitement, au cas par cas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="m-ns-cta">
+    <div class="m-shell">
+      <h2 class="m-ns-heading on-dark">Parlons de votre projet<span class="m-ns-script on-dark">gratuitement</span></h2>
+      <p class="m-ns-body on-dark">Un extérieur à créer, à entretenir ou à mettre en conformité, ça commence par un échange. Dites-nous ce que vous avez en tête — on vient voir et on vous chiffre tout, gratuitement.</p>
+      <a href="mailto:contact@trenca-paysage.fr" class="m-ns-btn">Demander mon devis gratuit</a>
     </div>
   </section>
 
@@ -463,7 +822,7 @@ class Component extends DCLogic {
 <script>
 (function () {
   const BASE_WIDTH = 1440;
-  const BASE_HEIGHT = 2160;
+  const BASE_HEIGHT = 7250;
 
   function fitDesktopArtboard() {
     const viewport = document.querySelector('.desktop-viewport');
