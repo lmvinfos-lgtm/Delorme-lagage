@@ -231,7 +231,7 @@
   .nav-dd { position: relative; display: inline-block; }
   .nav-dd > a::after { content: '▾'; font-size: 9px; margin-left: 5px; display: inline-block; vertical-align: middle; }
   .nav-dd-panel { display: none; position: absolute; top: 26px; left: -20px; min-width: 300px; background: #1d220f; border: 1px solid rgba(244,239,226,.16); padding: 10px 0; z-index: 80; box-shadow: 0 20px 44px rgba(0,0,0,.4); }
-  .nav-dd:hover .nav-dd-panel, .nav-dd.open .nav-dd-panel { display: block; }
+  .nav-dd.open .nav-dd-panel { display: block; }
   .nav-dd-panel a { display: block; padding: 9px 22px; font-size: 12px; font-weight: 400; letter-spacing: .04em; color: #d9d4c7 !important; white-space: nowrap; }
   .nav-dd-panel a:hover { background: rgba(244,239,226,.08); color: #f4efe2 !important; }
   .m-services-toggle { position: relative; z-index: 4; background: #0f120a; }
@@ -252,7 +252,7 @@
   .nav-dd { position: relative; display: inline-block; }
   .nav-dd > a::after { content: '▾'; font-size: 9px; margin-left: 5px; display: inline-block; vertical-align: middle; }
   .nav-dd-panel { display: none; position: absolute; top: 26px; left: -20px; min-width: 300px; background: #1d220f; border: 1px solid rgba(244,239,226,.16); padding: 10px 0; z-index: 80; box-shadow: 0 20px 44px rgba(0,0,0,.4); }
-  .nav-dd:hover .nav-dd-panel, .nav-dd.open .nav-dd-panel { display: block; }
+  .nav-dd.open .nav-dd-panel { display: block; }
   .nav-dd-panel a { display: block; padding: 9px 22px; font-size: 12px; font-weight: 400; letter-spacing: .04em; color: #d9d4c7 !important; white-space: nowrap; }
   .nav-dd-panel a:hover { background: rgba(244,239,226,.08); color: #f4efe2 !important; }
   .m-services-toggle { position: relative; z-index: 4; background: #0f120a; }
@@ -527,13 +527,17 @@
 
   function enableNavDropdownHoldOpen() {
     document.querySelectorAll('.nav-dd').forEach(function (dd) {
+      var openTimer = null;
       var closeTimer = null;
       dd.addEventListener('mouseenter', function () {
         if (closeTimer) { clearTimeout(closeTimer); closeTimer = null; }
-        dd.classList.add('open');
+        if (!openTimer) {
+          openTimer = setTimeout(function () { dd.classList.add('open'); openTimer = null; }, 180);
+        }
       });
       dd.addEventListener('mouseleave', function () {
-        closeTimer = setTimeout(function () { dd.classList.remove('open'); }, 450);
+        if (openTimer) { clearTimeout(openTimer); openTimer = null; }
+        closeTimer = setTimeout(function () { dd.classList.remove('open'); closeTimer = null; }, 900);
       });
     });
   }
