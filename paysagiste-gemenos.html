@@ -20,7 +20,7 @@
   a:hover { color: #a4b359; }
 
   /* Desktop artboard: same original design, fluidly fitted without horizontal overflow. */
-  .desktop-viewport { position: relative; width: 100%; height: 5708px; overflow-x: auto; overflow-y: hidden; background: #e4ded5; }
+  .desktop-viewport { position: relative; width: 100%; height: 3574px; overflow-x: auto; overflow-y: hidden; background: #e4ded5; }
   .desktop-stage { position: absolute !important; top: 0; left: 0; margin: 0 !important; transform-origin: top left; }
   .mobile-site { display: none; }
 
@@ -247,6 +247,15 @@
   .m-logo-img { display: block; height: 34px; width: auto; }
   .m-logo-badge { display: inline-flex; align-items: center; padding: 8px 13px; background: #1d220f; border-radius: 5px; }
   .m-logo-badge .m-logo-img { height: 26px; }
+  .ns-phone-row { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; }
+  .ns-phone-link { display: inline-flex; align-items: center; gap: 8px; font-size: 13.4px; font-weight: 400; letter-spacing: .05em; color: #f4efe2; }
+  .ns-phone-link:hover { color: #cfc8b8; }
+  .m-phone-row { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; margin-top: 22px; }
+  .m-phone-link { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 500; letter-spacing: .05em; color: #f4efe2; }
+  .hero-phone-row { position: absolute; display: flex; align-items: center; gap: 26px; }
+  .hero-phone-link { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 400; letter-spacing: .1em; color: #f6f1e6; }
+  .hero-phone-link:hover { color: #d9d4c7; }
+  .m-hero-phone { display: inline-flex; align-items: center; gap: 6px; margin-top: 14px; font-size: 11px; font-weight: 500; letter-spacing: .06em; color: #f6f1e6; }
 
   .ns-ol { margin: 18px 0 0; padding: 0; list-style: none; }
   .nav-dd { position: relative; display: inline-block; }
@@ -268,11 +277,20 @@
   .m-logo-img { display: block; height: 34px; width: auto; }
   .m-logo-badge { display: inline-flex; align-items: center; padding: 8px 13px; background: #1d220f; border-radius: 5px; }
   .m-logo-badge .m-logo-img { height: 26px; }
+  .ns-phone-row { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; }
+  .ns-phone-link { display: inline-flex; align-items: center; gap: 8px; font-size: 13.4px; font-weight: 400; letter-spacing: .05em; color: #f4efe2; }
+  .ns-phone-link:hover { color: #cfc8b8; }
+  .m-phone-row { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; margin-top: 22px; }
+  .m-phone-link { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 500; letter-spacing: .05em; color: #f4efe2; }
+  .hero-phone-row { position: absolute; display: flex; align-items: center; gap: 26px; }
+  .hero-phone-link { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 400; letter-spacing: .1em; color: #f6f1e6; }
+  .hero-phone-link:hover { color: #d9d4c7; }
+  .m-hero-phone { display: inline-flex; align-items: center; gap: 6px; margin-top: 14px; font-size: 11px; font-weight: 500; letter-spacing: .06em; color: #f6f1e6; }
 </style>
 
 </helmet>
 <div class="desktop-viewport" aria-hidden="false">
-<div class="desktop-stage" data-screen-label="Paysagiste à Gémenos" style="position: relative; width: 1440px; height: 3540px; margin: 0 auto; overflow: hidden; background: #eee7de; font-family: Poppins, 'Century Gothic', sans-serif; -webkit-font-smoothing: antialiased;">
+<div class="desktop-stage" data-screen-label="Paysagiste à Gémenos" style="position: relative; width: 1440px; height: 3574px; margin: 0 auto; overflow: hidden; background: #eee7de; font-family: Poppins, 'Century Gothic', sans-serif; -webkit-font-smoothing: antialiased;">
   <div style="position: absolute; inset: 0; opacity: 0.5; mix-blend-mode: multiply; background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3'/%3E%3C/filter%3E%3Crect width='260' height='260' filter='url(%23n)' opacity='0.16'/%3E%3C/svg%3E&quot;);"></div>
 
   <!-- HERO (static image, no video) -->
@@ -300,7 +318,10 @@
   <div style="position: absolute; left: 106px; top: 236px; font-size: 60px; font-weight: 300; letter-spacing: 0.005em; line-height: 1.08; color: #f8f2e9; max-width: 900px;">CRÉER ET ENTRETENIR<br>AU PIED DE LA SAINTE-BAUME</div>
   <div style="position: absolute; left: 111px; top: 380px; font-family: Allura, cursive; font-size: 78px; line-height: 1; color: #a4b359;">sur mesure</div>
   <div style="position: absolute; left: 105px; top: 462px; width: 560px; font-size: 15px; font-weight: 300; line-height: 23px; color: rgba(243,239,230,0.87); text-wrap: pretty;">À Gémenos, l'extérieur fait vraiment partie de la maison. Grands terrains, vues sur la Sainte-Baume : le cadre demande un jardin à sa hauteur.</div>
-  <a href="mailto:contact@trenca-paysage.fr" style="position: absolute; left: 105px; top: 636px; height: 46px; padding: 0 30px; display: flex; align-items: center; justify-content: center; background: #5f6626; font-size: 13px; font-weight: 400; letter-spacing: 0.13em; color: #f4efe2;" style-hover="background: #6d7530;">DEMANDER UN DEVIS À GÉMENOS</a>
+  <div class="hero-phone-row" style="left: 105px; top: 636px; height: 46px;">
+    <a href="mailto:contact@trenca-paysage.fr" style="height: 46px; padding: 0 30px; display: flex; align-items: center; justify-content: center; background: #5f6626; font-size: 13px; font-weight: 400; letter-spacing: 0.13em; color: #f4efe2;" style-hover="background: #6d7530;">DEMANDER UN DEVIS À GÉMENOS</a>
+    <a href="tel:+33789949070" class="hero-phone-link">☎ 07 89 94 90 70</a>
+  </div>
 
 <div class="ns-section" data-ns="S1" style="top: 706px; background: #eee7de;">
     <div class="ns-wrap" style="padding-top: 90px; padding-bottom: 90px;">
@@ -345,13 +366,16 @@
     <div class="ns-wrap" style="padding-top: 90px; padding-bottom: 90px;">
       <h2 class="ns-heading dark">UN PROJET À<span class="ns-script dark">gémenos</span></h2>
       <p class="ns-body dark">Un projet de jardin ou un entretien à Gémenos ? On vient voir et on vous chiffre, gratuitement.</p>
-      <a href="mailto:contact@trenca-paysage.fr" class="ns-btn">DEMANDER UN DEVIS À GÉMENOS</a>
+      <div class="ns-phone-row" style="margin-top: 34px;">
+        <a href="mailto:contact@trenca-paysage.fr" class="ns-btn" style="margin-top: 0;">DEMANDER UN DEVIS À GÉMENOS</a>
+        <a href="tel:+33789949070" class="ns-phone-link">☎ 07 89 94 90 70</a>
+      </div>
     </div>
   </div>
 
-<div style="position: absolute; left: 0px; top: 3376px; width: 1440px; height: 164px; clip-path: polygon(0px 0px, 1440px 46px, 1440px 164px, 0px 164px); background: #ece5da;"></div>
+<div style="position: absolute; left: 0px; top: 3410px; width: 1440px; height: 164px; clip-path: polygon(0px 0px, 1440px 46px, 1440px 164px, 0px 164px); background: #ece5da;"></div>
 
-  <div style="position: absolute; left: -30px; top: 3410px; width: 300px; height: 150px; color: #8a8770; opacity: 0.16; pointer-events: none;">
+  <div style="position: absolute; left: -30px; top: 3444px; width: 300px; height: 150px; color: #8a8770; opacity: 0.16; pointer-events: none;">
     <svg viewBox="0 0 60 22" style="width: 300px; height: 110px; transform: rotate(28deg); transform-origin: 10% 40%;">
       <path d="M2 20 C 16 16 30 11 58 3" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="round"></path>
       <ellipse cx="10" cy="15" rx="5.4" ry="1.9" transform="rotate(-38 10 15)" fill="none" stroke="currentColor" stroke-width="0.45"></ellipse>
@@ -365,19 +389,19 @@
     </svg>
   </div>
 
-  <div style="position: absolute; left: 164px; top: 3413px;">
+  <div style="position: absolute; left: 164px; top: 3447px;">
     <div class="logo-badge"><img src="assets/logo-trenca-paysage.png" alt="Trenca Paysage" class="logo-img"></div>
   </div>
 
-  <div style="position: absolute; left: 482px; top: 3430px; font-size: 12px; font-weight: 300; line-height: 15.5px; color: #8a8175;">181 allée Jean Aicard<br />13400 Aubagne</div>
-  <div style="position: absolute; left: 482px; top: 3471px; font-size: 12px; font-weight: 600; letter-spacing: 0.02em; line-height: 1; color: #3a3529;"></div>
-  <div style="position: absolute; left: 482px; top: 3491px; font-size: 12px; font-weight: 300; line-height: 1; color: #8a8175;">contact@trenca-paysage.fr</div>
+  <div style="position: absolute; left: 482px; top: 3464px; font-size: 12px; font-weight: 300; line-height: 15.5px; color: #8a8175;">181 allée Jean Aicard<br />13400 Aubagne</div>
+  <div style="position: absolute; left: 482px; top: 3505px; font-size: 12px; font-weight: 600; letter-spacing: 0.02em; line-height: 1; color: #3a3529;"></div>
+  <div style="position: absolute; left: 482px; top: 3525px; font-size: 12px; font-weight: 300; line-height: 1; color: #8a8175;">contact@trenca-paysage.fr</div>
 
-  <div style="position: absolute; left: 714px; top: 3434px; width: 1px; height: 70px; background: #ded7ca;"></div>
+  <div style="position: absolute; left: 714px; top: 3468px; width: 1px; height: 70px; background: #ded7ca;"></div>
 
-  <div style="position: absolute; left: 762px; top: 3444px; font-size: 13px; font-weight: 400; letter-spacing: 0.12em; line-height: 1; color: #8a8767;">SUIVEZ-NOUS</div>
+  <div style="position: absolute; left: 762px; top: 3478px; font-size: 13px; font-weight: 400; letter-spacing: 0.12em; line-height: 1; color: #8a8767;">SUIVEZ-NOUS</div>
 
-  <div style="position: absolute; left: 880px; top: 3471px; display: flex; align-items: center; gap: 14px;">
+  <div style="position: absolute; left: 880px; top: 3505px; display: flex; align-items: center; gap: 14px;">
     <a href="#" style="width: 31px; height: 31px; border: 1px solid #9a9184; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
       <span style="display: block; width: 15px; height: 15px; border: 1px solid #6f685c; border-radius: 5px; position: relative;">
         <span style="position: absolute; left: 3px; top: 3px; width: 7px; height: 7px; border: 1px solid #6f685c; border-radius: 50%;"></span>
@@ -387,7 +411,7 @@
     <a href="#" style="width: 31px; height: 31px; border: 1px solid #9a9184; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: Georgia, serif; font-size: 19px; line-height: 1; color: #6f685c; padding-bottom: 2px;">f</a>
   </div>
 
-  <a href="#" style="position: absolute; left: 1083px; top: 3456px; width: 231px; height: 46px; display: flex; align-items: center; justify-content: center; background: #1d220f; font-size: 13.4px; font-weight: 400; letter-spacing: 0.14em; color: #ece5d8;" style-hover="background: #262c14;">DEMANDE DE DEVIS</a>
+  <a href="#" style="position: absolute; left: 1083px; top: 3490px; width: 231px; height: 46px; display: flex; align-items: center; justify-content: center; background: #1d220f; font-size: 13.4px; font-weight: 400; letter-spacing: 0.14em; color: #ece5d8;" style-hover="background: #262c14;">DEMANDE DE DEVIS</a>
 
 </div><!-- /.desktop-stage -->
 </div><!-- /.desktop-viewport -->
@@ -404,6 +428,7 @@
         <h1 class="m-title" style="white-space: normal; overflow-wrap: break-word; font-size: clamp(28px, 8.5vw, 46px);">Créer et entretenir<br>au pied de la Sainte-Baume<br><span class="m-script" style="font-size: clamp(42px, 13vw, 66px);">sur mesure</span></h1>
         <p class="m-intro">À Gémenos, l'extérieur fait vraiment partie de la maison. Le cadre demande un jardin à sa hauteur.</p>
         <a href="#mobile-content" class="m-btn">Demander un devis à Gémenos</a>
+        <a href="tel:+33789949070" class="m-hero-phone">☎ 07 89 94 90 70</a>
       </div>
     </div>
   </section>
@@ -477,7 +502,10 @@
     <div class="m-shell">
       <h2 class="m-ns-heading on-dark">Un projet à<span class="m-ns-script on-dark">Gémenos</span></h2>
       <p class="m-ns-body on-dark">Un projet de jardin ou un entretien à Gémenos ? On vient voir et on vous chiffre, gratuitement.</p>
-      <a href="mailto:contact@trenca-paysage.fr" class="m-ns-btn">Demander un devis à Gémenos</a>
+      <div class="m-phone-row">
+        <a href="mailto:contact@trenca-paysage.fr" class="m-ns-btn" style="margin-top: 0;">Demander un devis à Gémenos</a>
+        <a href="tel:+33789949070" class="m-phone-link">☎ 07 89 94 90 70</a>
+      </div>
     </div>
   </section>
 <footer class="m-footer" id="devis-mobile">
@@ -492,7 +520,7 @@
 <script>
 (function () {
   const BASE_WIDTH = 1440;
-  const BASE_HEIGHT = 3540;
+  const BASE_HEIGHT = 3574;
 
   function fitDesktopArtboard() {
     const viewport = document.querySelector('.desktop-viewport');

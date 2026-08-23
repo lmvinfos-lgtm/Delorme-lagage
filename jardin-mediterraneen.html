@@ -20,7 +20,7 @@
   a:hover { color: #a4b359; }
 
   /* Desktop artboard: same original design, fluidly fitted without horizontal overflow. */
-  .desktop-viewport { position: relative; width: 100%; height: 5708px; overflow-x: auto; overflow-y: hidden; background: #e4ded5; }
+  .desktop-viewport { position: relative; width: 100%; height: 5005px; overflow-x: auto; overflow-y: hidden; background: #e4ded5; }
   .desktop-stage { position: absolute !important; top: 0; left: 0; margin: 0 !important; transform-origin: top left; }
   .mobile-site { display: none; }
 
@@ -247,11 +247,20 @@
   .m-logo-img { display: block; height: 34px; width: auto; }
   .m-logo-badge { display: inline-flex; align-items: center; padding: 8px 13px; background: #1d220f; border-radius: 5px; }
   .m-logo-badge .m-logo-img { height: 26px; }
+  .ns-phone-row { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; }
+  .ns-phone-link { display: inline-flex; align-items: center; gap: 8px; font-size: 13.4px; font-weight: 400; letter-spacing: .05em; color: #f4efe2; }
+  .ns-phone-link:hover { color: #cfc8b8; }
+  .m-phone-row { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; margin-top: 22px; }
+  .m-phone-link { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 500; letter-spacing: .05em; color: #f4efe2; }
+  .hero-phone-row { position: absolute; display: flex; align-items: center; gap: 26px; }
+  .hero-phone-link { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 400; letter-spacing: .1em; color: #f6f1e6; }
+  .hero-phone-link:hover { color: #d9d4c7; }
+  .m-hero-phone { display: inline-flex; align-items: center; gap: 6px; margin-top: 14px; font-size: 11px; font-weight: 500; letter-spacing: .06em; color: #f6f1e6; }
 </style>
 
 </helmet>
 <div class="desktop-viewport" aria-hidden="false">
-<div class="desktop-stage" data-screen-label="Jardin méditerranéen" style="position: relative; width: 1440px; height: 5708px; margin: 0 auto; overflow: hidden; background: #eee7de; font-family: Poppins, 'Century Gothic', sans-serif; -webkit-font-smoothing: antialiased;">
+<div class="desktop-stage" data-screen-label="Jardin méditerranéen" style="position: relative; width: 1440px; height: 5005px; margin: 0 auto; overflow: hidden; background: #eee7de; font-family: Poppins, 'Century Gothic', sans-serif; -webkit-font-smoothing: antialiased;">
 
   <div style="position: absolute; inset: 0; opacity: 0.5; mix-blend-mode: multiply; background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3'/%3E%3C/filter%3E%3Crect width='260' height='260' filter='url(%23n)' opacity='0.16'/%3E%3C/svg%3E&quot;);"></div>
 
@@ -281,7 +290,10 @@
   <div style="position: absolute; left: 106px; top: 236px; font-size: 68px; font-weight: 300; letter-spacing: 0.005em; line-height: 1.04; color: #f8f2e9;">LE JARDIN<br>MÉDITERRANÉEN</div>
   <div style="position: absolute; left: 111px; top: 373px; font-family: Allura, cursive; font-size: 82px; line-height: 1; color: #a4b359;">sobre en eau</div>
   <div style="position: absolute; left: 105px; top: 462px; width: 560px; font-size: 15px; font-weight: 300; line-height: 23px; color: rgba(243,239,230,0.87); text-wrap: pretty;">Ici, le plus beau jardin n'est pas celui qui boit le plus. Un jardin pensé pour le climat méditerranéen tient la sécheresse estivale et reste vivant quand les pelouses gorgées d'eau grillent en juillet.</div>
-  <a href="mailto:contact@trenca-paysage.fr" style="position: absolute; left: 105px; top: 636px; height: 46px; padding: 0 30px; display: flex; align-items: center; justify-content: center; background: #5f6626; font-size: 13px; font-weight: 400; letter-spacing: 0.13em; color: #f4efe2;" style-hover="background: #6d7530;">CONCEVOIR MON JARDIN MÉDITERRANÉEN</a>
+  <div class="hero-phone-row" style="left: 105px; top: 636px; height: 46px;">
+    <a href="mailto:contact@trenca-paysage.fr" style="height: 46px; padding: 0 30px; display: flex; align-items: center; justify-content: center; background: #5f6626; font-size: 13px; font-weight: 400; letter-spacing: 0.13em; color: #f4efe2;" style-hover="background: #6d7530;">CONCEVOIR MON JARDIN MÉDITERRANÉEN</a>
+    <a href="tel:+33789949070" class="hero-phone-link">☎ 07 89 94 90 70</a>
+  </div>
 
   <!-- LEAD paragraph -->
   <div class="ns-section" data-ns="LEAD" style="top: 706px; background: #eee7de;">
@@ -290,135 +302,83 @@
     </div>
   </div>
 
-  <!-- P1 -->
-  <div class="ns-section" data-ns="P1" style="top: 1009px; background: #eee7de;">
-    <div class="ns-wrap" style="padding-top: 70px; padding-bottom: 90px;">
-      <p class="ns-eyebrow">LES PRINCIPES</p>
-      <h2 class="ns-heading">QU'EST-CE QU'UN JARDIN<br>MÉDITERRANÉEN ?</h2>
-      <ul class="ns-ul" style="max-width: 880px;">
-        <li><strong>La sobriété en eau.</strong> On choisit des végétaux qui supportent la sécheresse et on limite les surfaces gourmandes (grandes pelouses classiques).</li>
-        <li><strong>La structure toute l'année.</strong> Beaucoup de persistants et de feuillages gris-argenté, pour que le jardin ait de la présence même en hiver, pas seulement au printemps.</li>
-        <li><strong>Le mariage du minéral et du végétal.</strong> Gravier, pierre, paillage minéral, restanques : ils habillent, drainent et gardent le sol frais, tout en réduisant l'entretien.</li>
-      </ul>
-      <p class="ns-body" style="max-width: 880px; margin-top: 26px;">C'est un jardin qui travaille avec le climat provençal — soleil, mistral, étés secs — au lieu de lutter contre lui.</p>
-    </div>
-  </div>
-
-  <!-- P2 dark -->
-  <div class="ns-section ns-cut-top" data-ns="P2" style="top: 1503px; background: #e6ddcf;">
+<div class="ns-section" data-ns="P1" style="top: 706px; background: #eee7de;">
     <div class="ns-wrap" style="padding-top: 90px; padding-bottom: 90px;">
-      <p class="ns-eyebrow">LA PALETTE VÉGÉTALE</p>
-      <h2 class="ns-heading">LES PLANTES DU JARDIN<br>MÉDITERRANÉEN</h2>
-      <div class="ns-plant-grid">
-        <div class="ns-plant-cat"><h4>Arbres</h4><p>Olivier, arbousier, micocoulier, chêne vert, pin parasol, cyprès de Provence, agrumes dans les secteurs abrités.</p></div>
-        <div class="ns-plant-cat"><h4>Arbustes</h4><p>Laurier-rose, romarin, ciste, pittosporum, arbousier, germandrée, phlomis.</p></div>
-        <div class="ns-plant-cat"><h4>Vivaces et aromatiques</h4><p>Lavande, thym, santoline, sauge, gaura, perovskia, euphorbe.</p></div>
-        <div class="ns-plant-cat"><h4>Graminées</h4><p>Stipa, miscanthus, pour le mouvement et la légèreté.</p></div>
-        <div class="ns-plant-cat"><h4>Couvre-sols</h4><p>Thym rampant, dichondra, plantes tapissantes qui limitent le désherbage.</p></div>
-      </div>
-      <p class="ns-body" style="max-width: 880px; margin-top: 40px;">Le choix dépend toujours de l'exposition, du sol et du niveau d'entretien souhaité — c'est là que le conseil compte.</p>
+      <p class="ns-eyebrow">DÉFINITION</p>
+      <h2 class="ns-heading">QU’EST-CE QU’UN<br>JARDIN MÉDITERRANÉEN ?</h2><p class="ns-body" style="max-width: 880px;">Trois principes le définissent :</p><ul class="ns-ul" style="max-width: 880px;"><li><strong>La sobriété en eau.</strong> On choisit des végétaux qui supportent la sécheresse et on limite les surfaces gourmandes (grandes pelouses classiques).</li>
+<li><strong>La structure toute l’année.</strong> Beaucoup de persistants et de feuillages gris-argenté, pour que le jardin ait de la présence même en hiver, pas seulement au printemps.</li>
+<li><strong>Le mariage du minéral et du végétal.</strong> Gravier, pierre, paillage minéral, restanques : ils habillent, drainent et gardent le sol frais, tout en réduisant l’entretien.</li></ul><p class="ns-body" style="max-width: 880px; margin-top: 18px;">C’est un jardin qui travaille avec le climat provençal — soleil, mistral, étés secs — au lieu de lutter contre lui.</p>
     </div>
   </div>
 
-  <!-- P3 cream, image row -->
-  <div class="ns-section ns-cut-top" data-ns="P3" style="top: 2064px; background: #eee7de;">
+<div class="ns-section ns-cut-top" data-ns="P2" style="top: 1240px; background: #e6ddcf;">
     <div class="ns-wrap" style="padding-top: 90px; padding-bottom: 90px;">
-      <p class="ns-eyebrow">SANS CORVÉE D'ARROSAGE</p>
-      <h2 class="ns-heading">LE JARDIN SEC : BEAU SANS<br>(PRESQUE) ARROSER</h2>
-      <div class="ns-row" style="margin-top: 50px; align-items: flex-start;">
-        <div class="ns-row-text">
-          <p class="ns-body">Le « jardin sec » pousse la logique méditerranéenne au bout : massifs sur paillage minéral (gravier, pouzzolane), plantes très résistantes, arrosage réduit au strict nécessaire une fois les végétaux installés.</p>
-          <p class="ns-body">C'est particulièrement adapté aux terrains exposés et aux propriétaires qui veulent un extérieur beau sans corvée d'arrosage — un vrai atout quand les restrictions d'eau tombent chaque été dans le département.</p>
-        </div>
-        <div class="ns-row-image"><img src="assets/jardin-sec-gravier-fleuri.jpg" alt="Jardin sec méditerranéen, gravier et floraisons" loading="lazy"></div>
-      </div>
+      <p class="ns-eyebrow">PALETTE VÉGÉTALE</p>
+      <h2 class="ns-heading">LES PLANTES DU<br>JARDIN MÉDITERRANÉEN</h2><ul class="ns-ul" style="max-width: 880px;"><li><strong>Arbres :</strong> olivier, arbousier, micocoulier, chêne vert, pin parasol, cyprès de Provence, agrumes dans les secteurs abrités.</li>
+<li><strong>Arbustes :</strong> laurier-rose, romarin, ciste, pittosporum, arbousier, germandrée, phlomis.</li>
+<li><strong>Vivaces et aromatiques :</strong> lavande, thym, santoline, sauge, gaura, perovskia, euphorbe.</li>
+<li><strong>Graminées :</strong> stipa, miscanthus, pour le mouvement et la légèreté.</li>
+<li><strong>Couvre-sols :</strong> thym rampant, dichondra, plantes tapissantes qui limitent le désherbage — une alternative à part entière au gazon sur les zones peu foulées.</li></ul><p class="ns-body" style="max-width: 880px; margin-top: 18px;">Le choix dépend toujours de l’exposition, du sol et du niveau d’entretien souhaité — c’est là que le conseil compte.</p><a href="engazonnement-gazon-mediterraneen-aubagne.html" class="ns-link" style="margin-top: 26px;">VOIR L’ENGAZONNEMENT & LES ALTERNATIVES AU GAZON<svg class="arrow-stroke" viewBox="0 0 40 8"><path d="M0 4 H38 M32.5 0.8 L38 4 L32.5 7.2" fill="none" stroke="currentColor" stroke-width="1"></path></svg></a>
     </div>
   </div>
 
-  <!-- P4 dark -->
-  <div class="ns-section ns-cut-top" data-ns="P4" style="top: 2803px; background: #e6ddcf;">
+<div class="ns-section ns-cut-top" data-ns="P3" style="top: 1814px; background: #eee7de;">
     <div class="ns-wrap" style="padding-top: 90px; padding-bottom: 90px;">
-      <p class="ns-eyebrow">GESTION DE L'EAU</p>
-      <h2 class="ns-heading">L'EAU : LE NERF DE LA GUERRE</h2>
-      <p class="ns-body" style="max-width: 780px; margin-top: 22px;">Même sobre, un jardin méditerranéen s'installe et se gère intelligemment côté eau :</p>
-      <ul class="ns-ul" style="max-width: 780px;">
-        <li>Arrosage au goutte-à-goutte réglé par zones, aux heures fraîches.</li>
-        <li>Paillage généralisé pour garder le sol frais et limiter l'évaporation.</li>
-        <li>Sols travaillés pour retenir l'eau plutôt que la laisser filer.</li>
-      </ul>
-      <p class="ns-body" style="max-width: 780px; margin-top: 22px;">C'est ce qui fait la différence entre un jardin qui tient l'été et un jardin qui souffre.</p>
-      <a href="arrosage-automatique-goutte-a-goutte-aubagne.html" class="ns-link">VOIR L'ARROSAGE AUTOMATIQUE &amp; GOUTTE-À-GOUTTE<svg class="arrow-stroke" viewBox="0 0 40 8"><path d="M0 4 H38 M32.5 0.8 L38 4 L32.5 7.2" fill="none" stroke="currentColor" stroke-width="1"></path></svg></a>
+      <p class="ns-eyebrow">JARDIN SEC</p>
+      <h2 class="ns-heading">BEAU SANS (PRESQUE)<br>ARROSER</h2><p class="ns-body" style="max-width: 880px;">Le « jardin sec » pousse la logique méditerranéenne au bout : massifs sur paillage minéral (gravier, pouzzolane), plantes très résistantes, arrosage réduit au strict nécessaire une fois les végétaux installés. C’est particulièrement adapté aux terrains exposés et aux propriétaires qui veulent un extérieur beau sans corvée d’arrosage — un vrai atout quand les restrictions d’eau tombent chaque été dans le département.</p>
     </div>
   </div>
 
-  <!-- P5 cream compare -->
-  <div class="ns-section ns-cut-top" data-ns="P5" style="top: 3277px; background: #eee7de;">
+<div class="ns-section ns-cut-top" data-ns="P4" style="top: 2182px; background: #e6ddcf;">
     <div class="ns-wrap" style="padding-top: 90px; padding-bottom: 90px;">
-      <p class="ns-eyebrow">DEUX STYLES, UN MÊME PRINCIPE</p>
-      <h2 class="ns-heading">TRADITIONNEL OU MODERNE ?</h2>
-      <div class="ns-compare" style="max-width: 900px;">
-        <div>
-          <h4>Traditionnel</h4>
-          <p class="ns-body">Oliviers, restanques, gravier, ambiance provençale intemporelle.</p>
-        </div>
-        <div>
-          <h4>Moderne</h4>
-          <p class="ns-body">Lignes épurées, graminées, minéral graphique, quelques sujets sculpturaux (agaves, oliviers taillés).</p>
-        </div>
-      </div>
-      <p class="ns-body" style="max-width: 900px; margin-top: 30px;">Les deux reposent sur les mêmes principes d'eau et de climat — seul le style change. On adapte au caractère de votre maison.</p>
+      <p class="ns-eyebrow">GESTION DE L’EAU</p>
+      <h2 class="ns-heading">L’EAU : LE NERF<br>DE LA GUERRE</h2><p class="ns-body" style="max-width: 880px;">Même sobre, un jardin méditerranéen s’installe et se gère intelligemment côté eau :</p><ul class="ns-ul" style="max-width: 880px;"><li><strong>Arrosage au goutte-à-goutte</strong> réglé par zones, aux heures fraîches.</li>
+<li><strong>Paillage</strong> généralisé pour garder le sol frais et limiter l’évaporation.</li>
+<li><strong>Sols travaillés</strong> pour retenir l’eau plutôt que la laisser filer.</li></ul><p class="ns-body" style="max-width: 880px; margin-top: 18px;">C’est ce qui fait la différence entre un jardin qui tient l’été et un jardin qui souffre.</p><a href="arrosage-automatique-goutte-a-goutte-aubagne.html" class="ns-link" style="margin-top: 26px;">VOIR L’ARROSAGE AUTOMATIQUE & GOUTTE-À-GOUTTE<svg class="arrow-stroke" viewBox="0 0 40 8"><path d="M0 4 H38 M32.5 0.8 L38 4 L32.5 7.2" fill="none" stroke="currentColor" stroke-width="1"></path></svg></a>
     </div>
   </div>
 
-  <!-- P6 dark, image row -->
-  <div class="ns-section ns-cut-top" data-ns="P6" style="top: 3708px; background: #e6ddcf;">
+<div class="ns-section ns-cut-top" data-ns="P5" style="top: 2678px; background: #eee7de;">
     <div class="ns-wrap" style="padding-top: 90px; padding-bottom: 90px;">
-      <p class="ns-eyebrow">À AUBAGNE ET DANS L'EST MARSEILLAIS</p>
-      <h2 class="ns-heading">LE CONCEVOIR CHEZ VOUS</h2>
-      <div class="ns-row" style="margin-top: 50px; align-items: flex-start;">
-        <div class="ns-row-text">
-          <p class="ns-body">Sur les terrains du secteur — sols calcaires, pentes vers les collines, plein soleil — le jardin méditerranéen n'est pas une mode, c'est la solution la plus durable. On conçoit le vôtre de A à Z : plan, terrassement léger, restanques si le terrain monte, plantations, paillage, arrosage. Un seul interlocuteur, du croquis au résultat.</p>
-          <a href="creation-amenagement-jardin-aubagne.html" class="ns-link">VOIR NOTRE PRESTATION DE CRÉATION DE JARDIN<svg class="arrow-stroke" viewBox="0 0 40 8"><path d="M0 4 H38 M32.5 0.8 L38 4 L32.5 7.2" fill="none" stroke="currentColor" stroke-width="1"></path></svg></a>
-        </div>
-        <div class="ns-row-image"><img src="assets/villa-restanques-cypres.jpg" alt="Restanques et jardin en pente, Aubagne" loading="lazy"></div>
-      </div>
+      <p class="ns-eyebrow">STYLE</p>
+      <h2 class="ns-heading">TRADITIONNEL<br>OU MODERNE ?</h2><div class="ns-compare" style="max-width: 900px;">
+        <div><h4>Traditionnel</h4><p class="ns-body">Oliviers, restanques, gravier, ambiance provençale intemporelle.</p></div>
+        <div><h4>Moderne</h4><p class="ns-body">Lignes épurées, graminées, minéral graphique, quelques sujets sculpturaux (agaves, oliviers taillés).</p></div>
+      </div><p class="ns-body" style="max-width: 880px; margin-top: 26px;">Les deux reposent sur les mêmes principes d’eau et de climat — seul le style change. On adapte au caractère de votre maison.</p>
     </div>
   </div>
 
-  <!-- P7 FAQ cream -->
-  <div class="ns-section ns-cut-top" data-ns="P7" style="top: 4398px; background: #e6ddcf;">
+<div class="ns-section ns-cut-top" data-ns="P6" style="top: 3154px; background: #e6ddcf;">
+    <div class="ns-wrap" style="padding-top: 90px; padding-bottom: 90px;">
+      <p class="ns-eyebrow">CHEZ VOUS</p>
+      <h2 class="ns-heading">LE CONCEVOIR À AUBAGNE<br>ET DANS L’EST MARSEILLAIS</h2><p class="ns-body" style="max-width: 880px;">Sur les terrains du secteur — sols calcaires, pentes vers les collines, plein soleil — le jardin méditerranéen n’est pas une mode, c’est la solution la plus durable. On conçoit le vôtre de A à Z : plan, terrassement léger, restanques si le terrain monte, plantations, paillage, arrosage. Un seul interlocuteur, du croquis au résultat. Intervention dans toute notre <a href="zone-intervention.html" style="color:#6d7740;font-weight:500;">zone d’intervention</a>, à Aubagne et dans l’Est marseillais.</p><a href="creation-amenagement-jardin-aubagne.html" class="ns-link" style="margin-top: 26px;">VOIR NOTRE PRESTATION DE CRÉATION DE JARDIN<svg class="arrow-stroke" viewBox="0 0 40 8"><path d="M0 4 H38 M32.5 0.8 L38 4 L32.5 7.2" fill="none" stroke="currentColor" stroke-width="1"></path></svg></a>
+    </div>
+  </div>
+
+<div class="ns-section ns-cut-top" data-ns="P7" style="top: 3564px; background: #eee7de;">
     <div class="ns-wrap" style="padding-top: 90px; padding-bottom: 90px;">
       <p class="ns-eyebrow">QUESTIONS FRÉQUENTES</p>
-      <h2 class="ns-heading">ON RÉPOND À VOS QUESTIONS</h2>
-      <div style="margin-top: 46px;">
-        <div class="ns-faq-item">
-          <p class="ns-faq-q">Un jardin méditerranéen, ça s'entretient vraiment moins ?</p>
-          <p class="ns-faq-a">Oui, une fois installé : moins d'arrosage, moins de tonte, un désherbage réduit par le paillage. Il demande surtout un entretien régulier léger — éligible au crédit d'impôt de 50 %.</p>
-        </div>
-        <div class="ns-faq-item">
-          <p class="ns-faq-q">Quelles plantes tiennent sans arrosage l'été ?</p>
-          <p class="ns-faq-a">Beaucoup : lavande, romarin, ciste, laurier-rose, olivier, graminées… Le tout est de bien les choisir selon votre exposition et de les installer correctement au départ.</p>
-        </div>
-        <div class="ns-faq-item">
-          <p class="ns-faq-q">Ça marche sur un terrain en pente ?</p>
-          <p class="ns-faq-a">C'est même idéal : restanques et plantes couvre-sol tiennent la terre tout en créant du relief. On étudie le terrain avant de proposer.</p>
-        </div>
+      <h2 class="ns-heading">ON RÉPOND À VOS QUESTIONS</h2><div style="margin-top: 46px;"><div class="ns-faq-item"><p class="ns-faq-q">Un jardin méditerranéen, ça s’entretient vraiment moins ?</p><p class="ns-faq-a">Oui, une fois installé : moins d'arrosage, moins de tonte, un désherbage réduit par le paillage. Il demande surtout un entretien régulier léger — éligible au <a href="entretien-jardin-credit-impot-aubagne.html" style="color:#6d7740;font-weight:500;">crédit d'impôt de 50 %</a>.</p></div>
+      <div class="ns-faq-item"><p class="ns-faq-q">Quelles plantes tiennent sans arrosage l’été ?</p><p class="ns-faq-a">Beaucoup : lavande, romarin, ciste, laurier-rose, olivier, graminées… Le tout est de bien les choisir selon votre exposition et de les installer correctement au départ.</p></div>
+      <div class="ns-faq-item"><p class="ns-faq-q">Ça marche sur un terrain en pente ?</p><p class="ns-faq-a">C'est même idéal : restanques et plantes couvre-sol tiennent la terre tout en créant du relief. On étudie le terrain avant de proposer.</p></div></div>
+    </div>
+  </div>
+
+<div class="ns-section ns-cut-top ns-cta-band" data-ns="P8" style="top: 4227px; background: #4a3c26;">
+    <div class="ns-wrap" style="padding-top: 90px; padding-bottom: 90px;">
+      <h2 class="ns-heading dark">CONCEVOIR VOTRE JARDIN<span class="ns-script dark">méditerranéen</span></h2>
+      <p class="ns-body dark">Envie d'un extérieur qui reste beau tout l'été sans se battre avec l'arrosoir ? On conçoit votre jardin méditerranéen, adapté à votre terrain et à votre budget.</p>
+      <div class="ns-phone-row" style="margin-top: 34px;">
+        <a href="mailto:contact@trenca-paysage.fr" class="ns-btn" style="margin-top: 0;">CONCEVOIR MON JARDIN MÉDITERRANÉEN</a>
+        <a href="tel:+33789949070" class="ns-phone-link">☎ 07 89 94 90 70</a>
       </div>
     </div>
   </div>
 
-  <!-- P8 CTA final -->
-  <div class="ns-section ns-cta-band ns-cut-top" data-ns="P8" style="top: 5061px;">
-    <div class="ns-wrap ns-cta-inner">
-      <h2 class="ns-heading dark">CONCEVOIR VOTRE JARDIN<span class="ns-script dark">méditerranéen</span></h2>
-      <p class="ns-body dark">Envie d'un extérieur qui reste beau tout l'été sans se battre avec l'arrosoir ? On conçoit votre jardin méditerranéen, adapté à votre terrain et à votre budget.</p>
-      <a href="mailto:contact@trenca-paysage.fr" class="ns-btn">CONCEVOIR MON JARDIN MÉDITERRANÉEN</a>
-    </div>
-  </div>
 
-    <div style="position: absolute; left: 0px; top: 5544px; width: 1440px; height: 164px; clip-path: polygon(0px 0px, 1440px 46px, 1440px 164px, 0px 164px); background: #ece5da;"></div>
+    <div style="position: absolute; left: 0px; top: 4841px; width: 1440px; height: 164px; clip-path: polygon(0px 0px, 1440px 46px, 1440px 164px, 0px 164px); background: #ece5da;"></div>
 
-  <div style="position: absolute; left: -30px; top: 5578px; width: 300px; height: 150px; color: #8a8770; opacity: 0.16; pointer-events: none;">
+  <div style="position: absolute; left: -30px; top: 4875px; width: 300px; height: 150px; color: #8a8770; opacity: 0.16; pointer-events: none;">
     <svg viewBox="0 0 60 22" style="width: 300px; height: 110px; transform: rotate(28deg); transform-origin: 10% 40%;">
       <path d="M2 20 C 16 16 30 11 58 3" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="round"></path>
       <ellipse cx="10" cy="15" rx="5.4" ry="1.9" transform="rotate(-38 10 15)" fill="none" stroke="currentColor" stroke-width="0.45"></ellipse>
@@ -432,19 +392,19 @@
     </svg>
   </div>
 
-  <div style="position: absolute; left: 164px; top: 5581px;">
+  <div style="position: absolute; left: 164px; top: 4878px;">
     <div class="logo-badge"><img src="assets/logo-trenca-paysage.png" alt="Trenca Paysage" class="logo-img"></div>
   </div>
 
-  <div style="position: absolute; left: 482px; top: 5598px; font-size: 12px; font-weight: 300; line-height: 15.5px; color: #8a8175;">181 allée Jean Aicard<br />13400 Aubagne</div>
-  <div style="position: absolute; left: 482px; top: 5639px; font-size: 12px; font-weight: 600; letter-spacing: 0.02em; line-height: 1; color: #3a3529;"></div>
-  <div style="position: absolute; left: 482px; top: 5659px; font-size: 12px; font-weight: 300; line-height: 1; color: #8a8175;">contact@trenca-paysage.fr</div>
+  <div style="position: absolute; left: 482px; top: 4895px; font-size: 12px; font-weight: 300; line-height: 15.5px; color: #8a8175;">181 allée Jean Aicard<br />13400 Aubagne</div>
+  <div style="position: absolute; left: 482px; top: 4936px; font-size: 12px; font-weight: 600; letter-spacing: 0.02em; line-height: 1; color: #3a3529;"></div>
+  <div style="position: absolute; left: 482px; top: 4956px; font-size: 12px; font-weight: 300; line-height: 1; color: #8a8175;">contact@trenca-paysage.fr</div>
 
-  <div style="position: absolute; left: 714px; top: 5602px; width: 1px; height: 70px; background: #ded7ca;"></div>
+  <div style="position: absolute; left: 714px; top: 4899px; width: 1px; height: 70px; background: #ded7ca;"></div>
 
-  <div style="position: absolute; left: 762px; top: 5612px; font-size: 13px; font-weight: 400; letter-spacing: 0.12em; line-height: 1; color: #8a8767;">SUIVEZ-NOUS</div>
+  <div style="position: absolute; left: 762px; top: 4909px; font-size: 13px; font-weight: 400; letter-spacing: 0.12em; line-height: 1; color: #8a8767;">SUIVEZ-NOUS</div>
 
-  <div style="position: absolute; left: 880px; top: 5639px; display: flex; align-items: center; gap: 14px;">
+  <div style="position: absolute; left: 880px; top: 4936px; display: flex; align-items: center; gap: 14px;">
     <a href="#" style="width: 31px; height: 31px; border: 1px solid #9a9184; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
       <span style="display: block; width: 15px; height: 15px; border: 1px solid #6f685c; border-radius: 5px; position: relative;">
         <span style="position: absolute; left: 3px; top: 3px; width: 7px; height: 7px; border: 1px solid #6f685c; border-radius: 50%;"></span>
@@ -454,7 +414,7 @@
     <a href="#" style="width: 31px; height: 31px; border: 1px solid #9a9184; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: Georgia, serif; font-size: 19px; line-height: 1; color: #6f685c; padding-bottom: 2px;">f</a>
   </div>
 
-  <a href="#" style="position: absolute; left: 1083px; top: 5624px; width: 231px; height: 46px; display: flex; align-items: center; justify-content: center; background: #1d220f; font-size: 13.4px; font-weight: 400; letter-spacing: 0.14em; color: #ece5d8;" style-hover="background: #262c14;">DEMANDE DE DEVIS</a>
+  <a href="#" style="position: absolute; left: 1083px; top: 4921px; width: 231px; height: 46px; display: flex; align-items: center; justify-content: center; background: #1d220f; font-size: 13.4px; font-weight: 400; letter-spacing: 0.14em; color: #ece5d8;" style-hover="background: #262c14;">DEMANDE DE DEVIS</a>
 
 
 </div><!-- /.desktop-stage -->
@@ -472,6 +432,7 @@
         <h1 class="m-title" style="white-space: normal; overflow-wrap: break-word; font-size: clamp(30px, 9.5vw, 52px);">LE JARDIN<br>MÉDITERRANÉEN<br><span class="m-script" style="font-size: clamp(48px, 15vw, 78px);">sobre en eau</span></h1>
         <p class="m-intro">Ici, le plus beau jardin n'est pas celui qui boit le plus. Un jardin pensé pour le climat méditerranéen reste vivant tout l'été, sans (presque) arrosage.</p>
         <a href="#jardin-med-content" class="m-btn">Concevoir mon jardin</a>
+        <a href="tel:+33789949070" class="m-hero-phone">☎ 07 89 94 90 70</a>
       </div>
     </div>
   </section>
@@ -504,113 +465,69 @@
     </div>
   </details>
 
-  <section class="m-newsec" id="jardin-med-content">
+
+<section class="m-newsec">
     <div class="m-shell">
-      <p class="m-ns-body" style="font-size: 14px; line-height: 1.75;">Ici, le plus beau jardin n'est pas celui qui boit le plus. C'est même l'inverse : un jardin pensé pour le climat méditerranéen consomme peu d'eau, tient la sécheresse estivale et reste vivant quand les pelouses gorgées d'eau, elles, grillent en juillet. Le jardin méditerranéen n'est pas un style « déco » — c'est une réponse au terrain, au soleil et au manque d'eau. Bien conçu, il demande moins d'entretien et moins d'arrosage tout en restant vert et fleuri une grande partie de l'année.</p>
+      <p class="m-ns-eyebrow">Définition</p>
+      <h2 class="m-ns-heading">Qu’est-ce qu’un jardin méditerranéen ?</h2><ul style="margin: 14px 0 0; padding: 0; list-style: none;"><li style="position:relative; padding-left:18px; margin-top:10px; font-size:12.5px; font-weight:300; line-height:1.6; color:#4a4736;"><span style="position:absolute;left:0;top:7px;width:5px;height:5px;background:#6d7740;border-radius:50%;"></span><strong>Sobriété en eau.</strong> Végétaux qui supportent la sécheresse, moins de grandes pelouses.</li>
+<li style="position:relative; padding-left:18px; margin-top:10px; font-size:12.5px; font-weight:300; line-height:1.6; color:#4a4736;"><span style="position:absolute;left:0;top:7px;width:5px;height:5px;background:#6d7740;border-radius:50%;"></span><strong>Structure toute l’année.</strong> Persistants et feuillages gris-argenté, présents même en hiver.</li>
+<li style="position:relative; padding-left:18px; margin-top:10px; font-size:12.5px; font-weight:300; line-height:1.6; color:#4a4736;"><span style="position:absolute;left:0;top:7px;width:5px;height:5px;background:#6d7740;border-radius:50%;"></span><strong>Minéral + végétal.</strong> Gravier, pierre, paillage, restanques : ils drainent et gardent le sol frais.</li></ul>
     </div>
   </section>
-
-  <section class="m-newsec" style="padding-top: 10px;">
+<section class="m-newsec" style="background: #e6ddcf;">
     <div class="m-shell">
-      <p class="m-ns-eyebrow">Les principes</p>
-      <h2 class="m-ns-heading">Qu'est-ce qu'un jardin méditerranéen ?</h2>
-      <ul style="margin: 18px 0 0; padding: 0; list-style: none;">
-        <li style="position:relative; padding-left:18px; margin-top:12px; font-size:12.5px; font-weight:300; line-height:1.65; color:#4a4736;"><span style="position:absolute;left:0;top:7px;width:5px;height:5px;background:#6d7740;border-radius:50%;"></span><strong>La sobriété en eau.</strong> On choisit des végétaux qui supportent la sécheresse et on limite les surfaces gourmandes.</li>
-        <li style="position:relative; padding-left:18px; margin-top:12px; font-size:12.5px; font-weight:300; line-height:1.65; color:#4a4736;"><span style="position:absolute;left:0;top:7px;width:5px;height:5px;background:#6d7740;border-radius:50%;"></span><strong>La structure toute l'année.</strong> Des persistants et feuillages gris-argenté, pour que le jardin ait de la présence même en hiver.</li>
-        <li style="position:relative; padding-left:18px; margin-top:12px; font-size:12.5px; font-weight:300; line-height:1.65; color:#4a4736;"><span style="position:absolute;left:0;top:7px;width:5px;height:5px;background:#6d7740;border-radius:50%;"></span><strong>Le mariage du minéral et du végétal.</strong> Gravier, pierre, paillage minéral, restanques : ils habillent, drainent et gardent le sol frais.</li>
-      </ul>
-      <p class="m-ns-body" style="margin-top: 16px;">C'est un jardin qui travaille avec le climat provençal — soleil, mistral, étés secs — au lieu de lutter contre lui.</p>
+      <p class="m-ns-eyebrow">Palette végétale</p>
+      <h2 class="m-ns-heading">Les plantes du jardin méditerranéen</h2><ul style="margin: 14px 0 0; padding: 0; list-style: none;"><li style="position:relative; padding-left:18px; margin-top:10px; font-size:12.5px; font-weight:300; line-height:1.6; color:#4a4736;"><span style="position:absolute;left:0;top:7px;width:5px;height:5px;background:#6d7740;border-radius:50%;"></span><strong>Arbres :</strong> olivier, arbousier, micocoulier, chêne vert, pin parasol, cyprès.</li>
+<li style="position:relative; padding-left:18px; margin-top:10px; font-size:12.5px; font-weight:300; line-height:1.6; color:#4a4736;"><span style="position:absolute;left:0;top:7px;width:5px;height:5px;background:#6d7740;border-radius:50%;"></span><strong>Arbustes :</strong> laurier-rose, romarin, ciste, pittosporum, phlomis.</li>
+<li style="position:relative; padding-left:18px; margin-top:10px; font-size:12.5px; font-weight:300; line-height:1.6; color:#4a4736;"><span style="position:absolute;left:0;top:7px;width:5px;height:5px;background:#6d7740;border-radius:50%;"></span><strong>Vivaces :</strong> lavande, thym, santoline, sauge, gaura.</li>
+<li style="position:relative; padding-left:18px; margin-top:10px; font-size:12.5px; font-weight:300; line-height:1.6; color:#4a4736;"><span style="position:absolute;left:0;top:7px;width:5px;height:5px;background:#6d7740;border-radius:50%;"></span><strong>Couvre-sols :</strong> thym rampant, dichondra — alternative au gazon.</li></ul><a href="engazonnement-gazon-mediterraneen-aubagne.html" class="m-ns-link">Voir l’engazonnement & les alternatives<svg viewBox="0 0 32 7"><path d="M0 3.5 H30 M26 0.6 L30 3.5 L26 6.4" fill="none" stroke="#6c6852" stroke-width="1"></path></svg></a>
     </div>
   </section>
-
-  <section class="m-newsec" style="background: #e6ddcf;">
+<section class="m-newsec">
     <div class="m-shell">
-      <p class="m-ns-eyebrow">La palette végétale</p>
-      <h2 class="m-ns-heading">Les plantes du jardin méditerranéen</h2>
-      <div style="margin-top: 26px; display: flex; flex-direction: column; gap: 20px;">
-        <div><h4 style="margin:0 0 8px; font-size:11px; font-weight:600; letter-spacing:.05em; text-transform:uppercase; color:#6d7740;">Arbres</h4><p class="m-ns-body">Olivier, arbousier, micocoulier, chêne vert, pin parasol, cyprès de Provence, agrumes dans les secteurs abrités.</p></div>
-        <div><h4 style="margin:0 0 8px; font-size:11px; font-weight:600; letter-spacing:.05em; text-transform:uppercase; color:#6d7740;">Arbustes</h4><p class="m-ns-body">Laurier-rose, romarin, ciste, pittosporum, arbousier, germandrée, phlomis.</p></div>
-        <div><h4 style="margin:0 0 8px; font-size:11px; font-weight:600; letter-spacing:.05em; text-transform:uppercase; color:#6d7740;">Vivaces et aromatiques</h4><p class="m-ns-body">Lavande, thym, santoline, sauge, gaura, perovskia, euphorbe.</p></div>
-        <div><h4 style="margin:0 0 8px; font-size:11px; font-weight:600; letter-spacing:.05em; text-transform:uppercase; color:#6d7740;">Graminées</h4><p class="m-ns-body">Stipa, miscanthus, pour le mouvement et la légèreté.</p></div>
-        <div><h4 style="margin:0 0 8px; font-size:11px; font-weight:600; letter-spacing:.05em; text-transform:uppercase; color:#6d7740;">Couvre-sols</h4><p class="m-ns-body">Thym rampant, dichondra, plantes tapissantes qui limitent le désherbage.</p></div>
+      <p class="m-ns-eyebrow">Jardin sec</p>
+      <h2 class="m-ns-heading">Beau sans (presque) arroser</h2><p class="m-ns-body" style="margin-top: 14px;">Massifs sur paillage minéral, plantes très résistantes, arrosage réduit au strict nécessaire une fois installés. Adapté aux terrains exposés et aux restrictions d'eau estivales.</p>
+    </div>
+  </section>
+<section class="m-newsec" style="background: #e6ddcf;">
+    <div class="m-shell">
+      <p class="m-ns-eyebrow">Gestion de l’eau</p>
+      <h2 class="m-ns-heading">L’eau : le nerf de la guerre</h2><ul style="margin: 14px 0 0; padding: 0; list-style: none;"><li style="position:relative; padding-left:18px; margin-top:10px; font-size:12.5px; font-weight:300; line-height:1.6; color:#4a4736;"><span style="position:absolute;left:0;top:7px;width:5px;height:5px;background:#6d7740;border-radius:50%;"></span><strong>Goutte-à-goutte</strong> réglé par zones, aux heures fraîches.</li>
+<li style="position:relative; padding-left:18px; margin-top:10px; font-size:12.5px; font-weight:300; line-height:1.6; color:#4a4736;"><span style="position:absolute;left:0;top:7px;width:5px;height:5px;background:#6d7740;border-radius:50%;"></span><strong>Paillage</strong> généralisé pour limiter l’évaporation.</li>
+<li style="position:relative; padding-left:18px; margin-top:10px; font-size:12.5px; font-weight:300; line-height:1.6; color:#4a4736;"><span style="position:absolute;left:0;top:7px;width:5px;height:5px;background:#6d7740;border-radius:50%;"></span><strong>Sols travaillés</strong> pour retenir l’eau.</li></ul><a href="arrosage-automatique-goutte-a-goutte-aubagne.html" class="m-ns-link">Voir l’arrosage automatique & goutte-à-goutte<svg viewBox="0 0 32 7"><path d="M0 3.5 H30 M26 0.6 L30 3.5 L26 6.4" fill="none" stroke="#6c6852" stroke-width="1"></path></svg></a>
+    </div>
+  </section>
+<section class="m-newsec">
+    <div class="m-shell">
+      <p class="m-ns-eyebrow">Style</p>
+      <h2 class="m-ns-heading">Traditionnel ou moderne ?</h2><div style="margin-top: 22px; display: flex; flex-direction: column; gap: 18px;">
+        <div><h4 style="margin:0 0 8px; font-size:14px; font-weight:500; color:#2b2921;">Traditionnel</h4><p class="m-ns-body">Oliviers, restanques, gravier, ambiance provençale.</p></div>
+        <div><h4 style="margin:0 0 8px; font-size:14px; font-weight:500; color:#2b2921;">Moderne</h4><p class="m-ns-body">Lignes épurées, graminées, minéral graphique.</p></div>
       </div>
-      <p class="m-ns-body" style="margin-top: 22px;">Le choix dépend toujours de l'exposition, du sol et du niveau d'entretien souhaité — c'est là que le conseil compte.</p>
     </div>
   </section>
-
-  <section class="m-newsec">
+<section class="m-newsec" style="background: #e6ddcf;">
     <div class="m-shell">
-      <p class="m-ns-eyebrow">Sans corvée d'arrosage</p>
-      <h2 class="m-ns-heading">Le jardin sec : beau sans (presque) arroser</h2>
-      <p class="m-ns-body" style="margin-top: 14px;">Le « jardin sec » pousse la logique méditerranéenne au bout : massifs sur paillage minéral (gravier, pouzzolane), plantes très résistantes, arrosage réduit au strict nécessaire une fois les végétaux installés.</p>
-      <p class="m-ns-body">C'est particulièrement adapté aux terrains exposés et aux propriétaires qui veulent un extérieur beau sans corvée d'arrosage — un vrai atout quand les restrictions d'eau tombent chaque été dans le département.</p>
-      <div class="m-ns-row-image"><img src="assets/jardin-sec-gravier-fleuri.jpg" alt="Jardin sec méditerranéen, gravier et floraisons" loading="lazy"></div>
+      <p class="m-ns-eyebrow">Chez vous</p>
+      <h2 class="m-ns-heading">Le concevoir à Aubagne et dans l’Est marseillais</h2><p class="m-ns-body" style="margin-top: 14px;">Sols calcaires, pentes, plein soleil : on conçoit le vôtre de A à Z, dans toute notre zone d'intervention.</p><a href="creation-amenagement-jardin-aubagne.html" class="m-ns-link">Voir notre prestation de création de jardin<svg viewBox="0 0 32 7"><path d="M0 3.5 H30 M26 0.6 L30 3.5 L26 6.4" fill="none" stroke="#6c6852" stroke-width="1"></path></svg></a>
     </div>
   </section>
-
-  <section class="m-newsec" style="background: #e6ddcf;">
-    <div class="m-shell">
-      <p class="m-ns-eyebrow">Gestion de l'eau</p>
-      <h2 class="m-ns-heading">L'eau : le nerf de la guerre</h2>
-      <p class="m-ns-body" style="margin-top: 14px;">Même sobre, un jardin méditerranéen s'installe et se gère intelligemment côté eau :</p>
-      <ul style="margin: 14px 0 0; padding: 0; list-style: none;">
-        <li style="position:relative; padding-left:18px; margin-top:10px; font-size:12.5px; font-weight:300; line-height:1.6; color:#4a4736;"><span style="position:absolute;left:0;top:7px;width:5px;height:5px;background:#6d7740;border-radius:50%;"></span>Arrosage au goutte-à-goutte réglé par zones, aux heures fraîches.</li>
-        <li style="position:relative; padding-left:18px; margin-top:10px; font-size:12.5px; font-weight:300; line-height:1.6; color:#4a4736;"><span style="position:absolute;left:0;top:7px;width:5px;height:5px;background:#6d7740;border-radius:50%;"></span>Paillage généralisé pour garder le sol frais et limiter l'évaporation.</li>
-        <li style="position:relative; padding-left:18px; margin-top:10px; font-size:12.5px; font-weight:300; line-height:1.6; color:#4a4736;"><span style="position:absolute;left:0;top:7px;width:5px;height:5px;background:#6d7740;border-radius:50%;"></span>Sols travaillés pour retenir l'eau plutôt que la laisser filer.</li>
-      </ul>
-      <p class="m-ns-body" style="margin-top: 14px;">C'est ce qui fait la différence entre un jardin qui tient l'été et un jardin qui souffre.</p>
-      <a href="arrosage-automatique-goutte-a-goutte-aubagne.html" class="m-ns-link">Voir l'arrosage automatique &amp; goutte-à-goutte<svg viewBox="0 0 32 7"><path d="M0 3.5 H30 M26 0.6 L30 3.5 L26 6.4" fill="none" stroke="#6c6852" stroke-width="1"></path></svg></a>
-    </div>
-  </section>
-
-  <section class="m-newsec">
-    <div class="m-shell">
-      <p class="m-ns-eyebrow">Deux styles, un même principe</p>
-      <h2 class="m-ns-heading">Traditionnel ou moderne ?</h2>
-      <div style="margin-top: 22px; display: flex; flex-direction: column; gap: 18px;">
-        <div><h4 style="margin:0 0 8px; font-size:14px; font-weight:500; color:#2b2921;">Traditionnel</h4><p class="m-ns-body">Oliviers, restanques, gravier, ambiance provençale intemporelle.</p></div>
-        <div><h4 style="margin:0 0 8px; font-size:14px; font-weight:500; color:#2b2921;">Moderne</h4><p class="m-ns-body">Lignes épurées, graminées, minéral graphique, quelques sujets sculpturaux (agaves, oliviers taillés).</p></div>
-      </div>
-      <p class="m-ns-body" style="margin-top: 18px;">Les deux reposent sur les mêmes principes d'eau et de climat — seul le style change. On adapte au caractère de votre maison.</p>
-    </div>
-  </section>
-
-  <section class="m-newsec" style="background: #e6ddcf;">
-    <div class="m-shell">
-      <p class="m-ns-eyebrow">À Aubagne et dans l'Est marseillais</p>
-      <h2 class="m-ns-heading">Le concevoir chez vous</h2>
-      <p class="m-ns-body" style="margin-top: 14px;">Sur les terrains du secteur — sols calcaires, pentes vers les collines, plein soleil — le jardin méditerranéen n'est pas une mode, c'est la solution la plus durable. On conçoit le vôtre de A à Z : plan, terrassement léger, restanques si le terrain monte, plantations, paillage, arrosage. Un seul interlocuteur, du croquis au résultat.</p>
-      <div class="m-ns-row-image"><img src="assets/villa-restanques-cypres.jpg" alt="Restanques et jardin en pente, Aubagne" loading="lazy"></div>
-      <a href="creation-amenagement-jardin-aubagne.html" class="m-ns-link">Voir notre prestation de création de jardin<svg viewBox="0 0 32 7"><path d="M0 3.5 H30 M26 0.6 L30 3.5 L26 6.4" fill="none" stroke="#6c6852" stroke-width="1"></path></svg></a>
-    </div>
-  </section>
-
-  <section class="m-newsec" style="background: #e6ddcf;">
+<section class="m-newsec">
     <div class="m-shell">
       <p class="m-ns-eyebrow">Questions fréquentes</p>
-      <h2 class="m-ns-heading">On répond à vos questions</h2>
-      <div style="margin-top: 26px;">
-        <div class="m-ns-faq-item">
-          <p class="m-ns-faq-q">Un jardin méditerranéen, ça s'entretient vraiment moins ?</p>
-          <p class="m-ns-faq-a">Oui, une fois installé : moins d'arrosage, moins de tonte, un désherbage réduit par le paillage. Il demande surtout un entretien régulier léger — éligible au crédit d'impôt de 50 %.</p>
-        </div>
-        <div class="m-ns-faq-item">
-          <p class="m-ns-faq-q">Quelles plantes tiennent sans arrosage l'été ?</p>
-          <p class="m-ns-faq-a">Beaucoup : lavande, romarin, ciste, laurier-rose, olivier, graminées… Le tout est de bien les choisir selon votre exposition.</p>
-        </div>
-        <div class="m-ns-faq-item">
-          <p class="m-ns-faq-q">Ça marche sur un terrain en pente ?</p>
-          <p class="m-ns-faq-a">C'est même idéal : restanques et plantes couvre-sol tiennent la terre tout en créant du relief. On étudie le terrain avant de proposer.</p>
-        </div>
-      </div>
+      <h2 class="m-ns-heading">On répond à vos questions</h2><div style="margin-top: 26px;"><div class="m-ns-faq-item"><p class="m-ns-faq-q">Un jardin méditerranéen, ça s’entretient vraiment moins ?</p><p class="m-ns-faq-a">Oui, une fois installé. Il demande un entretien léger, éligible au crédit d'impôt de 50 %.</p></div>
+        <div class="m-ns-faq-item"><p class="m-ns-faq-q">Quelles plantes tiennent sans arrosage ?</p><p class="m-ns-faq-a">Lavande, romarin, ciste, laurier-rose, olivier, graminées — bien choisies selon l'exposition.</p></div>
+        <div class="m-ns-faq-item"><p class="m-ns-faq-q">Ça marche sur un terrain en pente ?</p><p class="m-ns-faq-a">C'est même idéal : restanques et couvre-sols tiennent la terre en créant du relief.</p></div></div>
     </div>
   </section>
-
-  <section class="m-ns-cta">
+<section class="m-ns-cta">
     <div class="m-shell">
       <h2 class="m-ns-heading on-dark">Concevoir votre jardin<span class="m-ns-script on-dark">méditerranéen</span></h2>
       <p class="m-ns-body on-dark">Envie d'un extérieur qui reste beau tout l'été sans se battre avec l'arrosoir ? On conçoit votre jardin méditerranéen, adapté à votre terrain et à votre budget.</p>
-      <a href="mailto:contact@trenca-paysage.fr" class="m-ns-btn">Concevoir mon jardin gratuitement</a>
+      <div class="m-phone-row">
+        <a href="mailto:contact@trenca-paysage.fr" class="m-ns-btn" style="margin-top: 0;">Concevoir mon jardin gratuitement</a>
+        <a href="tel:+33789949070" class="m-phone-link">☎ 07 89 94 90 70</a>
+      </div>
     </div>
   </section>
 
@@ -627,7 +544,7 @@
 <script>
 (function () {
   const BASE_WIDTH = 1440;
-  const BASE_HEIGHT = 5708;
+  const BASE_HEIGHT = 5005;
 
   function fitDesktopArtboard() {
     const viewport = document.querySelector('.desktop-viewport');

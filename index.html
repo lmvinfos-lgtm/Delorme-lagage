@@ -229,6 +229,15 @@
   .m-logo-img { display: block; height: 34px; width: auto; }
   .m-logo-badge { display: inline-flex; align-items: center; padding: 8px 13px; background: #1d220f; border-radius: 5px; }
   .m-logo-badge .m-logo-img { height: 26px; }
+  .ns-phone-row { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; }
+  .ns-phone-link { display: inline-flex; align-items: center; gap: 8px; font-size: 13.4px; font-weight: 400; letter-spacing: .05em; color: #f4efe2; }
+  .ns-phone-link:hover { color: #cfc8b8; }
+  .m-phone-row { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; margin-top: 22px; }
+  .m-phone-link { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 500; letter-spacing: .05em; color: #f4efe2; }
+  .hero-phone-row { position: absolute; display: flex; align-items: center; gap: 26px; }
+  .hero-phone-link { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 400; letter-spacing: .1em; color: #f6f1e6; }
+  .hero-phone-link:hover { color: #d9d4c7; }
+  .m-hero-phone { display: inline-flex; align-items: center; gap: 6px; margin-top: 14px; font-size: 11px; font-weight: 500; letter-spacing: .06em; color: #f6f1e6; }
 </style>
 </helmet>
 <div class="desktop-viewport" aria-hidden="false">
@@ -424,7 +433,10 @@
     <div class="ns-wrap ns-cta-inner">
       <h2 class="ns-heading dark">PARLONS DE VOTRE PROJET<span class="ns-script dark">gratuitement</span></h2>
       <p class="ns-body dark">Un extérieur à créer, à entretenir ou à mettre en conformité, ça commence par un échange. Dites-nous ce que vous avez en tête — on vient voir et on vous chiffre tout, gratuitement.</p>
-      <a href="mailto:contact@trenca-paysage.fr" class="ns-btn">DEMANDER MON DEVIS GRATUIT</a>
+      <div class="ns-phone-row" style="margin-top: 34px;">
+        <a href="mailto:contact@trenca-paysage.fr" class="ns-btn" style="margin-top: 0;">DEMANDER MON DEVIS GRATUIT</a>
+        <a href="tel:+33789949070" class="ns-phone-link">☎ 07 89 94 90 70</a>
+      </div>
     </div>
   </div>
 
@@ -814,7 +826,10 @@
     <div class="m-shell">
       <h2 class="m-ns-heading on-dark">Parlons de votre projet<span class="m-ns-script on-dark">gratuitement</span></h2>
       <p class="m-ns-body on-dark">Un extérieur à créer, à entretenir ou à mettre en conformité, ça commence par un échange. Dites-nous ce que vous avez en tête — on vient voir et on vous chiffre tout, gratuitement.</p>
-      <a href="mailto:contact@trenca-paysage.fr" class="m-ns-btn">Demander mon devis gratuit</a>
+      <div class="m-phone-row">
+        <a href="mailto:contact@trenca-paysage.fr" class="m-ns-btn" style="margin-top: 0;">Demander mon devis gratuit</a>
+        <a href="tel:+33789949070" class="m-phone-link">☎ 07 89 94 90 70</a>
+      </div>
     </div>
   </section>
 

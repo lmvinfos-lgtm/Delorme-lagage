@@ -20,7 +20,7 @@
   a:hover { color: #a4b359; }
 
   /* Desktop artboard: same original design, fluidly fitted without horizontal overflow. */
-  .desktop-viewport { position: relative; width: 100%; height: 5708px; overflow-x: auto; overflow-y: hidden; background: #e4ded5; }
+  .desktop-viewport { position: relative; width: 100%; height: 3426px; overflow-x: auto; overflow-y: hidden; background: #e4ded5; }
   .desktop-stage { position: absolute !important; top: 0; left: 0; margin: 0 !important; transform-origin: top left; }
   .mobile-site { display: none; }
 
@@ -247,6 +247,15 @@
   .m-logo-img { display: block; height: 34px; width: auto; }
   .m-logo-badge { display: inline-flex; align-items: center; padding: 8px 13px; background: #1d220f; border-radius: 5px; }
   .m-logo-badge .m-logo-img { height: 26px; }
+  .ns-phone-row { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; }
+  .ns-phone-link { display: inline-flex; align-items: center; gap: 8px; font-size: 13.4px; font-weight: 400; letter-spacing: .05em; color: #f4efe2; }
+  .ns-phone-link:hover { color: #cfc8b8; }
+  .m-phone-row { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; margin-top: 22px; }
+  .m-phone-link { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 500; letter-spacing: .05em; color: #f4efe2; }
+  .hero-phone-row { position: absolute; display: flex; align-items: center; gap: 26px; }
+  .hero-phone-link { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 400; letter-spacing: .1em; color: #f6f1e6; }
+  .hero-phone-link:hover { color: #d9d4c7; }
+  .m-hero-phone { display: inline-flex; align-items: center; gap: 6px; margin-top: 14px; font-size: 11px; font-weight: 500; letter-spacing: .06em; color: #f6f1e6; }
 
   .ns-ol { margin: 18px 0 0; padding: 0; list-style: none; }
   .nav-dd { position: relative; display: inline-block; }
@@ -268,11 +277,20 @@
   .m-logo-img { display: block; height: 34px; width: auto; }
   .m-logo-badge { display: inline-flex; align-items: center; padding: 8px 13px; background: #1d220f; border-radius: 5px; }
   .m-logo-badge .m-logo-img { height: 26px; }
+  .ns-phone-row { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; }
+  .ns-phone-link { display: inline-flex; align-items: center; gap: 8px; font-size: 13.4px; font-weight: 400; letter-spacing: .05em; color: #f4efe2; }
+  .ns-phone-link:hover { color: #cfc8b8; }
+  .m-phone-row { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; margin-top: 22px; }
+  .m-phone-link { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 500; letter-spacing: .05em; color: #f4efe2; }
+  .hero-phone-row { position: absolute; display: flex; align-items: center; gap: 26px; }
+  .hero-phone-link { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 400; letter-spacing: .1em; color: #f6f1e6; }
+  .hero-phone-link:hover { color: #d9d4c7; }
+  .m-hero-phone { display: inline-flex; align-items: center; gap: 6px; margin-top: 14px; font-size: 11px; font-weight: 500; letter-spacing: .06em; color: #f6f1e6; }
 </style>
 
 </helmet>
 <div class="desktop-viewport" aria-hidden="false">
-<div class="desktop-stage" data-screen-label="Création de jardin" style="position: relative; width: 1440px; height: 3350px; margin: 0 auto; overflow: hidden; background: #eee7de; font-family: Poppins, 'Century Gothic', sans-serif; -webkit-font-smoothing: antialiased;">
+<div class="desktop-stage" data-screen-label="Création de jardin" style="position: relative; width: 1440px; height: 3426px; margin: 0 auto; overflow: hidden; background: #eee7de; font-family: Poppins, 'Century Gothic', sans-serif; -webkit-font-smoothing: antialiased;">
   <div style="position: absolute; inset: 0; opacity: 0.5; mix-blend-mode: multiply; background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3'/%3E%3C/filter%3E%3Crect width='260' height='260' filter='url(%23n)' opacity='0.16'/%3E%3C/svg%3E&quot;);"></div>
 
   <!-- HERO (static image, no video) -->
@@ -300,16 +318,19 @@
   <div style="position: absolute; left: 106px; top: 236px; font-size: 60px; font-weight: 300; letter-spacing: 0.005em; line-height: 1.08; color: #f8f2e9; max-width: 900px;">CRÉATION DE JARDIN<br>MÉDITERRANÉEN</div>
   <div style="position: absolute; left: 111px; top: 380px; font-family: Allura, cursive; font-size: 78px; line-height: 1; color: #a4b359;">projection</div>
   <div style="position: absolute; left: 105px; top: 462px; width: 560px; font-size: 15px; font-weight: 300; line-height: 23px; color: rgba(243,239,230,0.87); text-wrap: pretty;">De la terre nue à l'espace de vie fini : un jardin conçu pour le climat, pas contre lui. Beau toute l'année, sobre en eau.</div>
-  <a href="mailto:contact@trenca-paysage.fr" style="position: absolute; left: 105px; top: 636px; height: 46px; padding: 0 30px; display: flex; align-items: center; justify-content: center; background: #5f6626; font-size: 13px; font-weight: 400; letter-spacing: 0.13em; color: #f4efe2;" style-hover="background: #6d7530;">RECEVOIR UNE ESTIMATION DE PROJET</a>
+  <div class="hero-phone-row" style="left: 105px; top: 636px; height: 46px;">
+    <a href="mailto:contact@trenca-paysage.fr" style="height: 46px; padding: 0 30px; display: flex; align-items: center; justify-content: center; background: #5f6626; font-size: 13px; font-weight: 400; letter-spacing: 0.13em; color: #f4efe2;" style-hover="background: #6d7530;">RECEVOIR UNE ESTIMATION DE PROJET</a>
+    <a href="tel:+33789949070" class="hero-phone-link">☎ 07 89 94 90 70</a>
+  </div>
 
 <div class="ns-section" data-ns="S1" style="top: 706px; background: #eee7de;">
     <div class="ns-wrap" style="padding-top: 90px; padding-bottom: 90px;">
       <p class="ns-eyebrow">NOTRE PHILOSOPHIE</p>
-      <h2 class="ns-heading">UN JARDIN CONÇU POUR<br>LE CLIMAT, PAS CONTRE LUI</h2><p class="ns-body" style="max-width: 880px;">Sur les sols caillouteux et argilo-calcaires du secteur, avec des étés secs et le mistral, un jardin gourmand en eau est un combat perdu d'avance. On conçoit l'inverse : essences méditerranéennes qui tiennent la sécheresse, paillage qui garde le sol frais, sols amendés pour retenir l'eau, arrosage au goutte-à-goutte là où il faut. Le résultat reste vert et vivant sans vider le compteur d'eau chaque été.</p>
+      <h2 class="ns-heading">UN JARDIN CONÇU POUR<br>LE CLIMAT, PAS CONTRE LUI</h2><p class="ns-body" style="max-width: 880px;">Sur les sols caillouteux et argilo-calcaires du secteur, avec des étés secs et le mistral, un jardin gourmand en eau est un combat perdu d'avance. On conçoit l'inverse : essences méditerranéennes qui tiennent la sécheresse, paillage qui garde le sol frais, sols amendés pour retenir l'eau, arrosage au goutte-à-goutte là où il faut. Le résultat reste vert et vivant sans vider le compteur d'eau chaque été.</p><a href="jardin-mediterraneen.html" class="ns-link" style="margin-top: 26px;">DÉCOUVRIR LE JARDIN MÉDITERRANÉEN (GUIDE)<svg class="arrow-stroke" viewBox="0 0 40 8"><path d="M0 4 H38 M32.5 0.8 L38 4 L32.5 7.2" fill="none" stroke="currentColor" stroke-width="1"></path></svg></a>
     </div>
   </div>
 
-<div class="ns-section ns-cut-top" data-ns="S2" style="top: 1074px; background: #e6ddcf;">
+<div class="ns-section ns-cut-top" data-ns="S2" style="top: 1116px; background: #e6ddcf;">
     <div class="ns-wrap" style="padding-top: 90px; padding-bottom: 90px;">
       <p class="ns-eyebrow">UN PROJET D’ENSEMBLE</p>
       <h2 class="ns-heading">DE LA TERRE NUE À<br>L’ESPACE DE VIE</h2><div class="ns-row" style="margin-top: 46px; align-items: flex-start;">
@@ -319,33 +340,36 @@
     </div>
   </div>
 
-<div class="ns-section ns-cut-top" data-ns="S3" style="top: 1809px; background: #eee7de;">
+<div class="ns-section ns-cut-top" data-ns="S3" style="top: 1851px; background: #eee7de;">
     <div class="ns-wrap" style="padding-top: 90px; padding-bottom: 90px;">
       <p class="ns-eyebrow">NOTRE PREUVE</p>
       <h2 class="ns-heading">AVANT / APRÈS :<br>CE QU’ON MONTRE</h2><p class="ns-body" style="max-width: 880px;">Un projet se juge sur le résultat, pas sur une liste de prestations. À chaque chantier : l'état de départ, le plan, le rendu final, la commune, la durée. C'est cette transformation qu'on documente — et qui parle mieux que n'importe quel argument.</p><a href="realisations.html" class="ns-link">VOIR NOS RÉALISATIONS<svg class="arrow-stroke" viewBox="0 0 40 8"><path d="M0 4 H38 M32.5 0.8 L38 4 L32.5 7.2" fill="none" stroke="currentColor" stroke-width="1"></path></svg></a>
     </div>
   </div>
 
-<div class="ns-section ns-cut-top" data-ns="S4" style="top: 2164px; background: #e6ddcf;">
+<div class="ns-section ns-cut-top" data-ns="S4" style="top: 2206px; background: #e6ddcf;">
     <div class="ns-wrap" style="padding-top: 90px; padding-bottom: 90px;">
       <p class="ns-eyebrow">QUESTIONS FRÉQUENTES</p>
       <h2 class="ns-heading">ON RÉPOND À VOS QUESTIONS</h2><div style="margin-top: 46px;"><div class="ns-faq-item"><p class="ns-faq-q">Combien coûte la création d’un jardin ?</p><p class="ns-faq-a">Ça dépend de la surface, du relief, des matériaux et de l'accès. On vient voir et on chiffre précisément — l'estimation est gratuite.</p></div>
       <div class="ns-faq-item"><p class="ns-faq-q">Le crédit d'impôt de 50 % s'applique-t-il à ma création ?</p><p class="ns-faq-a">Non : la création et l'aménagement ne sont pas éligibles, seul l'entretien courant l'est. En revanche, l'entretien de votre nouveau jardin, lui, le sera. <a href="entretien-jardin-credit-impot-aubagne.html" style="color:#6d7740;font-weight:500;">En savoir plus sur l’entretien + crédit d’impôt</a>.</p></div>
-      <div class="ns-faq-item"><p class="ns-faq-q">Vous intervenez au-delà d’Aubagne ?</p><p class="ns-faq-a">Oui, dans tout l'Est marseillais : Gémenos, Cassis, Carnoux, Roquevaire et alentours.</p></div></div>
+      <div class="ns-faq-item"><p class="ns-faq-q">Vous intervenez au-delà d’Aubagne ?</p><p class="ns-faq-a">Oui, dans tout l'Est marseillais : <a href="paysagiste-gemenos.html" style="color:#6d7740;font-weight:500;">Gémenos</a>, <a href="paysagiste-cassis.html" style="color:#6d7740;font-weight:500;">Cassis</a>, <a href="paysagiste-carnoux.html" style="color:#6d7740;font-weight:500;">Carnoux</a>, <a href="paysagiste-roquevaire.html" style="color:#6d7740;font-weight:500;">Roquevaire</a>, <a href="paysagiste-auriol.html" style="color:#6d7740;font-weight:500;">Auriol</a>, <a href="paysagiste-la-penne-sur-huveaune.html" style="color:#6d7740;font-weight:500;">La Penne-sur-Huveaune</a> et alentours.</p></div></div>
     </div>
   </div>
 
-<div class="ns-section ns-cut-top" data-ns="S5" style="top: 2802px; background: #4a3c26;">
+<div class="ns-section ns-cut-top" data-ns="S5" style="top: 2844px; background: #4a3c26;">
     <div class="ns-wrap" style="padding-top: 90px; padding-bottom: 90px;">
       <h2 class="ns-heading dark">UN TERRAIN À<span class="ns-script dark">transformer</span></h2>
       <p class="ns-body dark">Un terrain à transformer, une idée encore floue ? On vient le voir, on vous dit ce qui est possible et on chiffre le projet.</p>
-      <a href="mailto:contact@trenca-paysage.fr" class="ns-btn">RECEVOIR UNE ESTIMATION DE PROJET</a>
+      <div class="ns-phone-row" style="margin-top: 34px;">
+        <a href="mailto:contact@trenca-paysage.fr" class="ns-btn" style="margin-top: 0;">RECEVOIR UNE ESTIMATION DE PROJET</a>
+        <a href="tel:+33789949070" class="ns-phone-link">☎ 07 89 94 90 70</a>
+      </div>
     </div>
   </div>
 
-<div style="position: absolute; left: 0px; top: 3186px; width: 1440px; height: 164px; clip-path: polygon(0px 0px, 1440px 46px, 1440px 164px, 0px 164px); background: #ece5da;"></div>
+<div style="position: absolute; left: 0px; top: 3262px; width: 1440px; height: 164px; clip-path: polygon(0px 0px, 1440px 46px, 1440px 164px, 0px 164px); background: #ece5da;"></div>
 
-  <div style="position: absolute; left: -30px; top: 3220px; width: 300px; height: 150px; color: #8a8770; opacity: 0.16; pointer-events: none;">
+  <div style="position: absolute; left: -30px; top: 3296px; width: 300px; height: 150px; color: #8a8770; opacity: 0.16; pointer-events: none;">
     <svg viewBox="0 0 60 22" style="width: 300px; height: 110px; transform: rotate(28deg); transform-origin: 10% 40%;">
       <path d="M2 20 C 16 16 30 11 58 3" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="round"></path>
       <ellipse cx="10" cy="15" rx="5.4" ry="1.9" transform="rotate(-38 10 15)" fill="none" stroke="currentColor" stroke-width="0.45"></ellipse>
@@ -359,19 +383,19 @@
     </svg>
   </div>
 
-  <div style="position: absolute; left: 164px; top: 3223px;">
+  <div style="position: absolute; left: 164px; top: 3299px;">
     <div class="logo-badge"><img src="assets/logo-trenca-paysage.png" alt="Trenca Paysage" class="logo-img"></div>
   </div>
 
-  <div style="position: absolute; left: 482px; top: 3240px; font-size: 12px; font-weight: 300; line-height: 15.5px; color: #8a8175;">181 allée Jean Aicard<br />13400 Aubagne</div>
-  <div style="position: absolute; left: 482px; top: 3281px; font-size: 12px; font-weight: 600; letter-spacing: 0.02em; line-height: 1; color: #3a3529;"></div>
-  <div style="position: absolute; left: 482px; top: 3301px; font-size: 12px; font-weight: 300; line-height: 1; color: #8a8175;">contact@trenca-paysage.fr</div>
+  <div style="position: absolute; left: 482px; top: 3316px; font-size: 12px; font-weight: 300; line-height: 15.5px; color: #8a8175;">181 allée Jean Aicard<br />13400 Aubagne</div>
+  <div style="position: absolute; left: 482px; top: 3357px; font-size: 12px; font-weight: 600; letter-spacing: 0.02em; line-height: 1; color: #3a3529;"></div>
+  <div style="position: absolute; left: 482px; top: 3377px; font-size: 12px; font-weight: 300; line-height: 1; color: #8a8175;">contact@trenca-paysage.fr</div>
 
-  <div style="position: absolute; left: 714px; top: 3244px; width: 1px; height: 70px; background: #ded7ca;"></div>
+  <div style="position: absolute; left: 714px; top: 3320px; width: 1px; height: 70px; background: #ded7ca;"></div>
 
-  <div style="position: absolute; left: 762px; top: 3254px; font-size: 13px; font-weight: 400; letter-spacing: 0.12em; line-height: 1; color: #8a8767;">SUIVEZ-NOUS</div>
+  <div style="position: absolute; left: 762px; top: 3330px; font-size: 13px; font-weight: 400; letter-spacing: 0.12em; line-height: 1; color: #8a8767;">SUIVEZ-NOUS</div>
 
-  <div style="position: absolute; left: 880px; top: 3281px; display: flex; align-items: center; gap: 14px;">
+  <div style="position: absolute; left: 880px; top: 3357px; display: flex; align-items: center; gap: 14px;">
     <a href="#" style="width: 31px; height: 31px; border: 1px solid #9a9184; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
       <span style="display: block; width: 15px; height: 15px; border: 1px solid #6f685c; border-radius: 5px; position: relative;">
         <span style="position: absolute; left: 3px; top: 3px; width: 7px; height: 7px; border: 1px solid #6f685c; border-radius: 50%;"></span>
@@ -381,7 +405,7 @@
     <a href="#" style="width: 31px; height: 31px; border: 1px solid #9a9184; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: Georgia, serif; font-size: 19px; line-height: 1; color: #6f685c; padding-bottom: 2px;">f</a>
   </div>
 
-  <a href="#" style="position: absolute; left: 1083px; top: 3266px; width: 231px; height: 46px; display: flex; align-items: center; justify-content: center; background: #1d220f; font-size: 13.4px; font-weight: 400; letter-spacing: 0.14em; color: #ece5d8;" style-hover="background: #262c14;">DEMANDE DE DEVIS</a>
+  <a href="#" style="position: absolute; left: 1083px; top: 3342px; width: 231px; height: 46px; display: flex; align-items: center; justify-content: center; background: #1d220f; font-size: 13.4px; font-weight: 400; letter-spacing: 0.14em; color: #ece5d8;" style-hover="background: #262c14;">DEMANDE DE DEVIS</a>
 
 </div><!-- /.desktop-stage -->
 </div><!-- /.desktop-viewport -->
@@ -398,6 +422,7 @@
         <h1 class="m-title" style="white-space: normal; overflow-wrap: break-word; font-size: clamp(28px, 8.5vw, 46px);">Création de jardin<br>méditerranéen<br><span class="m-script" style="font-size: clamp(42px, 13vw, 66px);">projection</span></h1>
         <p class="m-intro">De la terre nue à l'espace de vie fini : un jardin conçu pour le climat, pas contre lui.</p>
         <a href="#mobile-content" class="m-btn">Recevoir une estimation de projet</a>
+        <a href="tel:+33789949070" class="m-hero-phone">☎ 07 89 94 90 70</a>
       </div>
     </div>
   </section>
@@ -439,7 +464,7 @@
 <section class="m-newsec">
     <div class="m-shell">
       <p class="m-ns-eyebrow">Notre philosophie</p>
-      <h2 class="m-ns-heading">Un jardin conçu pour le climat</h2><p class="m-ns-body" style="margin-top: 14px;">Sur les sols caillouteux et argilo-calcaires du secteur, avec des étés secs et le mistral, un jardin gourmand en eau est un combat perdu d'avance. On conçoit l'inverse : essences méditerranéennes, paillage, sols amendés, goutte-à-goutte.</p>
+      <h2 class="m-ns-heading">Un jardin conçu pour le climat</h2><p class="m-ns-body" style="margin-top: 14px;">Sur les sols caillouteux et argilo-calcaires du secteur, avec des étés secs et le mistral, un jardin gourmand en eau est un combat perdu d'avance. On conçoit l'inverse : essences méditerranéennes, paillage, sols amendés, goutte-à-goutte.</p><a href="jardin-mediterraneen.html" class="m-ns-link">Découvrir le jardin méditerranéen (guide)<svg viewBox="0 0 32 7"><path d="M0 3.5 H30 M26 0.6 L30 3.5 L26 6.4" fill="none" stroke="#6c6852" stroke-width="1"></path></svg></a>
     </div>
   </section>
 <section class="m-newsec" style="background: #e6ddcf;">
@@ -459,14 +484,17 @@
       <p class="m-ns-eyebrow">Questions fréquentes</p>
       <h2 class="m-ns-heading">On répond à vos questions</h2><div style="margin-top: 26px;"><div class="m-ns-faq-item"><p class="m-ns-faq-q">Combien coûte la création d’un jardin ?</p><p class="m-ns-faq-a">Ça dépend de la surface, du relief, des matériaux et de l'accès. Estimation gratuite.</p></div>
         <div class="m-ns-faq-item"><p class="m-ns-faq-q">Le crédit d'impôt s'applique-t-il ?</p><p class="m-ns-faq-a">Non pour la création, uniquement pour l'entretien courant.</p></div>
-        <div class="m-ns-faq-item"><p class="m-ns-faq-q">Vous intervenez au-delà d’Aubagne ?</p><p class="m-ns-faq-a">Oui, dans tout l'Est marseillais.</p></div></div>
+        <div class="m-ns-faq-item"><p class="m-ns-faq-q">Vous intervenez au-delà d’Aubagne ?</p><p class="m-ns-faq-a">Oui, dans tout l'Est marseillais : <a href="paysagiste-gemenos.html" style="color:#6d7740;font-weight:500;">Gémenos</a>, <a href="paysagiste-cassis.html" style="color:#6d7740;font-weight:500;">Cassis</a>, <a href="paysagiste-carnoux.html" style="color:#6d7740;font-weight:500;">Carnoux</a>, <a href="paysagiste-roquevaire.html" style="color:#6d7740;font-weight:500;">Roquevaire</a>, <a href="paysagiste-auriol.html" style="color:#6d7740;font-weight:500;">Auriol</a>, <a href="paysagiste-la-penne-sur-huveaune.html" style="color:#6d7740;font-weight:500;">La Penne</a> et alentours.</p></div></div>
     </div>
   </section>
 <section class="m-ns-cta">
     <div class="m-shell">
       <h2 class="m-ns-heading on-dark">Un terrain à<span class="m-ns-script on-dark">transformer</span></h2>
       <p class="m-ns-body on-dark">Un terrain à transformer, une idée encore floue ? On vient le voir, on vous dit ce qui est possible et on chiffre le projet.</p>
-      <a href="mailto:contact@trenca-paysage.fr" class="m-ns-btn">Recevoir une estimation de projet</a>
+      <div class="m-phone-row">
+        <a href="mailto:contact@trenca-paysage.fr" class="m-ns-btn" style="margin-top: 0;">Recevoir une estimation de projet</a>
+        <a href="tel:+33789949070" class="m-phone-link">☎ 07 89 94 90 70</a>
+      </div>
     </div>
   </section>
 <footer class="m-footer" id="devis-mobile">
@@ -481,7 +509,7 @@
 <script>
 (function () {
   const BASE_WIDTH = 1440;
-  const BASE_HEIGHT = 3350;
+  const BASE_HEIGHT = 3426;
 
   function fitDesktopArtboard() {
     const viewport = document.querySelector('.desktop-viewport');
